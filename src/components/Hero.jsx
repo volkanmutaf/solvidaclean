@@ -197,7 +197,7 @@ useEffect(() => {
   };
 
   return (
-<section className="w-full bg-[#2563eb] flex items-start justify-center px-4 md:px-8 relative min-h-[600px] -mt-4 md:-mt-6 z-0">
+<section className="w-full bg-[#2563eb] flex items-start justify-center px-2 sm:px-4 md:px-8 relative min-h-[600px] -mt-4 md:-mt-6 z-0">
 {/* Decorative bubbles/drops background */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none select-none">
         {/* Decorative SVG background */}
@@ -233,23 +233,23 @@ useEffect(() => {
         <span className="absolute bottom-1/4 left-1/5 opacity-10 text-4xl">💧</span>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between pt-28 pb-2 gap-y-8 gap-x-6 min-h-[500px]">
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between pt-20 md:pt-28 pb-2 gap-y-8 gap-x-6 min-h-[500px] px-2 md:px-0">
         {/* LEFT CONTENT - This is your form container */}
-        <div className="flex-1 min-w-0 flex flex-col items-start justify-start relative z-20"> {/* Added relative and z-20 */}
-          <h1 className="text-white text-3xl md:text-5xl font-extrabold leading-tight mb-4 text-left">
+        <div className="flex-1 min-w-0 flex flex-col items-start justify-start relative z-20 w-full"> {/* Added relative and z-20 */}
+          <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-3 md:mb-4 text-left w-full">
             {t("quoteForm.headline")}
           </h1>
-          <p className="text-white/90 text-base md:text-lg font-medium mb-7 text-left max-w-xl">
+          <p className="text-white/90 text-sm sm:text-base md:text-lg font-medium mb-5 md:mb-7 text-left max-w-xl w-full">
             {t("quoteForm.subheadline")} {t("quoteForm.freeQuoteText")}
           </p>
 
           <form
             onSubmit={handleHeroFormSubmit}
-            className="w-full max-w-2xl bg-white rounded-2xl shadow-lg p-4 flex flex-col gap-3 relative z-20" /* Added relative and z-20 */
+            className="w-full max-w-2xl bg-white rounded-xl md:rounded-2xl shadow-lg p-3 md:p-4 flex flex-col gap-3 relative z-20" /* Added relative and z-20 */
             encType="multipart/form-data"
           >
-        {/* Unified input group: Name | Bedroom | Bathroom */}
-        <div className="flex flex-row items-center bg-gray-100 border border-gray-200 rounded-lg px-2 py-0 w-full h-12 min-h-[48px]">
+        {/* Mobile: Vertical layout, Desktop: Horizontal layout */}
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center bg-gray-100 border border-gray-200 rounded-lg px-2 sm:px-2 py-2 sm:py-0 w-full min-h-[48px] sm:h-12 gap-2 sm:gap-0">
           {/* Name */}
           <input
             type="text"
@@ -257,46 +257,50 @@ useEffect(() => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="flex-grow bg-transparent border-none outline-none text-base placeholder-gray-400 min-w-[120px] h-full px-3"
+            className="flex-grow bg-transparent border-none outline-none text-base placeholder-gray-400 min-w-[120px] h-10 sm:h-full px-3 min-h-[44px] touch-manipulation"
           />
-          <span className="mx-2 text-gray-400 text-lg select-none">|</span>
+          <span className="mx-2 text-gray-400 text-lg select-none hidden sm:inline">|</span>
           {/* Bedroom */}
-          <div className="flex items-center gap-1 min-w-fit">
+          <div className="flex items-center justify-between sm:justify-center gap-2 sm:gap-1 min-w-fit">
             <button
               type="button"
               onClick={() => setBedrooms(Math.max(1, bedrooms - 1))}
-              className="w-5 h-5 rounded-full bg-white border border-gray-300 flex items-center justify-center text-[#2563eb] hover:bg-blue-100 transition"
+              className="w-8 h-8 sm:w-5 sm:h-5 rounded-full bg-white border border-gray-300 flex items-center justify-center text-[#2563eb] hover:bg-blue-100 active:bg-blue-200 transition touch-manipulation"
+              aria-label="Decrease bedrooms"
             >
               <Minus className="w-4 h-4" />
             </button>
             <BedDouble className="w-5 h-5 text-[#2563eb]" />
-            <span className="text-base font-semibold text-gray-700">{bedrooms}</span>
-            <span className="text-sm text-gray-700 ml-1 select-none">{t("quoteForm.bedroom")}</span>
+            <span className="text-base font-semibold text-gray-700 min-w-[20px] text-center">{bedrooms}</span>
+            <span className="text-sm text-gray-700 ml-1 select-none hidden sm:inline">{t("quoteForm.bedroom")}</span>
             <button
               type="button"
               onClick={() => setBedrooms(bedrooms + 1)}
-              className="w-5 h-5 rounded-full bg-white border border-gray-300 flex items-center justify-center text-[#2563eb] hover:bg-blue-100 transition"
+              className="w-8 h-8 sm:w-5 sm:h-5 rounded-full bg-white border border-gray-300 flex items-center justify-center text-[#2563eb] hover:bg-blue-100 active:bg-blue-200 transition touch-manipulation"
+              aria-label="Increase bedrooms"
             >
               <Plus className="w-4 h-4" />
             </button>
           </div>
-          <span className="mx-2 text-gray-400 text-lg select-none">|</span>
+          <span className="mx-2 text-gray-400 text-lg select-none hidden sm:inline">|</span>
           {/* Bathroom */}
-          <div className="flex items-center gap-1 min-w-fit">
+          <div className="flex items-center justify-between sm:justify-center gap-2 sm:gap-1 min-w-fit">
             <button
               type="button"
               onClick={() => setBathrooms(Math.max(1, bathrooms - 1))}
-              className="w-5 h-5 rounded-full bg-white border border-gray-300 flex items-center justify-center text-[#2563eb] hover:bg-blue-100 transition"
+              className="w-8 h-8 sm:w-5 sm:h-5 rounded-full bg-white border border-gray-300 flex items-center justify-center text-[#2563eb] hover:bg-blue-100 active:bg-blue-200 transition touch-manipulation"
+              aria-label="Decrease bathrooms"
             >
               <Minus className="w-4 h-4" />
             </button>
             <ShowerHead className="w-5 h-5 text-[#2563eb]" />
-            <span className="text-base font-semibold text-gray-700">{bathrooms}</span>
-            <span className="text-sm text-gray-700 ml-1 select-none">{t("quoteForm.bathroom")}</span>
+            <span className="text-base font-semibold text-gray-700 min-w-[20px] text-center">{bathrooms}</span>
+            <span className="text-sm text-gray-700 ml-1 select-none hidden sm:inline">{t("quoteForm.bathroom")}</span>
             <button
               type="button"
               onClick={() => setBathrooms(bathrooms + 1)}
-              className="w-5 h-5 rounded-full bg-white border border-gray-300 flex items-center justify-center text-[#2563eb] hover:bg-blue-100 transition"
+              className="w-8 h-8 sm:w-5 sm:h-5 rounded-full bg-white border border-gray-300 flex items-center justify-center text-[#2563eb] hover:bg-blue-100 active:bg-blue-200 transition touch-manipulation"
+              aria-label="Increase bathrooms"
             >
               <Plus className="w-4 h-4" />
             </button>
@@ -316,14 +320,16 @@ useEffect(() => {
             )}
 
             {/* Email & Mobile as separate boxes with divider */}
-            <div className="flex flex-col md:flex-row items-center w-full gap-2 mt-2">
+            <div className="flex flex-col md:flex-row items-stretch md:items-center w-full gap-2 mt-2">
               <div className="flex-1">
                 <input
                   type="email"
                   placeholder={t("quoteForm.emailPlaceholder")}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 text-base placeholder-gray-400 min-w-[120px] focus:ring-2 focus:ring-blue-500"
+                  className="w-full bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 text-base placeholder-gray-400 min-w-[120px] min-h-[44px] focus:ring-2 focus:ring-blue-500 touch-manipulation"
+                  autoComplete="email"
+                  inputMode="email"
                 />
               </div>
               <span className="mx-2 text-gray-300 text-xl select-none hidden md:inline">|</span>
@@ -340,7 +346,9 @@ useEffect(() => {
                     if (raw.length >= 7) { formatted += `-${raw.slice(6, 10)}`; }
                     setPhone(formatted);
                   }}
-                  className="w-full bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 text-base placeholder-gray-400 min-w-[120px] focus:ring-2 focus:ring-blue-500"
+                  className="w-full bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 text-base placeholder-gray-400 min-w-[120px] min-h-[44px] focus:ring-2 focus:ring-blue-500 touch-manipulation"
+                  autoComplete="tel"
+                  inputMode="tel"
                 />
               </div>
             </div>
@@ -349,11 +357,12 @@ useEffect(() => {
               <button
                 type="button"
                 onClick={() => setShowNotes((prev) => !prev)}
-                className="text-sm text-gray-600 hover:text-primary transition-colors duration-200 flex items-center justify-center gap-1 mx-auto"
+                className="text-sm text-gray-600 hover:text-primary active:text-primary/80 transition-colors duration-200 flex items-center justify-center gap-1 mx-auto min-h-[44px] touch-manipulation px-2"
               >
-              <div className="inline-flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700 font-semibold">
-                📝 {t("quoteForm.customRequestLabel")} & 🖼️ {t("quoteForm.photoLabel")}
-                <span className="text-xs text-gray-500 ml-1 font-normal">({t("quoteForm.optional")})</span>
+              <div className="inline-flex items-center gap-1 bg-gray-100 px-3 py-2 rounded-full text-xs sm:text-sm text-gray-700 font-semibold">
+                <span className="hidden sm:inline">📝 {t("quoteForm.customRequestLabel")} & 🖼️ {t("quoteForm.photoLabel")}</span>
+                <span className="sm:hidden">📝 🖼️ {t("quoteForm.optional")}</span>
+                <span className="text-xs text-gray-500 ml-1 font-normal hidden sm:inline">({t("quoteForm.optional")})</span>
               </div>           
                   <svg
                   className={`w-4 h-4 transition-transform duration-200 ${showNotes ? 'rotate-180' : ''}`}
@@ -376,7 +385,7 @@ useEffect(() => {
                 }}
                 placeholder={t("quoteForm.messagePlaceholder")}
                 rows="4"
-                className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-1 focus:ring-[#00796B] focus:border-[#00796B] transition-all duration-200 resize-none"
+                className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-1 focus:ring-[#00796B] focus:border-[#00796B] transition-all duration-200 resize-none text-base min-h-[100px] touch-manipulation"
               />
               <p className="text-right text-xs text-gray-500 mt-1">{message.length} / 1500</p>
               <label className="block mt-2">
@@ -387,6 +396,7 @@ useEffect(() => {
                   type="file"
                   accept="image/png, image/jpeg"
                   multiple
+                  className="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer touch-manipulation min-h-[44px]"
                   onChange={(e) => {
                     const newFiles = Array.from(e.target.files);
                     const currentFiles = [...files];
@@ -431,7 +441,7 @@ useEffect(() => {
 
             <button
               type="submit"
-              className="w-full bg-[#00C853] hover:brightness-110 text-white font-bold py-3 rounded-lg text-lg transition-all duration-200 mt-1"
+              className="w-full bg-[#00C853] hover:brightness-110 active:brightness-95 text-white font-bold py-4 md:py-3 rounded-lg text-base md:text-lg transition-all duration-200 mt-1 min-h-[48px] touch-manipulation shadow-lg hover:shadow-xl"
               disabled={loading}
             >
               {loading ? t("quoteForm.submitting") : t("quoteForm.submitButton")}

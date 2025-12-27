@@ -6,7 +6,7 @@ export default function ContactPage() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-teal-50 pt-24 pb-20 px-2">
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-teal-50 pt-20 sm:pt-24 pb-12 sm:pb-20 px-2 sm:px-4">
       {/* Professional background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -14,16 +14,16 @@ export default function ContactPage() {
         }}></div>
       </div>
       {/* BACK BUTTON: Sol üst köşede sabit */}
-      <div className="absolute top-28 left-4 md:left-72 z-20">
+      <div className="absolute top-20 sm:top-28 left-2 sm:left-4 md:left-72 z-20">
         <BackButton />
       </div>
 
       {/* Sayfa içeriği */}
-      <div className="relative z-10 max-w-6xl w-full mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center leading-tight mb-14 text-primary drop-shadow-lg">
+      <div className="relative z-10 max-w-6xl w-full mx-auto px-2 sm:px-4">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center leading-tight mb-8 sm:mb-14 text-primary drop-shadow-lg px-2">
           {t("contactPage.headline")}
         </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm font-medium mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-sm font-medium mb-8 sm:mb-16">
               <div className="group bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg text-center border border-gray-200/50 transition-all duration-300 hover:shadow-[0_0_20px_theme('colors.accent')] hover:scale-105">
                 <div className="flex justify-center mb-3 text-accent">
                   <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10m-12 8V7a2 2 0 012-2h10a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2z" /></svg>
@@ -54,45 +54,45 @@ export default function ContactPage() {
                 <p className="text-dark">{t("contactPage.features.alwaysInTouch.description")}</p>
               </div>
             </div>
-            <div className="bg-white/90 backdrop-blur-md p-10 rounded-2xl shadow-2xl max-w-5xl mx-auto border border-gray-200/50 grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div className="space-y-8 text-dark flex flex-col justify-between">
+            <div className="bg-white/90 backdrop-blur-md p-4 sm:p-6 md:p-10 rounded-xl sm:rounded-2xl shadow-2xl max-w-5xl mx-auto border border-gray-200/50 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
+              <div className="space-y-6 sm:space-y-8 text-dark flex flex-col justify-between">
                 <div>
-                  <h3 className="text-2xl font-bold text-primary mb-4">{t("contactPage.getInTouch")}</h3>
-                  <div className="flex items-start gap-4 mb-4">
-                    <MapPin className="w-7 h-7 text-accent flex-shrink-0 mt-1" />
+                  <h3 className="text-xl sm:text-2xl font-bold text-primary mb-4">{t("contactPage.getInTouch")}</h3>
+                  <div className="flex items-start gap-3 sm:gap-4 mb-4">
+                    <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold text-lg text-dark">1137 Washington St, unit 101</p>
-                      <p className="text-dark/80">Boston, MA 02124, United States</p>
+                      <p className="font-semibold text-base sm:text-lg text-dark">1137 Washington St, unit 101</p>
+                      <p className="text-dark/80 text-sm sm:text-base">Boston, MA 02124, United States</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 mb-4">
-                    <Phone className="w-7 h-7 text-accent flex-shrink-0 mt-1" />
+                  <div className="flex items-start gap-3 sm:gap-4 mb-4">
+                    <Phone className="w-6 h-6 sm:w-7 sm:h-7 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <a href="tel:6172021372" className="font-semibold text-lg text-dark hover:text-accent transition-colors">
+                      <a href="tel:6172021372" className="font-semibold text-base sm:text-lg text-dark hover:text-accent transition-colors touch-manipulation">
                         (617) 202-1372
                       </a>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 mb-4">
-                    <Mail className="w-7 h-7 text-accent flex-shrink-0 mt-1" />
+                  <div className="flex items-start gap-3 sm:gap-4 mb-4">
+                    <Mail className="w-6 h-6 sm:w-7 sm:h-7 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <p className="font-semibold text-lg text-dark">info@solvidaclean.com</p>
+                      <a href="mailto:info@solvidaclean.com" className="font-semibold text-base sm:text-lg text-dark hover:text-accent transition-colors touch-manipulation break-all">info@solvidaclean.com</a>
                     </div>
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-semibold text-primary mb-4">{t("contactPage.connectWithUs")}</h4>
-                  <div className="flex gap-6 text-2xl">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-highlight transition-colors text-dark"><Facebook className="w-6 h-6" /></a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-highlight transition-colors text-dark"><Twitter className="w-6 h-6" /></a>
-                    <a href="https://instagram.com/solvidaclean" target="_blank" rel="noopener noreferrer" className="hover:text-highlight transition-colors text-dark"><Instagram className="w-6 h-6" /></a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-highlight transition-colors text-dark"><Linkedin className="w-6 h-6" /></a>
+                  <h4 className="text-xl sm:text-2xl font-semibold text-primary mb-4">{t("contactPage.connectWithUs")}</h4>
+                  <div className="flex gap-4 sm:gap-6 text-xl sm:text-2xl">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-highlight active:text-highlight/80 transition-colors text-dark touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"><Facebook className="w-6 h-6 sm:w-7 sm:h-7" /></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-highlight active:text-highlight/80 transition-colors text-dark touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"><Twitter className="w-6 h-6 sm:w-7 sm:h-7" /></a>
+                    <a href="https://instagram.com/solvidaclean" target="_blank" rel="noopener noreferrer" className="hover:text-highlight active:text-highlight/80 transition-colors text-dark touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"><Instagram className="w-6 h-6 sm:w-7 sm:h-7" /></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-highlight active:text-highlight/80 transition-colors text-dark touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"><Linkedin className="w-6 h-6 sm:w-7 sm:h-7" /></a>
                   </div>
                 </div>
               </div>
-              <div className="md:border-l md:border-gray-200/50 md:pl-10 flex flex-col justify-center">
-                <h2 className="text-3xl font-semibold mb-3 text-center text-primary">{t("contact.title")}</h2>
-                <p className="text-center text-lg mb-6 opacity-90 text-dark">{t("contact.introText")}</p>
+              <div className="md:border-l md:border-gray-200/50 md:pl-10 flex flex-col justify-center pt-6 md:pt-0">
+                <h2 className="text-2xl sm:text-3xl font-semibold mb-3 text-center text-primary">{t("contact.title")}</h2>
+                <p className="text-center text-base sm:text-lg mb-6 opacity-90 text-dark">{t("contact.introText")}</p>
                 <form
                   action="https://formspree.io/f/YOUR_FORM_ID"
                   method="POST"
@@ -104,7 +104,7 @@ export default function ContactPage() {
                       type="text"
                       name="name"
                       placeholder={t("contact.namePlaceholder")}
-                      className="w-full pl-10 pr-4 py-3 border border-accent/30 rounded-lg shadow-sm focus:ring-2 focus:ring-accent text-dark text-base transition"
+                      className="w-full pl-10 pr-4 py-3 border border-accent/30 rounded-lg shadow-sm focus:ring-2 focus:ring-accent text-dark text-base transition min-h-[44px] touch-manipulation"
                       required
                       autoComplete="name"
                     />
@@ -115,9 +115,10 @@ export default function ContactPage() {
                       type="email"
                       name="email"
                       placeholder={t("contact.emailPlaceholder")}
-                      className="w-full pl-10 pr-4 py-3 border border-accent/30 rounded-lg shadow-sm focus:ring-2 focus:ring-accent text-dark text-base transition"
+                      className="w-full pl-10 pr-4 py-3 border border-accent/30 rounded-lg shadow-sm focus:ring-2 focus:ring-accent text-dark text-base transition min-h-[44px] touch-manipulation"
                       required
                       autoComplete="email"
+                      inputMode="email"
                     />
                   </div>
                   <div className="relative">
@@ -126,13 +127,13 @@ export default function ContactPage() {
                       name="message"
                       placeholder={t("contact.messagePlaceholder")}
                       rows="5"
-                      className="w-full pl-10 pr-4 py-3 border border-accent/30 rounded-lg shadow-sm focus:ring-2 focus:ring-accent text-dark text-base transition resize-none"
+                      className="w-full pl-10 pr-4 py-3 border border-accent/30 rounded-lg shadow-sm focus:ring-2 focus:ring-accent text-dark text-base transition resize-none min-h-[120px] touch-manipulation"
                       required
                     ></textarea>
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-primary hover:bg-accent text-white font-bold py-3 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent"
+                    className="w-full bg-primary hover:bg-accent active:bg-accent/90 text-white font-bold py-4 rounded-xl text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent touch-manipulation min-h-[48px]"
                   >
                     {t("contact.submitButton")}
                   </button>

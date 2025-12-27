@@ -104,16 +104,16 @@ export function QuoteForm() {
 
   return (
     // Section'a padding ve arka plan şeffaflığı.
-    <section id="quotes-form" className=" py-12 px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-6">
-        <h1 className="text-3xl font-bold text-primary mb-1">{t("quoteForm.headline")}</h1>
-        <h2 className="text-lg text-gray-700">{t("quoteForm.subheadline")}</h2>
+    <section id="quotes-form" className="py-8 sm:py-12 px-2 sm:px-4 lg:px-8">
+      <div className="text-center mb-4 sm:mb-6">
+        <h1 className="text-2xl sm:text-3xl font-bold text-primary mb-1">{t("quoteForm.headline")}</h1>
+        <h2 className="text-base sm:text-lg text-gray-700 px-2">{t("quoteForm.subheadline")}</h2>
       </div>
 
       {/* FORM KAPSAYICISI: Buraya arka plan ve diğer stil ekledik */}
       <form
         onSubmit={handleSubmit}
-        className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-8 rounded-lg shadow-lg border border-gray-200"
+        className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg border border-gray-200"
         encType="multipart/form-data"
       >
 
@@ -123,8 +123,9 @@ export function QuoteForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder={t("quoteForm.namePlaceholder")}
-          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full"
+          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full text-base min-h-[44px] touch-manipulation"
           required
+          autoComplete="name"
         />
 
         <input
@@ -133,13 +134,15 @@ export function QuoteForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={t("quoteForm.emailPlaceholder")}
-          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full"
+          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full text-base min-h-[44px] touch-manipulation"
           required
+          autoComplete="email"
+          inputMode="email"
         />
 
         <input
           type="tel"
-          inputMode="numeric"
+          inputMode="tel"
           maxLength={14}
           value={phone}
           onChange={(e) => {
@@ -157,14 +160,15 @@ export function QuoteForm() {
             setPhone(formatted);
           }}
           placeholder={t("quoteForm.phonePlaceholder")}
-          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full"
+          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full text-base min-h-[44px] touch-manipulation"
+          autoComplete="tel"
         />
 
         <select
           name="service"
           value={selectedService}
           onChange={handleServiceChange}
-          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full"
+          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full text-base min-h-[44px] touch-manipulation"
           required
         >
           <option value="">{t("quoteForm.selectServicePlaceholder")}</option>
@@ -190,40 +194,44 @@ export function QuoteForm() {
         )}
 
         {/* Yatak Odası ve Banyo Sayaçları Kapsayıcısı */}
-        <div className="flex justify-between col-span-2 gap-4">
+        <div className="flex flex-col sm:flex-row justify-between col-span-2 gap-3 sm:gap-4">
           {/* Yatak Odası Sayacı */}
-          <div className="flex items-center bg-gray-100 border border-gray-400 rounded-lg px-4 py-2 w-full text-gray-700 shadow-sm">
+          <div className="flex items-center bg-gray-100 border border-gray-400 rounded-lg px-3 sm:px-4 py-2 sm:py-2 w-full text-gray-700 shadow-sm min-h-[48px]">
             <button
               type="button"
               onClick={() => setBedrooms((prev) => Math.max(0, prev - 1))}
-              className="text-2xl text-[#00BFA6] px-2 hover:bg-gray-200 rounded-full transition-colors duration-200"
+              className="text-xl sm:text-2xl text-[#00BFA6] px-2 sm:px-2 hover:bg-gray-200 active:bg-gray-300 rounded-full transition-colors duration-200 touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Decrease bedrooms"
             >
               −
             </button>
-            <span className="flex-1 text-center font-semibold text-lg">🛏️ {bedrooms} {t("quoteForm.bedroom")}</span>
+            <span className="flex-1 text-center font-semibold text-sm sm:text-lg">🛏️ {bedrooms} <span className="hidden sm:inline">{t("quoteForm.bedroom")}</span></span>
             <button
               type="button"
               onClick={() => setBedrooms((prev) => prev + 1)}
-              className="text-2xl text-[#00BFA6] px-2 hover:bg-gray-200 rounded-full transition-colors duration-200"
+              className="text-xl sm:text-2xl text-[#00BFA6] px-2 sm:px-2 hover:bg-gray-200 active:bg-gray-300 rounded-full transition-colors duration-200 touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Increase bedrooms"
             >
               +
             </button>
           </div>
 
           {/* Banyo Sayacı */}
-          <div className="flex items-center bg-gray-100 border border-gray-400 rounded-lg px-4 py-2 w-full text-gray-700 shadow-sm">
+          <div className="flex items-center bg-gray-100 border border-gray-400 rounded-lg px-3 sm:px-4 py-2 sm:py-2 w-full text-gray-700 shadow-sm min-h-[48px]">
             <button
               type="button"
               onClick={() => setBathrooms((prev) => Math.max(0, prev - 1))}
-              className="text-2xl text-[#00BFA6] px-2 hover:bg-gray-200 rounded-full transition-colors duration-200"
+              className="text-xl sm:text-2xl text-[#00BFA6] px-2 sm:px-2 hover:bg-gray-200 active:bg-gray-300 rounded-full transition-colors duration-200 touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Decrease bathrooms"
             >
               −
             </button>
-            <span className="flex-1 text-center font-semibold text-lg">🛁 {bathrooms} {t("quoteForm.bathroom")}</span>
+            <span className="flex-1 text-center font-semibold text-sm sm:text-lg">🛁 {bathrooms} <span className="hidden sm:inline">{t("quoteForm.bathroom")}</span></span>
             <button
               type="button"
               onClick={() => setBathrooms((prev) => prev + 1)}
-              className="text-2xl text-[#00BFA6] px-2 hover:bg-gray-200 rounded-full transition-colors duration-200"
+              className="text-xl sm:text-2xl text-[#00BFA6] px-2 sm:px-2 hover:bg-gray-200 active:bg-gray-300 rounded-full transition-colors duration-200 touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label="Increase bathrooms"
             >
               +
             </button>
@@ -235,9 +243,9 @@ export function QuoteForm() {
           <button
             type="button"
             onClick={() => setShowNotes(!showNotes)}
-            className="text-sm text-gray-600 hover:text-primary transition-colors duration-200 flex items-center justify-center gap-1 mx-auto"
+            className="text-sm text-gray-600 hover:text-primary active:text-primary/80 transition-colors duration-200 flex items-center justify-center gap-1 mx-auto touch-manipulation min-h-[44px] px-2"
           >
-            <span>Add notes or special instructions</span>
+            <span className="text-xs sm:text-sm">Add notes or special instructions</span>
             <svg
               className={`w-4 h-4 transition-transform duration-200 ${showNotes ? 'rotate-180' : ''}`}
               fill="none"
@@ -260,7 +268,7 @@ export function QuoteForm() {
             }}
             placeholder="Write any additional notes here (optional)"
             rows="4"
-            className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-1 focus:ring-[#00796B] focus:border-[#00796B] transition-all duration-200 resize-none"
+            className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-1 focus:ring-[#00796B] focus:border-[#00796B] transition-all duration-200 resize-none text-base min-h-[100px] touch-manipulation"
           />
           <p className="text-right text-xs text-gray-500 mt-1">{message.length} / 1500</p>
         </div>
@@ -273,6 +281,7 @@ export function QuoteForm() {
             type="file"
             accept="image/png, image/jpeg"
             multiple
+            className="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer touch-manipulation min-h-[44px]"
             onChange={(e) => {
               const newFiles = Array.from(e.target.files);
               const currentFiles = [...files];
@@ -318,13 +327,13 @@ export function QuoteForm() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-[#00BFA6] hover:bg-[#00796B] text-white font-semibold py-3 px-6 rounded-md transition"
+            className="bg-[#00BFA6] hover:bg-[#00796B] active:bg-[#00695C] text-white font-semibold py-4 px-8 sm:py-3 sm:px-6 rounded-md transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 touch-manipulation min-h-[48px] text-base sm:text-lg w-full sm:w-auto"
           >
             {loading ? t("quoteForm.submitting") : t("quoteForm.submit")}
           </button>
         </div>
 
-        <div className="mt-8 col-span-2 w-full flex justify-center items-center flex-wrap gap-x-10 gap-y-2 text-sm text-gray-700 text-center">
+        <div className="mt-6 sm:mt-8 col-span-2 w-full flex flex-col sm:flex-row justify-center items-center flex-wrap gap-3 sm:gap-x-10 gap-y-2 text-xs sm:text-sm text-gray-700 text-center">
           <div className="flex items-center gap-1 whitespace-nowrap">⭐️⭐️⭐️⭐️⭐️ <span>{t("quoteForm.fiveStar")}</span></div>
           <div className="flex items-center gap-1 whitespace-nowrap">✅ <span>{t("quoteForm.trusted")}</span></div>
           <div className="flex items-center gap-1 whitespace-nowrap">🛡️ <span>{t("quoteForm.guarantee")}</span></div>

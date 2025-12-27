@@ -146,17 +146,17 @@ export function Header() {
     <div className="bg-transparent">
       {/* Reverted header background to bg-light and text colors to text-dark */}
       <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-md z-50">
-      <div className="max-w-6xl mx-auto flex items-center justify-between h-full relative">
+      <div className="max-w-6xl mx-auto flex items-center justify-between h-full relative px-2 sm:px-4">
           {/* Sol: Logo */}
-          <div className="ml-[-110px] flex-shrink-0 flex items-center h-full overflow-hidden" style={{width: '250px', height: '80px'}}>
-            <a onClick={() => handleNavigate("/")} className="cursor-pointer flex items-center justify-center w-full h-full">
-              <img src="/logo.png" alt="SolVida Clean Logo" className="h-32 md:h-40 lg:h-48 object-contain transition-transform group-hover:scale-110 drop-shadow-2xl" />
+          <div className="ml-[-110px] sm:ml-[-80px] md:ml-[-110px] flex-shrink-0 flex items-center h-full overflow-hidden" style={{width: '250px', height: '80px'}}>
+            <a onClick={() => handleNavigate("/")} className="cursor-pointer flex items-center justify-center w-full h-full touch-manipulation">
+              <img src="/logo.png" alt="SolVida Clean Logo" className="h-24 sm:h-32 md:h-40 lg:h-48 object-contain transition-transform group-hover:scale-110 drop-shadow-2xl" />
             </a>
           </div>
                         {/* Phone Number */}
                         <div className="whitespace-nowrap hidden md:flex items-center gap-2 text-white font-semibold text-lg">
   <Phone className="w-7 h-7 text-accent" />
-  <a href="tel:6172021372" className="text-accent font-bold text-xl"> (617) 202-1372 </a>
+  <a href="tel:6172021372" className="text-accent font-bold text-xl touch-manipulation"> (617) 202-1372 </a>
 </div>
           {/* Sağ: Menü ve Butonlar */}
           <div className="flex-1 flex items-center justify-end h-full">
@@ -384,16 +384,17 @@ export function Header() {
 
       {/* Mobile Menu Overlay */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40">
-          <div className="absolute top-0 right-0 w-80 h-full bg-light shadow-xl">
-            <div className="p-6">
-              <div className="flex justify-between items-center mb-8">
+        <div className="lg:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40" onClick={() => setMobileOpen(false)}>
+          <div className="absolute top-0 right-0 w-full sm:w-80 max-w-sm h-full bg-white shadow-xl overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+            <div className="p-4 sm:p-6">
+              <div className="flex justify-between items-center mb-6 sm:mb-8">
                 <h3 className="text-lg font-semibold text-gray-800">Menu</h3>
                 <button 
                   onClick={() => setMobileOpen(false)}
-                  className="p-2 text-dark hover:text-dark hover:bg-accent rounded-lg transition-colors duration-200"
+                  className="p-2 text-dark hover:text-dark hover:bg-accent rounded-lg transition-colors duration-200 touch-manipulation min-h-[44px] min-w-[44px] flex items-center justify-center"
+                  aria-label="Close menu"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-6 h-6" />
                 </button>
               </div>
 
@@ -408,12 +409,12 @@ export function Header() {
                       <button
                         key={key}
                         onClick={() => handleNavigate(`/service/${key}`)}
-                        className="flex items-center gap-3 w-full px-4 py-3 text-left text-dark hover:bg-accent/10 hover:text-highlight rounded-lg transition-colors duration-200"
+                        className="flex items-center gap-3 w-full px-4 py-3 text-left text-dark hover:bg-accent/10 active:bg-accent/20 hover:text-highlight rounded-lg transition-colors duration-200 touch-manipulation min-h-[44px]"
                       >
                         <span className="text-gray-400">
                           {serviceIcons[key]}
                         </span>
-                        <span className="font-medium">{t(`${key}.title`)}</span>
+                        <span className="font-medium text-base">{t(`${key}.title`)}</span>
                       </button>
                     ))}
                   </div>
@@ -423,36 +424,36 @@ export function Header() {
                 <div className="space-y-1">
                   <button 
                     onClick={() => handleNavigate("/service-areas")} 
-                    className="flex items-center gap-3 w-full px-4 py-3 text-left text-dark hover:bg-accent/10 hover:text-highlight rounded-lg transition-colors duration-200"
+                    className="flex items-center gap-3 w-full px-4 py-3 text-left text-dark hover:bg-accent/10 active:bg-accent/20 hover:text-highlight rounded-lg transition-colors duration-200 touch-manipulation min-h-[44px]"
                   >
-                    <MapPin className={`w-4 h-4 transition-colors duration-200 ${isActiveLink("/service-areas") ? "text-highlight" : "text-gray-400 group-hover:text-highlight"}`} />
-                    <span className="font-medium">{t("header.serviceAreas")}</span>
+                    <MapPin className={`w-5 h-5 transition-colors duration-200 ${isActiveLink("/service-areas") ? "text-highlight" : "text-gray-400 group-hover:text-highlight"}`} />
+                    <span className="font-medium text-base">{t("header.serviceAreas")}</span>
                   </button>
                   
                   <button 
                     onClick={() => handleScrollOrNavigate("about")} 
-                    className="flex items-center gap-3 w-full px-4 py-3 text-left text-dark hover:bg-accent/10 hover:text-highlight rounded-lg transition-colors duration-200"
+                    className="flex items-center gap-3 w-full px-4 py-3 text-left text-dark hover:bg-accent/10 active:bg-accent/20 hover:text-highlight rounded-lg transition-colors duration-200 touch-manipulation min-h-[44px]"
                   >
-                    <User className="w-4 h-4 text-gray-400" />
-                    <span className="font-medium">{t("about.title")}</span>
+                    <User className="w-5 h-5 text-gray-400" />
+                    <span className="font-medium text-base">{t("about.title")}</span>
                   </button>
                   
                   <button 
                     onClick={() => handleNavigate("/contact")} 
-                    className="flex items-center gap-3 w-full px-4 py-3 text-left text-dark hover:bg-accent/10 hover:text-highlight rounded-lg transition-colors duration-200"
+                    className="flex items-center gap-3 w-full px-4 py-3 text-left text-dark hover:bg-accent/10 active:bg-accent/20 hover:text-highlight rounded-lg transition-colors duration-200 touch-manipulation min-h-[44px]"
                   >
-                    <MessageCircle className="w-4 h-4 text-gray-400" />
-                    <span className="font-medium">{t("contact.title")}</span>
+                    <MessageCircle className="w-5 h-5 text-gray-400" />
+                    <span className="font-medium text-base">{t("contact.title")}</span>
                   </button>
                 </div>
 
                 {/* Mobile Get Quote Button */}
-                <div className="pt-6">
+                <div className="pt-4 sm:pt-6">
                   <button
                     onClick={() => handleScrollOrNavigate("quotes-form")}
-                    className="flex items-center gap-2 w-full bg-[#00BFA6] hover:bg-[#00A896] text-white px-6 py-3 rounded-lg font-medium shadow-sm transition-all duration-200"
+                    className="flex items-center justify-center gap-2 w-full bg-[#00BFA6] hover:bg-[#00A896] active:bg-[#009688] text-white px-6 py-4 rounded-lg font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-200 touch-manipulation min-h-[48px]"
                   >
-                    <FileText className="w-4 h-4" />
+                    <FileText className="w-5 h-5" />
                     {t("quoteForm.title")}
                   </button>
                 </div>

@@ -307,36 +307,36 @@ export default function OurServices() {
     <>
       <ScrollToTop />
 
-      <section className="bg-solvidaBg pt-24 pb-20 min-h-screen w-full px-2">
-        <div className="text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-8">
+      <section className="bg-solvidaBg pt-20 sm:pt-24 pb-12 sm:pb-20 min-h-screen w-full px-2 sm:px-4">
+        <div className="text-center px-2 sm:px-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 sm:mb-8">
             {t("services.title")}
           </h1>
 
           {/* Tab Buttons */}
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-10 px-2">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => handleTabChange(tab.id)}
-                className={`px-6 py-3 rounded-full font-medium text-sm shadow transition-all duration-300 border
+                className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium text-xs sm:text-sm shadow transition-all duration-300 border touch-manipulation min-h-[44px] active:scale-95
                   ${
                     activeTab === tab.id
-                      ? "bg-primary text-white border-primary hover:bg-highlight"
-                      : "bg-white text-dark border-accent hover:bg-gray-100 hover:text-highlight"
+                      ? "bg-primary text-white border-primary hover:bg-highlight active:bg-highlight/90"
+                      : "bg-white text-dark border-accent hover:bg-gray-100 active:bg-gray-200 hover:text-highlight"
                   }`}
               >
-                {tab.labelKey}
+                <span className="whitespace-nowrap">{tab.labelKey}</span>
               </button>
             ))}
           </div>
 
           {/* Additional Services Notice */}
           {activeTab === "additional" && (
-            <div className="max-w-7xl mx-auto mb-6 px-4">
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg">
-                <p className="text-yellow-800 font-semibold mb-2">⚠️ Additional Charges Apply</p>
-                <p className="text-yellow-700 text-sm">
+            <div className="max-w-7xl mx-auto mb-4 sm:mb-6 px-2 sm:px-4">
+              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 sm:p-4 rounded-r-lg">
+                <p className="text-yellow-800 font-semibold mb-2 text-sm sm:text-base">⚠️ Additional Charges Apply</p>
+                <p className="text-yellow-700 text-xs sm:text-sm">
                   For these extra services, additional charges apply. Please contact us for pricing details.
                 </p>
               </div>
@@ -344,7 +344,7 @@ export default function OurServices() {
           )}
 
           {/* Tab Content */}
-          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-2 sm:px-4">
             {servicesByCategory[activeTab]?.map((service) => (
               <div
                 key={service.key}

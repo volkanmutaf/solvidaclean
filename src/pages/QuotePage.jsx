@@ -52,43 +52,43 @@ export default function QuotePage() {
   return (
                                                                                <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-emerald-50 m-0 p-0 !mt-0 !pt-0">
               {/* Main Form Section - Primary Focus */}
-                                                                                                                                       <section className="pt-[120px] pb-16 px-4 m-0">
+                                                                                                                                       <section className="pt-20 sm:pt-24 md:pt-[120px] pb-12 sm:pb-16 px-2 sm:px-4 m-0">
         <div className="max-w-7xl mx-auto">
                      {/* Header */}
-           <div className={`text-center mb-8 mt-0 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+           <div className={`text-center mb-6 sm:mb-8 mt-0 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight px-2">
                {t("quotePage.mainHeading")}
              </h1>
 
             {/* Progress Indicator */}
-            <div className="flex justify-center items-center gap-4 mb-8">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-full flex items-center justify-center text-white text-sm font-bold">1</div>
-                <span className="text-sm font-medium text-gray-700">{t("quotePage.progressSteps.fillForm")}</span>
+            <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-4 mb-6 sm:mb-8 px-2">
+              <div className="flex items-center gap-1 sm:gap-2">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-full flex items-center justify-center text-white text-xs sm:text-sm font-bold">1</div>
+                <span className="text-xs sm:text-sm font-medium text-gray-700 hidden sm:inline">{t("quotePage.progressSteps.fillForm")}</span>
               </div>
-              <div className="w-12 h-1 bg-gray-300 rounded-full"></div>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 text-sm font-bold">2</div>
-                <span className="text-sm font-medium text-gray-500">{t("quotePage.progressSteps.getQuote")}</span>
+              <div className="w-6 sm:w-12 h-1 bg-gray-300 rounded-full"></div>
+              <div className="flex items-center gap-1 sm:gap-2">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 text-xs sm:text-sm font-bold">2</div>
+                <span className="text-xs sm:text-sm font-medium text-gray-500 hidden sm:inline">{t("quotePage.progressSteps.getQuote")}</span>
               </div>
-              <div className="w-12 h-1 bg-gray-300 rounded-full"></div>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 text-sm font-bold">3</div>
-                <span className="text-sm font-medium text-gray-500">{t("quotePage.progressSteps.bookService")}</span>
+              <div className="w-6 sm:w-12 h-1 bg-gray-300 rounded-full"></div>
+              <div className="flex items-center gap-1 sm:gap-2">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 text-xs sm:text-sm font-bold">3</div>
+                <span className="text-xs sm:text-sm font-medium text-gray-500 hidden sm:inline">{t("quotePage.progressSteps.bookService")}</span>
               </div>
             </div>
           </div>
 
           {/* Form Container - Primary Focus */}
-          <div className={`max-w-4xl mx-auto mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
+          <div className={`max-w-4xl mx-auto mb-8 sm:mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="bg-white rounded-xl sm:rounded-2xl md:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 border border-gray-100">
               <QuoteForm />
             </div>
           </div>
 
           {/* Trust Indicators */}
-          <div className={`text-center mb-12 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="flex flex-wrap justify-center items-center gap-8 text-gray-500">
+          <div className={`text-center mb-8 sm:mb-12 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 text-gray-500 text-xs sm:text-sm">
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5 text-emerald-500" />
                 <span className="text-sm">{t("quotePage.trustIndicators.licensedInsured")}</span>
@@ -115,12 +115,12 @@ export default function QuotePage() {
       </section>
 
              {/* Supporting Content Section */}
-               <section className="py-16 px-4 bg-white">
+               <section className="py-8 sm:py-12 md:py-16 px-2 sm:px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Benefits Grid */}
-          <div className={`mb-16 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">{t("quotePage.benefitsSection.title")}</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+          <div className={`mb-8 sm:mb-12 md:mb-16 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-6 sm:mb-8 md:mb-12 px-2">{t("quotePage.benefitsSection.title")}</h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               {benefits.map((benefit, index) => (
                 <div 
                   key={index}
@@ -165,7 +165,7 @@ export default function QuotePage() {
             </p>
             <button 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl active:scale-95 transition-all duration-300 touch-manipulation min-h-[48px]"
             >
               {t("quotePage.finalCta.button")}
             </button>
