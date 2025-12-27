@@ -233,7 +233,7 @@ useEffect(() => {
         <span className="absolute bottom-1/4 left-1/5 opacity-10 text-4xl">💧</span>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between pt-24 sm:pt-28 md:pt-32 pb-2 gap-y-8 gap-x-6 min-h-[500px] px-2 sm:px-4 md:px-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-end justify-between pt-24 sm:pt-28 md:pt-32 pb-0 gap-y-8 gap-x-6 min-h-[500px] px-2 sm:px-4 md:px-0">
         {/* LEFT CONTENT - This is your form container */}
         <div className="flex-1 min-w-0 flex flex-col items-start justify-start relative z-10 w-full max-w-full lg:max-w-2xl"> {/* Added relative and z-10 */}
           <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-3 md:mb-4 text-left w-full break-words">
@@ -472,7 +472,7 @@ useEffect(() => {
         </div>
 
         {/* RIGHT CONTENT - Maid Image (Desktop only) */}
-        <div className="hidden lg:flex flex-1 items-center justify-end relative z-10 pl-8">
+        <div className="hidden lg:flex flex-1 items-end justify-end relative z-10 pl-8 pb-0">
           <img
             src="/images/cleaner-woman2.png"
             alt="Professional cleaning staff"
