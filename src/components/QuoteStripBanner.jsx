@@ -4,7 +4,7 @@ export default function QuoteStripBanner() {
   const { t } = useTranslation();
   return (
     <div className="w-full bg-gradient-to-r from-primary to-dark text-white text-center text-sm sm:text-base md:text-lg py-3 px-2 sm:px-4 font-extrabold tracking-wide shadow-lg relative overflow-x-hidden">
-      {/* Cleaner Woman Image - Hidden on mobile, visible on desktop */}
+      {/* Cleaner Woman Image - Visible on desktop */}
       <div className="hidden lg:block" style={{
         position: 'absolute',
         right: '330px',

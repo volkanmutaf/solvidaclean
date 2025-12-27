@@ -233,7 +233,7 @@ useEffect(() => {
         <span className="absolute bottom-1/4 left-1/5 opacity-10 text-4xl">💧</span>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between pt-20 md:pt-28 pb-2 gap-y-8 gap-x-6 min-h-[500px] px-2 sm:px-4 md:px-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between pt-24 sm:pt-28 md:pt-32 pb-2 gap-y-8 gap-x-6 min-h-[500px] px-2 sm:px-4 md:px-0">
         {/* LEFT CONTENT - This is your form container */}
         <div className="flex-1 min-w-0 flex flex-col items-start justify-start relative z-20 w-full max-w-full"> {/* Added relative and z-20 */}
           <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-3 md:mb-4 text-left w-full break-words">
@@ -272,9 +272,9 @@ useEffect(() => {
             >
               <Minus className="w-4 h-4" />
             </button>
-            <BedDouble className="w-5 h-5 text-[#2563eb]" />
+            <BedDouble className="w-5 h-5 text-[#2563eb] flex-shrink-0" />
             <span className="text-base font-semibold text-gray-700 min-w-[20px] text-center">{bedrooms}</span>
-            <span className="text-xs sm:text-sm text-gray-700 ml-1 select-none">{t("quoteForm.bedroom")}</span>
+            <span className="text-xs sm:text-sm text-gray-700 ml-1 select-none whitespace-nowrap">{t("quoteForm.bedroom")}</span>
             <button
               type="button"
               onClick={() => setBedrooms(bedrooms + 1)}
@@ -295,9 +295,9 @@ useEffect(() => {
             >
               <Minus className="w-4 h-4" />
             </button>
-            <ShowerHead className="w-5 h-5 text-[#2563eb]" />
+            <ShowerHead className="w-5 h-5 text-[#2563eb] flex-shrink-0" />
             <span className="text-base font-semibold text-gray-700 min-w-[20px] text-center">{bathrooms}</span>
-            <span className="text-xs sm:text-sm text-gray-700 ml-1 select-none">{t("quoteForm.bathroom")}</span>
+            <span className="text-xs sm:text-sm text-gray-700 ml-1 select-none whitespace-nowrap">{t("quoteForm.bathroom")}</span>
             <button
               type="button"
               onClick={() => setBathrooms(bathrooms + 1)}
@@ -471,7 +471,15 @@ useEffect(() => {
           </form>
         </div>
 
-
+        {/* RIGHT CONTENT - Maid Image (Desktop only) */}
+        <div className="hidden lg:flex flex-1 items-center justify-center relative z-10">
+          <img
+            src="/images/cleaner-woman2.png"
+            alt="Professional cleaning staff"
+            className="w-full max-w-md object-contain opacity-90"
+            draggable={false}
+          />
+        </div>
 
       </div>
       {/* Floating Action Buttons (FAB) */}

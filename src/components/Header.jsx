@@ -148,9 +148,9 @@ export function Header() {
       <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-md z-50 overflow-x-hidden">
       <div className="max-w-6xl mx-auto flex items-center justify-between h-full relative px-2 sm:px-4">
           {/* Sol: Logo */}
-          <div className="ml-0 sm:ml-[-80px] md:ml-[-110px] flex-shrink-0 flex items-center h-full overflow-visible" style={{width: 'auto', height: '80px', minWidth: '120px'}}>
+          <div className="ml-0 sm:ml-[-60px] md:ml-[-80px] lg:ml-[-110px] flex-shrink-0 flex items-center h-full overflow-visible" style={{width: 'auto', height: '80px', minWidth: '100px'}}>
             <a onClick={() => handleNavigate("/")} className="cursor-pointer flex items-center justify-center w-full h-full touch-manipulation">
-              <img src="/logo.png" alt="SolVida Clean Logo" className="h-16 sm:h-24 md:h-32 lg:h-40 object-contain transition-transform group-hover:scale-110 drop-shadow-2xl" />
+              <img src="/logo.png" alt="SolVida Clean Logo" className="h-20 sm:h-28 md:h-36 lg:h-44 object-contain transition-transform group-hover:scale-110 drop-shadow-2xl" />
             </a>
           </div>
                         {/* Phone Number - Mobile'da da göster */}
