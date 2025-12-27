@@ -472,11 +472,11 @@ useEffect(() => {
         </div>
 
         {/* RIGHT CONTENT - Maid Image (Desktop only) */}
-        <div className="hidden lg:flex flex-1 items-center justify-center relative z-10">
+        <div className="hidden lg:flex flex-1 items-center justify-end relative z-10 pl-8">
           <img
             src="/images/cleaner-woman2.png"
             alt="Professional cleaning staff"
-            className="w-full max-w-md xl:max-w-lg object-contain"
+            className="w-auto h-auto max-w-sm xl:max-w-md object-contain"
             draggable={false}
             onError={(e) => {
               console.error('Hero maid image failed to load:', e.target.src);
