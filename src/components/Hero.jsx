@@ -122,12 +122,30 @@ useEffect(() => {
     setError("");
 
     try {
-      // Upload photos to Cloudinary first
-      const selected = files.slice(0, 10);
-      const uploadPromises = selected.map((file) => uploadToCloudinary(file));
-      const imageUrls = await Promise.all(uploadPromises);
+      // Upload photos to Cloudinary first (with error handling)
+      let imageUrls = [];
+      if (files && files.length > 0) {
+        try {
+          const selected = files.slice(0, 10);
+          const uploadPromises = selected.map((file) => 
+            uploadToCloudinary(file).catch(err => {
+              console.warn("Image upload failed for file:", file.name, err);
+              return null; // Return null for failed uploads
+            })
+          );
+          const uploadResults = await Promise.all(uploadPromises);
+          imageUrls = uploadResults.filter(url => url !== null); // Filter out failed uploads
+          console.log("✅ Uploaded images:", imageUrls.length);
+        } catch (uploadErr) {
+          console.error("Image upload error:", uploadErr);
+          // Continue without images if upload fails
+          imageUrls = [];
+        }
+      }
 
       const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+      console.log("📤 Sending quote request to:", `${API_URL}/api/submit-quote`);
+      
       const response = await fetch(`${API_URL}/api/submit-quote`, {
         method: 'POST',
         headers: {
@@ -137,15 +155,22 @@ useEffect(() => {
           name,
           email,
           phone,
-          service: customText, // Use selected service or custom text
-          message: message,
+          service: customText || "General Cleaning",
+          message: message || "",
           bedrooms,
           bathrooms,
-          imageUrls, // Include uploaded image URLs
+          imageUrls,
         }),
       });
 
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("❌ API Error Response:", response.status, errorText);
+        throw new Error(`Server error: ${response.status}`);
+      }
+
       const data = await response.json();
+      console.log("✅ API Response:", data);
 
       if (data.success) {
         // Save to Firebase after server call succeeds
@@ -176,23 +201,30 @@ useEffect(() => {
         setPhone("");
         setBedrooms(1);
         setBathrooms(1);
-        setMessage(""); // Clear message after submission
+        setMessage("");
         setFiles([]);
         setFileNames([]);
         setCustomText("");
-        // setShowNotes(false); // Keep notes open to maintain visual alignment
         
         // Show success modal
         setSubmittedQuoteNumber(data.quoteNumber);
         setShowSuccessModal(true);
       } else {
-        setError(data.error || t("quoteForm.errorMessage"));
+        const errorMsg = data.error || t("quoteForm.errorMessage");
+        console.error("❌ API returned error:", errorMsg);
+        setError(errorMsg);
       }
     } catch (err) {
-      console.error("Hero form error:", err);
-      setError(t("quoteForm.errorMessage"));
+      console.error("❌ Hero form error:", err);
+      console.error("Error details:", {
+        message: err.message,
+        stack: err.stack,
+        name: err.name
+      });
+      setError(err.message || t("quoteForm.errorMessage"));
     } finally {
       setLoading(false);
+      console.log("🔄 Form submission completed, loading set to false");
     }
   };
 
