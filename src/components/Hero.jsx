@@ -235,7 +235,7 @@ useEffect(() => {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between pt-24 sm:pt-28 md:pt-32 pb-2 gap-y-8 gap-x-6 min-h-[500px] px-2 sm:px-4 md:px-0">
         {/* LEFT CONTENT - This is your form container */}
-        <div className="flex-1 min-w-0 flex flex-col items-start justify-start relative z-20 w-full max-w-full lg:max-w-2xl"> {/* Added relative and z-20 */}
+        <div className="flex-1 min-w-0 flex flex-col items-start justify-start relative z-20 w-full max-w-full lg:max-w-xl xl:max-w-2xl"> {/* Added relative and z-20 */}
           <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-3 md:mb-4 text-left w-full break-words">
             {t("quoteForm.headline")}
           </h1>
@@ -472,12 +472,12 @@ useEffect(() => {
         </div>
 
         {/* RIGHT CONTENT - Maid Image (Desktop only) */}
-        <div className="hidden lg:flex flex-1 items-center justify-end relative z-10 pl-8">
-          <div className="relative w-full max-w-lg">
+        <div className="hidden lg:flex flex-1 items-center justify-center lg:justify-end relative z-10 pl-4 xl:pl-8 min-w-0">
+          <div className="relative w-full max-w-md xl:max-w-lg flex-shrink-0">
             <img
               src="/images/cleaner-woman2.png"
               alt="Professional cleaning staff"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto max-h-[500px] object-contain"
               draggable={false}
               onError={(e) => {
                 console.error('Hero image failed to load:', e.target.src);
