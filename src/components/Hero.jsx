@@ -251,14 +251,16 @@ useEffect(() => {
         {/* Mobile: Vertical layout, Desktop: Horizontal layout */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center bg-gray-100 border border-gray-200 rounded-lg px-2 sm:px-2 py-2 sm:py-0 w-full min-h-[48px] sm:h-12 gap-2 sm:gap-0 overflow-x-hidden">
           {/* Name */}
-          <input
-            type="text"
-            placeholder={t("quoteForm.namePlaceholder")}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            className="flex-grow bg-transparent border-none outline-none text-base placeholder-gray-400 min-w-0 w-full sm:min-w-[120px] h-10 sm:h-full px-2 sm:px-3 min-h-[44px] touch-manipulation"
-          />
+          <div className="flex-1 w-full sm:flex-grow border-b sm:border-b-0 sm:border-r border-gray-300 pb-2 sm:pb-0 sm:pr-2 sm:mr-2">
+            <input
+              type="text"
+              placeholder={t("quoteForm.namePlaceholder")}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              className="w-full bg-transparent border-none outline-none text-base placeholder-gray-400 min-w-0 h-10 sm:h-full px-2 sm:px-3 min-h-[44px] touch-manipulation"
+            />
+          </div>
           <span className="mx-2 text-gray-400 text-lg select-none hidden sm:inline">|</span>
           {/* Bedroom */}
           <div className="flex items-center justify-between sm:justify-center gap-2 sm:gap-1 min-w-fit">
@@ -272,7 +274,7 @@ useEffect(() => {
             </button>
             <BedDouble className="w-5 h-5 text-[#2563eb]" />
             <span className="text-base font-semibold text-gray-700 min-w-[20px] text-center">{bedrooms}</span>
-            <span className="text-sm text-gray-700 ml-1 select-none hidden sm:inline">{t("quoteForm.bedroom")}</span>
+            <span className="text-xs sm:text-sm text-gray-700 ml-1 select-none">{t("quoteForm.bedroom")}</span>
             <button
               type="button"
               onClick={() => setBedrooms(bedrooms + 1)}
@@ -295,7 +297,7 @@ useEffect(() => {
             </button>
             <ShowerHead className="w-5 h-5 text-[#2563eb]" />
             <span className="text-base font-semibold text-gray-700 min-w-[20px] text-center">{bathrooms}</span>
-            <span className="text-sm text-gray-700 ml-1 select-none hidden sm:inline">{t("quoteForm.bathroom")}</span>
+            <span className="text-xs sm:text-sm text-gray-700 ml-1 select-none">{t("quoteForm.bathroom")}</span>
             <button
               type="button"
               onClick={() => setBathrooms(bathrooms + 1)}

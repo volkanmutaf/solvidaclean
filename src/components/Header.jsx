@@ -145,18 +145,18 @@ export function Header() {
     // Tek bir ana kapsayıcı div
     <div className="bg-transparent">
       {/* Reverted header background to bg-light and text colors to text-dark */}
-      <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-md z-50">
+      <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-md z-50 overflow-x-hidden">
       <div className="max-w-6xl mx-auto flex items-center justify-between h-full relative px-2 sm:px-4">
           {/* Sol: Logo */}
-          <div className="ml-[-110px] sm:ml-[-80px] md:ml-[-110px] flex-shrink-0 flex items-center h-full overflow-hidden" style={{width: '250px', height: '80px'}}>
+          <div className="ml-0 sm:ml-[-80px] md:ml-[-110px] flex-shrink-0 flex items-center h-full overflow-visible" style={{width: 'auto', height: '80px', minWidth: '120px'}}>
             <a onClick={() => handleNavigate("/")} className="cursor-pointer flex items-center justify-center w-full h-full touch-manipulation">
-              <img src="/logo.png" alt="SolVida Clean Logo" className="h-24 sm:h-32 md:h-40 lg:h-48 object-contain transition-transform group-hover:scale-110 drop-shadow-2xl" />
+              <img src="/logo.png" alt="SolVida Clean Logo" className="h-16 sm:h-24 md:h-32 lg:h-40 object-contain transition-transform group-hover:scale-110 drop-shadow-2xl" />
             </a>
           </div>
-                        {/* Phone Number */}
-                        <div className="whitespace-nowrap hidden md:flex items-center gap-2 text-white font-semibold text-lg">
-  <Phone className="w-7 h-7 text-accent" />
-  <a href="tel:6172021372" className="text-accent font-bold text-xl touch-manipulation"> (617) 202-1372 </a>
+                        {/* Phone Number - Mobile'da da göster */}
+                        <div className="whitespace-nowrap flex items-center gap-1 sm:gap-2 text-accent font-semibold text-xs sm:text-sm md:text-lg">
+  <Phone className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 text-accent flex-shrink-0" />
+  <a href="tel:6172021372" className="text-accent font-bold text-xs sm:text-sm md:text-xl touch-manipulation">(617) 202-1372</a>
 </div>
           {/* Sağ: Menü ve Butonlar */}
           <div className="flex-1 flex items-center justify-end h-full">
@@ -341,20 +341,21 @@ export function Header() {
             </div>
 
             {/* Mobile Menu Toggle */}
-            <div className="lg:hidden flex items-center gap-3">
+            <div className="lg:hidden flex items-center gap-1 sm:gap-2">
               {/* Mobile Language Toggle */}
               <button 
                 onClick={() => setLangOpen((prev) => !prev)} 
                 // Hover:bg-highlight remains as requested
-                className="flex items-center gap-1 px-3 py-2 text-sm bg-light hover:bg-highlight text-dark rounded-lg transition-colors duration-200"
+                className="flex items-center gap-1 px-2 sm:px-3 py-2 text-xs sm:text-sm bg-light hover:bg-highlight text-dark rounded-lg transition-colors duration-200 touch-manipulation min-h-[44px] min-w-[44px] flex items-center justify-center"
               >
                 <img src={languages.find((l) => l.code === lang)?.flag} alt={lang} className="w-4 h-3" />
-                <span className="font-medium">{languages.find((l) => l.code === lang)?.label}</span>
+                <span className="font-medium hidden sm:inline">{languages.find((l) => l.code === lang)?.label}</span>
               </button>
 
               <button 
                 onClick={() => setMobileOpen((prev) => !prev)} 
-                className="p-2 text-dark hover:bg-accent rounded-lg transition-colors duration-200"
+                className="p-2 text-dark hover:bg-accent rounded-lg transition-colors duration-200 touch-manipulation min-h-[44px] min-w-[44px] flex items-center justify-center"
+                aria-label="Toggle menu"
               >
                 {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>

@@ -25,10 +25,10 @@ function AppContent() {
                        location.pathname.startsWith("/admin/appointments");
 
   return (
-    <div className="font-sans text-gray-800 min-h-screen bg-white">
+    <div className="font-sans text-gray-800 min-h-screen bg-white overflow-x-hidden w-full max-w-full">
       {!isAdminRoute && <Header />}
-      <main className="pt-0">
-        <div className="mx-auto">
+      <main className="pt-0 overflow-x-hidden w-full max-w-full">
+        <div className="mx-auto w-full max-w-full overflow-x-hidden">
           <Routes>
             <Route path="/service-areas" element={<ServiceAreas />} />
             <Route path="/" element={<Home />} />
