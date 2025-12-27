@@ -197,7 +197,7 @@ useEffect(() => {
   };
 
   return (
-<section className="w-full bg-[#2563eb] flex items-start justify-center px-2 sm:px-4 md:px-8 relative -mt-4 md:-mt-6 mb-0 pb-0 z-0 overflow-hidden" style={{ zIndex: 0 }}>
+<section className="w-full bg-[#2563eb] flex items-start justify-center px-2 sm:px-4 md:px-8 relative -mt-4 md:-mt-6 mb-0 pb-0 overflow-hidden" style={{ zIndex: 0, position: 'relative' }}>
 {/* Decorative bubbles/drops background */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none select-none">
         {/* Decorative SVG background */}
