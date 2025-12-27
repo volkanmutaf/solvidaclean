@@ -197,7 +197,7 @@ useEffect(() => {
   };
 
   return (
-<section className="w-full bg-[#2563eb] flex items-start justify-center px-2 sm:px-4 md:px-8 relative min-h-[600px] -mt-4 md:-mt-6 z-0 overflow-x-hidden">
+<section className="w-full bg-[#2563eb] flex items-start justify-center px-2 sm:px-4 md:px-8 relative min-h-[600px] -mt-4 md:-mt-6 z-0 overflow-x-hidden overflow-y-visible">
 {/* Decorative bubbles/drops background */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none select-none">
         {/* Decorative SVG background */}
@@ -208,11 +208,11 @@ useEffect(() => {
           draggable={false}
         />
         {/* Maid Image - Absolute positioned on desktop */}
-        <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[400px] xl:w-[500px] z-5 pointer-events-none">
+        <div className="hidden lg:block absolute right-4 xl:right-8 top-1/2 -translate-y-1/2 w-[350px] xl:w-[450px] 2xl:w-[500px] z-10 pointer-events-none overflow-visible">
           <img
             src="/images/cleaner-woman2.png"
             alt="Professional cleaning staff"
-            className="w-full h-auto object-contain opacity-95"
+            className="w-full h-auto object-contain"
             draggable={false}
             onError={(e) => {
               console.error('Hero maid image failed to load:', e.target.src);
@@ -248,7 +248,7 @@ useEffect(() => {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between pt-24 sm:pt-28 md:pt-32 pb-2 gap-y-8 gap-x-6 min-h-[500px] px-2 sm:px-4 md:px-0">
         {/* LEFT CONTENT - This is your form container */}
-        <div className="flex-1 min-w-0 flex flex-col items-start justify-start relative z-20 w-full max-w-full lg:max-w-xl xl:max-w-2xl"> {/* Added relative and z-20 */}
+        <div className="flex-1 min-w-0 flex flex-col items-start justify-start relative z-10 w-full max-w-full lg:max-w-xl xl:max-w-2xl"> {/* Added relative and z-10 */}
           <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-3 md:mb-4 text-left w-full break-words">
             {t("quoteForm.headline")}
           </h1>
