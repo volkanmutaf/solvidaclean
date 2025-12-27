@@ -471,6 +471,21 @@ useEffect(() => {
           </form>
         </div>
 
+        {/* RIGHT CONTENT - Maid Image (Desktop only) - Above blue background */}
+        <div className="hidden lg:flex flex-1 items-end justify-end relative z-50 pr-4 xl:pr-8 pb-0 mb-0">
+          <img
+            src="/images/cleaner-woman2.png"
+            alt="Professional cleaning staff"
+            className="w-auto h-auto max-w-xs xl:max-w-sm object-contain"
+            draggable={false}
+            style={{ marginBottom: 0, paddingBottom: 0 }}
+            onError={(e) => {
+              console.error('Hero maid image failed to load:', e.target.src);
+              e.target.style.display = 'none';
+            }}
+          />
+        </div>
+
       </div>
       {/* Floating Action Buttons (FAB) */}
       <div
