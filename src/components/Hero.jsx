@@ -197,7 +197,7 @@ useEffect(() => {
   };
 
   return (
-<section className="w-full bg-[#2563eb] flex items-start justify-center px-2 sm:px-4 md:px-8 relative min-h-[600px] -mt-4 md:-mt-6 z-0">
+<section className="w-full bg-[#2563eb] flex items-start justify-center px-2 sm:px-4 md:px-8 relative min-h-[600px] -mt-4 md:-mt-6 z-0 overflow-x-hidden">
 {/* Decorative bubbles/drops background */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none select-none">
         {/* Decorative SVG background */}
@@ -233,23 +233,23 @@ useEffect(() => {
         <span className="absolute bottom-1/4 left-1/5 opacity-10 text-4xl">💧</span>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between pt-20 md:pt-28 pb-2 gap-y-8 gap-x-6 min-h-[500px] px-2 md:px-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between pt-20 md:pt-28 pb-2 gap-y-8 gap-x-6 min-h-[500px] px-2 sm:px-4 md:px-0">
         {/* LEFT CONTENT - This is your form container */}
-        <div className="flex-1 min-w-0 flex flex-col items-start justify-start relative z-20 w-full"> {/* Added relative and z-20 */}
-          <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-3 md:mb-4 text-left w-full">
+        <div className="flex-1 min-w-0 flex flex-col items-start justify-start relative z-20 w-full max-w-full"> {/* Added relative and z-20 */}
+          <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-3 md:mb-4 text-left w-full break-words">
             {t("quoteForm.headline")}
           </h1>
-          <p className="text-white/90 text-sm sm:text-base md:text-lg font-medium mb-5 md:mb-7 text-left max-w-xl w-full">
+          <p className="text-white/90 text-sm sm:text-base md:text-lg font-medium mb-5 md:mb-7 text-left max-w-xl w-full break-words">
             {t("quoteForm.subheadline")} {t("quoteForm.freeQuoteText")}
           </p>
 
           <form
             onSubmit={handleHeroFormSubmit}
-            className="w-full max-w-2xl bg-white rounded-xl md:rounded-2xl shadow-lg p-3 md:p-4 flex flex-col gap-3 relative z-20" /* Added relative and z-20 */
+            className="w-full max-w-2xl bg-white rounded-xl md:rounded-2xl shadow-lg p-3 sm:p-4 md:p-4 flex flex-col gap-3 relative z-20 overflow-x-hidden" /* Added relative and z-20 */
             encType="multipart/form-data"
           >
         {/* Mobile: Vertical layout, Desktop: Horizontal layout */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center bg-gray-100 border border-gray-200 rounded-lg px-2 sm:px-2 py-2 sm:py-0 w-full min-h-[48px] sm:h-12 gap-2 sm:gap-0">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center bg-gray-100 border border-gray-200 rounded-lg px-2 sm:px-2 py-2 sm:py-0 w-full min-h-[48px] sm:h-12 gap-2 sm:gap-0 overflow-x-hidden">
           {/* Name */}
           <input
             type="text"
@@ -257,7 +257,7 @@ useEffect(() => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="flex-grow bg-transparent border-none outline-none text-base placeholder-gray-400 min-w-[120px] h-10 sm:h-full px-3 min-h-[44px] touch-manipulation"
+            className="flex-grow bg-transparent border-none outline-none text-base placeholder-gray-400 min-w-0 w-full sm:min-w-[120px] h-10 sm:h-full px-2 sm:px-3 min-h-[44px] touch-manipulation"
           />
           <span className="mx-2 text-gray-400 text-lg select-none hidden sm:inline">|</span>
           {/* Bedroom */}
@@ -320,20 +320,20 @@ useEffect(() => {
             )}
 
             {/* Email & Mobile as separate boxes with divider */}
-            <div className="flex flex-col md:flex-row items-stretch md:items-center w-full gap-2 mt-2">
-              <div className="flex-1">
+            <div className="flex flex-col md:flex-row items-stretch md:items-center w-full gap-2 mt-2 overflow-x-hidden">
+              <div className="flex-1 w-full min-w-0">
                 <input
                   type="email"
                   placeholder={t("quoteForm.emailPlaceholder")}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 text-base placeholder-gray-400 min-w-[120px] min-h-[44px] focus:ring-2 focus:ring-blue-500 touch-manipulation"
+                  className="w-full bg-gray-100 border border-gray-200 rounded-lg px-3 sm:px-4 py-3 text-base placeholder-gray-400 min-w-0 min-h-[44px] focus:ring-2 focus:ring-blue-500 touch-manipulation"
                   autoComplete="email"
                   inputMode="email"
                 />
               </div>
               <span className="mx-2 text-gray-300 text-xl select-none hidden md:inline">|</span>
-              <div className="flex-1">
+              <div className="flex-1 w-full min-w-0">
                 <input
                   type="tel"
                   placeholder={t("quoteForm.phonePlaceholder")}
@@ -346,7 +346,7 @@ useEffect(() => {
                     if (raw.length >= 7) { formatted += `-${raw.slice(6, 10)}`; }
                     setPhone(formatted);
                   }}
-                  className="w-full bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 text-base placeholder-gray-400 min-w-[120px] min-h-[44px] focus:ring-2 focus:ring-blue-500 touch-manipulation"
+                  className="w-full bg-gray-100 border border-gray-200 rounded-lg px-3 sm:px-4 py-3 text-base placeholder-gray-400 min-w-0 min-h-[44px] focus:ring-2 focus:ring-blue-500 touch-manipulation"
                   autoComplete="tel"
                   inputMode="tel"
                 />
@@ -441,12 +441,12 @@ useEffect(() => {
 
             <button
               type="submit"
-              className="w-full bg-[#00C853] hover:brightness-110 active:brightness-95 text-white font-bold py-4 md:py-3 rounded-lg text-base md:text-lg transition-all duration-200 mt-1 min-h-[48px] touch-manipulation shadow-lg hover:shadow-xl"
+              className="w-full bg-[#00C853] hover:brightness-110 active:brightness-95 text-white font-bold py-4 md:py-3 rounded-lg text-base md:text-lg transition-all duration-200 mt-1 min-h-[48px] touch-manipulation shadow-lg hover:shadow-xl mx-0"
               disabled={loading}
             >
               {loading ? t("quoteForm.submitting") : t("quoteForm.submitButton")}
             </button>
-            <div className="flex flex-nowrap justify-center items-center gap-1 sm:gap-2 text-gray-700 font-medium mt-4 px-1">
+            <div className="flex flex-wrap justify-center items-center gap-1 sm:gap-2 text-gray-700 font-medium mt-4 px-1 w-full overflow-x-hidden">
               {/* Mobile: Icons only */}
               <div className="flex items-center gap-1 sm:hidden">
                 <span className="text-lg">🏆</span>
@@ -455,15 +455,15 @@ useEffect(() => {
               </div>
               
               {/* Desktop: Full text */}
-              <div className="hidden sm:flex items-center gap-2">
-                <span className="inline-flex items-center gap-1 whitespace-nowrap">🏆 {t("hero.fiveStarRated")}</span>
+              <div className="hidden sm:flex items-center gap-2 flex-wrap justify-center">
+                <span className="inline-flex items-center gap-1 whitespace-nowrap text-xs sm:text-sm">🏆 {t("hero.fiveStarRated")}</span>
                 <span className="text-gray-300">|</span>
-                <span className="inline-flex items-center gap-1 whitespace-nowrap">🌟 {t("hero.premiumQuality")}</span>
+                <span className="inline-flex items-center gap-1 whitespace-nowrap text-xs sm:text-sm">🌟 {t("hero.premiumQuality")}</span>
                 <span className="text-gray-300">|</span>
-                <span className="inline-flex items-center gap-1 whitespace-nowrap">🚫 {t("hero.noHiddenFees")}</span>
+                <span className="inline-flex items-center gap-1 whitespace-nowrap text-xs sm:text-sm">🚫 {t("hero.noHiddenFees")}</span>
               </div>
             </div>
-            {error && <p className="text-red-600 text-sm mt-2">{error}</p>}
+            {error && <p className="text-red-600 text-sm mt-2 break-words w-full">{error}</p>}
 
 
           </form>
@@ -474,27 +474,26 @@ useEffect(() => {
       </div>
       {/* Floating Action Buttons (FAB) */}
       <div
-        className={`fixed left-4 bottom-6 z-50 flex flex-col gap-2 items-start transition-all duration-1000 ease-in-out
+        className={`fixed left-2 sm:left-4 bottom-4 sm:bottom-6 z-50 flex flex-col gap-2 items-start transition-all duration-1000 ease-in-out
           ${showFAB ? 'opacity-100 translate-y-0 pointer-events-auto animate-slide-up-fab' : 'opacity-0 translate-y-16 pointer-events-none'}`}
         style={{ transitionProperty: 'opacity, transform' }}
       >
         <a
-          href="tel:1234567890"
-          className="flex items-center gap-2 px-3 py-2 rounded-full shadow-lg bg-green-500 hover:bg-green-600 text-white font-bold text-base transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400"
-          style={{ minWidth: 120 }}
+          href="tel:6172021372"
+          className="flex items-center gap-2 px-2 sm:px-3 py-2 rounded-full shadow-lg bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold text-xs sm:text-base transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 touch-manipulation min-h-[44px]"
         >
-          <Phone className="w-4 h-4" />
-          (617) 202-1372
+          <Phone className="w-4 h-4 flex-shrink-0" />
+          <span className="hidden sm:inline">(617) 202-1372</span>
+          <span className="sm:hidden">Call</span>
         </a>
         <button
-          className="flex items-center gap-2 px-3 py-2 rounded-full shadow-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-base transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          style={{ minWidth: 120 }}
+          className="flex items-center gap-2 px-2 sm:px-3 py-2 rounded-full shadow-lg bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-xs sm:text-base transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 touch-manipulation min-h-[44px]"
           onClick={() => {
             navigate("/quote#quote-form");
           }}
         >
-          <Send className="w-4 h-4" />
-          {t("globalFAB.getQuote")}
+          <Send className="w-4 h-4 flex-shrink-0" />
+          <span className="whitespace-nowrap">{t("globalFAB.getQuote")}</span>
         </button>
       </div>
       {/* Scroll to Top Button - Only show when needed, before section closes */}

@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 export default function QuoteStripBanner() {
   const { t } = useTranslation();
   return (
-    <div className="w-full bg-gradient-to-r from-primary to-dark text-white text-center text-base md:text-lg py-3 px-4 font-extrabold tracking-wide shadow-lg relative">
-      {/* Cleaner Woman Image - Fixed to strip banner top line */}
-      <div style={{
+    <div className="w-full bg-gradient-to-r from-primary to-dark text-white text-center text-sm sm:text-base md:text-lg py-3 px-2 sm:px-4 font-extrabold tracking-wide shadow-lg relative overflow-x-hidden">
+      {/* Cleaner Woman Image - Hidden on mobile, visible on desktop */}
+      <div className="hidden lg:block" style={{
         position: 'absolute',
         right: '330px',
         top: '0px',
@@ -27,10 +27,10 @@ export default function QuoteStripBanner() {
         />
       </div>
       
-      <span className="animate-strong-blink">
+      <span className="animate-strong-blink break-words inline-block px-2">
         {t("quoteBanner.guarantee")}
         <span className="font-black text-accent"> {t("quoteBanner.within")}</span> {t("quoteBanner.or")}
-        <span className="text-accent font-black text-xl"> {t("quoteBanner.discount")}</span>!
+        <span className="text-accent font-black text-lg sm:text-xl"> {t("quoteBanner.discount")}</span>!
       </span>
     </div>
   );

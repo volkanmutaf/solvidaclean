@@ -104,16 +104,16 @@ export function QuoteForm() {
 
   return (
     // Section'a padding ve arka plan şeffaflığı.
-    <section id="quotes-form" className="py-8 sm:py-12 px-2 sm:px-4 lg:px-8">
-      <div className="text-center mb-4 sm:mb-6">
-        <h1 className="text-2xl sm:text-3xl font-bold text-primary mb-1">{t("quoteForm.headline")}</h1>
-        <h2 className="text-base sm:text-lg text-gray-700 px-2">{t("quoteForm.subheadline")}</h2>
+    <section id="quotes-form" className="py-8 sm:py-12 px-2 sm:px-4 lg:px-8 overflow-x-hidden">
+      <div className="text-center mb-4 sm:mb-6 px-2">
+        <h1 className="text-2xl sm:text-3xl font-bold text-primary mb-1 break-words">{t("quoteForm.headline")}</h1>
+        <h2 className="text-base sm:text-lg text-gray-700 px-2 break-words">{t("quoteForm.subheadline")}</h2>
       </div>
 
       {/* FORM KAPSAYICISI: Buraya arka plan ve diğer stil ekledik */}
       <form
         onSubmit={handleSubmit}
-        className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg border border-gray-200"
+        className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 bg-white p-3 sm:p-4 md:p-8 rounded-lg shadow-lg border border-gray-200 overflow-x-hidden w-full"
         encType="multipart/form-data"
       >
 
@@ -123,7 +123,7 @@ export function QuoteForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder={t("quoteForm.namePlaceholder")}
-          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full text-base min-h-[44px] touch-manipulation"
+          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full text-base min-h-[44px] touch-manipulation min-w-0"
           required
           autoComplete="name"
         />
@@ -134,7 +134,7 @@ export function QuoteForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={t("quoteForm.emailPlaceholder")}
-          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full text-base min-h-[44px] touch-manipulation"
+          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full text-base min-h-[44px] touch-manipulation min-w-0"
           required
           autoComplete="email"
           inputMode="email"
@@ -160,7 +160,7 @@ export function QuoteForm() {
             setPhone(formatted);
           }}
           placeholder={t("quoteForm.phonePlaceholder")}
-          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full text-base min-h-[44px] touch-manipulation"
+          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full text-base min-h-[44px] touch-manipulation min-w-0"
           autoComplete="tel"
         />
 
@@ -168,7 +168,7 @@ export function QuoteForm() {
           name="service"
           value={selectedService}
           onChange={handleServiceChange}
-          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full text-base min-h-[44px] touch-manipulation"
+          className="p-3 border border-gray-300 rounded-lg shadow-sm w-full text-base min-h-[44px] touch-manipulation min-w-0"
           required
         >
           <option value="">{t("quoteForm.selectServicePlaceholder")}</option>
@@ -323,20 +323,20 @@ export function QuoteForm() {
           </ul>
         </label>
 
-        <div className="text-center col-span-2">
+        <div className="text-center col-span-2 w-full overflow-x-hidden">
           <button
             type="submit"
             disabled={loading}
-            className="bg-[#00BFA6] hover:bg-[#00796B] active:bg-[#00695C] text-white font-semibold py-4 px-8 sm:py-3 sm:px-6 rounded-md transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 touch-manipulation min-h-[48px] text-base sm:text-lg w-full sm:w-auto"
+            className="bg-[#00BFA6] hover:bg-[#00796B] active:bg-[#00695C] text-white font-semibold py-4 px-6 sm:px-8 sm:py-3 rounded-md transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 touch-manipulation min-h-[48px] text-base sm:text-lg w-full max-w-full"
           >
             {loading ? t("quoteForm.submitting") : t("quoteForm.submit")}
           </button>
         </div>
 
-        <div className="mt-6 sm:mt-8 col-span-2 w-full flex flex-col sm:flex-row justify-center items-center flex-wrap gap-3 sm:gap-x-10 gap-y-2 text-xs sm:text-sm text-gray-700 text-center">
-          <div className="flex items-center gap-1 whitespace-nowrap">⭐️⭐️⭐️⭐️⭐️ <span>{t("quoteForm.fiveStar")}</span></div>
-          <div className="flex items-center gap-1 whitespace-nowrap">✅ <span>{t("quoteForm.trusted")}</span></div>
-          <div className="flex items-center gap-1 whitespace-nowrap">🛡️ <span>{t("quoteForm.guarantee")}</span></div>
+        <div className="mt-6 sm:mt-8 col-span-2 w-full flex flex-col sm:flex-row justify-center items-center flex-wrap gap-3 sm:gap-x-10 gap-y-2 text-xs sm:text-sm text-gray-700 text-center overflow-x-hidden px-2">
+          <div className="flex items-center gap-1 break-words">⭐️⭐️⭐️⭐️⭐️ <span className="whitespace-normal">{t("quoteForm.fiveStar")}</span></div>
+          <div className="flex items-center gap-1 break-words">✅ <span className="whitespace-normal">{t("quoteForm.trusted")}</span></div>
+          <div className="flex items-center gap-1 break-words">🛡️ <span className="whitespace-normal">{t("quoteForm.guarantee")}</span></div>
         </div>
       </form>
 
