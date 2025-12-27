@@ -1,0 +1,631 @@
+{
+  "services": {
+    "title": "Nossos Serviços",
+    "items": [
+      "Limpeza Residencial",
+      "Limpeza de Escritórios",
+      "Limpeza Profunda",
+      "Limpeza de Janelas",
+      "Limpeza Pós-Construção",
+      "Limpeza de Entrada/Saída"
+    ],
+    "descs": {
+  "residential": "Limpeza residencial profissional para um espaço de vida fresco e saudável.",
+  "office": "Limpeza de escritório para manter um ambiente de trabalho limpo e produtivo.",
+  "deep": "Limpeza profunda e minuciosa que alcança todos os cantos e superfícies.",
+  "airbnb": "Limpeza de janelas com brilho cristalino, por dentro e por fora.",
+  "postconst": "Limpeza pós-obra para remover poeira, detritos e resíduos.",
+  "moveout": "Limpeza de mudança para um começo impecável ou entrega tranquila."  
+    }
+  },
+"about": {
+  "title": "Sobre Nós",
+  "missionTitle": "Nossa Missão",
+  "missionStatement": "Nós não apenas limpamos casas — criamos tranquilidade.",
+  "header": "Quem Somos",
+  "excellenceTitle": "Anos de Excelência",
+  "excellenceDesc": "Com mais de uma década de serviço dedicado, construímos nossa reputação com confiabilidade, atenção aos detalhes e compromisso inabalável com a satisfação do cliente.",
+  "ecoTitle": "Ecológico & Seguro",
+  "ecoDesc": "Usamos apenas produtos de limpeza não tóxicos e ecológicos, seguros para sua família, animais de estimação e o meio ambiente, entregando resultados excepcionais.",
+  "teamTitle": "Equipe Profissional",
+  "teamDesc": "Nossa equipe totalmente treinada, segurada e verificada trata cada propriedade como se fosse sua, garantindo qualidade consistente e tranquilidade.",
+  "valuesTitle": "Nossos Valores",
+  "valueTrust": "Confiança",
+  "valuePunctuality": "Pontualidade",
+  "valueProfessionalism": "Profissionalismo",
+  "valueQuality": "Qualidade",
+  "multilingualTitle": "Serviço Multilíngue",
+  "multilingualDesc": "Atendemos com orgulho nossa comunidade diversa em <b><i>inglês</i></b>, <b><i>português</i></b>, <b><i>espanhol</i></b> e <b><i>turco</i></b> — garantindo comunicação clara e serviço personalizado para todos."
+},
+"quoteForm": {
+  "title": "Orçamento Grátis",
+  "namePlaceholder": "Seu Nome",
+  "emailPlaceholder": "Seu E-mail",
+  "phonePlaceholder": "Telefone (opcional)",
+  "messagePlaceholder": "Notas ou instruções adicionais",
+  "photoLabel": "Enviar uma foto",
+  "noFileChosen": "Nenhum arquivo selecionado",
+  "submitButton": "Enviar Pedido",
+  "serviceLabel": "Selecione um Serviço",
+  "selectServicePlaceholder": "Escolha um serviço...",
+  "customRequestLabel": "Descreva seu pedido personalizado",
+  "customRequestPlaceholder": "ex: Limpar área do pátio e churrasqueira",
+  "bedroom": "Quarto",
+  "bathroom": "Banheiro",
+  "submitting": "Enviando...",
+  "submit": "Solicitar limpeza agora",
+  "fiveStar": "Serviço com 5 estrelas",
+  "trusted": "Profissionais confiáveis",
+  "guarantee": "Garantia 100%",
+      "headline": "Nº1 em limpeza residencial\nem Boston",
+      "subheadline": "Agende uma limpeza instantaneamente.",
+    "freeQuoteText": "Orçamento grátis hoje.",
+    "customService": "Digite o serviço personalizado",
+  "successMessage": "Sua solicitação de orçamento foi enviada com sucesso! Entraremos em contato em breve."
+
+},
+  "contact": {
+    "title": "Fale Conosco",
+    "namePlaceholder": "Seu Nome",
+    "emailPlaceholder": "Email",
+    "messagePlaceholder": "Sua mensagem...",
+    "submitButton": "Enviar Mensagem",
+    "introText": "Estamos ansiosos para ajudá-lo com suas necessidades de limpeza."
+
+  },
+  "footer": {
+    "copyright": "© 2025 SolVida Clean. Todos os direitos reservados.",
+    "contactInfo": "solvidaclean.com | info@solvidaclean.com"
+  },
+"residential": {
+  "title": "Limpeza Residencial",
+  "content": [
+    "Manter uma casa verdadeiramente limpa pode ser desafiador — especialmente com uma rotina corrida, crianças, animais de estimação ou visitas inesperadas. Poeira se acumula nos cantos, os banheiros perdem o brilho e as cozinhas podem rapidamente parecer engorduradas ou desorganizadas. Nosso serviço de limpeza residencial é feito para tirar esse peso dos seus ombros e trazer frescor e clareza duradouros ao seu lar.",
+    "Vamos muito além da limpeza superficial. Nossa equipe treinada cuida de cada cômodo da sua casa — aspirando carpetes, passando pano em pisos, limpando rodapés, desinfetando maçanetas, polindo torneiras e eliminando o pó de móveis e persianas. As cozinhas são desengorduradas e higienizadas, os banheiros são esfregados do azulejo à torneira, e as áreas de convívio são renovadas com cuidado. Utilizamos produtos ecológicos e seguros para crianças, que limpam com eficácia sem deixar resíduos químicos agressivos.",
+    "Seja para manutenção regular ou uma limpeza pontual, nosso serviço se adapta à sua rotina e às suas necessidades. De apartamentos aconchegantes a casas amplas, personalizamos nosso trabalho para entregar resultados que promovem um estilo de vida mais limpo e saudável. Você sentirá a diferença não apenas no visual da sua casa — mas também na sensação de bem-estar ao viver nela."
+  ]
+},
+"office": {
+  "title": "Limpeza de Escritório",
+  "content": [
+    "Manter um escritório limpo não é apenas uma questão de aparência — afeta diretamente a saúde dos colaboradores, a concentração no trabalho e a impressão que sua empresa causa nos clientes. Um ambiente bem cuidado promove produtividade, reduz a propagação de germes e demonstra compromisso com o profissionalismo. Nosso serviço de limpeza de escritório é ideal para empresas que valorizam sua imagem e sua equipe.",
+    "Cuidamos de todas as áreas do seu escritório: mesas, salas de reunião, recepção, copa, banheiros e superfícies de alto contato como maçanetas, interruptores e equipamentos compartilhados. O lixo é removido, os pisos são aspirados e esfregados, e superfícies de vidro são polidas até ficarem sem manchas. Podemos agendar a limpeza fora do horário comercial para não atrapalhar a rotina da equipe.",
+    "De pequenas startups a escritórios corporativos em vários andares, nossa equipe é treinada para trabalhar com eficiência, discrição e mínimo impacto na operação. Atendemos demandas diárias, semanais ou pontuais com planos personalizados. Deixe-nos ajudar você a manter um ambiente limpo e profissional que reflita os valores da sua marca."
+  ]
+},
+"deepclean": {
+  "title": "Limpeza Profunda",
+  "content": [
+    "A limpeza profunda é perfeita quando o ambiente precisa de mais do que uma manutenção básica. Com o tempo, a sujeira se acumula em locais que a limpeza diária não alcança — atrás de eletrodomésticos, dentro de armários, nos rejuntes e debaixo dos móveis. Nosso serviço de limpeza profunda restaura esses espaços esquecidos e devolve vida ao seu ambiente.",
+    "Eliminamos gordura acumulada, resíduos de sabão, poeira, manchas de calcário e alérgenos com equipamentos profissionais e produtos não tóxicos. Cozinhas, banheiros, rodapés, portas, interruptores — nada fica de fora. Trabalhamos de forma completa e detalhada para um resultado verdadeiramente renovado.",
+    "Esse serviço é ideal para renovações sazonais, desinfecção pós-doença, preparação para visitas ou após longos períodos sem limpeza. Também é um ótimo complemento para planos de limpeza regulares e melhora visivelmente a qualidade do ar e o conforto geral do ambiente."
+  ]
+},
+  "airbnb": {
+    "title": "Serviços de Limpeza de Virada para Aluguéis",
+     "content": [
+      "Maximize suas reservas e a satisfação dos hóspedes com os serviços especializados de limpeza de Airbnb e aluguéis de curta duração da SolVida Clean. Compreendemos a importância crítica de uma limpeza rápida, eficiente e impecável entre os hóspedes, especialmente aqui em Boston. Nossa equipe profissional garante que sua propriedade esteja sempre pronta para receber os hóspedes, proporcionando uma experiência consistentemente brilhante que lhe renderá avaliações 5 estrelas e reservas recorrentes, permitindo que você se concentre em gerenciar suas listas, e não a sujeira.",
+      "Nosso serviço detalhado abrange tudo: higienização de cozinhas/banheiros, troca de roupa de cama limpa e limpeza completa de pó/pisos. Entregamos limpeza com qualidade de hotel, trabalhando de forma confiável com sua programação para cumprir prazos apertados de check-in. Nossa equipe verificada prepara meticulosamente seu espaço para cada nova chegada.",
+      "Escolha a SolVida Clean para gerenciar sem esforço a limpeza do seu Airbnb e aumentar a satisfação dos hóspedes em Boston. Oferecemos serviços flexíveis e ecologicamente corretos, dedicados a ajudá-lo a obter avaliações excelentes. Concentre-se em seus aluguéis; nós cuidaremos das viradas impecáveis."
+    ]
+  },
+"postconst": {
+  "title": "Limpeza Pós-Obra",
+  "content": [
+    "Reformas são empolgantes — mas o pó de gesso, serragem, resíduos de cola e entulho podem acabar com essa empolgação. Nosso serviço de limpeza pós-obra foi criado para remover todos os vestígios da construção, deixando o ambiente pronto para uso com conforto e segurança.",
+    "Varremos, aspiramos e passamos pano em todos os pisos; removemos poeira de luminárias, rodapés, janelas e superfícies; limpamos vidros, espelhos e deixamos banheiros e cozinhas brilhando. Etiquetas, respingos de tinta ou silicone? Tudo resolvido.",
+    "Esse serviço é essencial para construtoras, proprietários e imobiliárias que precisam entregar um imóvel impecável. Sua obra finalizada vai brilhar e impressionar já no primeiro olhar."
+  ]
+},
+"moveout": {
+  "title": "Limpeza de Entrada/Saída",
+  "content": [
+    "Mudar de casa é estressante — e limpar o imóvel antigo ou o novo costuma ser a última coisa que você quer enfrentar. Nosso serviço de limpeza de entrada/saída resolve isso por você, permitindo focar totalmente na mudança.",
+    "Esfregamos cada canto: dentro de armários, debaixo de pias, fornos, geladeiras, pisos, paredes e rodapés. Banheiros são desinfetados, cozinhas são limpas a fundo e cada ambiente fica pronto para ser entregue ou ocupado.",
+    "Se você é inquilino querendo garantir o reembolso do depósito ou um proprietário preparando o local para o próximo morador, esse serviço garante uma entrega impecável e sem preocupações."
+  ]
+},
+  "header": {
+    "serviceAreas": "Áreas de Atendimento"
+
+},
+  "serviceAreas": {
+    "title": "Áreas de Atendimento",
+    "headline": "Encontre Serviços de Limpeza Perto de Você",
+    "description": "Digite sua cidade ou selecione da lista para ver se atendemos sua região. Estamos sempre expandindo!",
+    "searchPlaceholder": "Digite o nome da cidade...",
+    "popularTitle": "Cidades Populares",
+    "popularDescription": "Acesso rápido às localidades mais solicitadas.",
+    "served": "Atendido",
+    "notServed": "Não Atendido",
+    "notServedNote": "Se sua área não é atendida, por favor <a href='/contact' class='underline text-[#00BFA6] font-semibold'>entre em contato</a>. Podemos ajudar você!",
+    "cardServed": "Atendemos esta área! Clique para obter um orçamento gratuito.",
+    "cardNotServed": "Atualmente não atendido. Solicite nosso serviço em sua cidade!"
+  },
+  "contactPage": {
+    "headline": "Contate-nos Hoje Para Obter Sua Cotação Gratuita",
+    "getInTouch": "Entre em Contato",
+    "connectWithUs": "Conecte-se Conosco",
+        "features": {
+      "businessHours": {
+        "title": "Horário Comercial",
+        "monFri": "Seg-Sex: 7 AM – 11 PM",
+        "satSun": "Sáb-Dom: 7 AM – 5 PM"
+      },
+      "timeOff": {
+        "title": "Aproveite seu Tempo Livre",
+        "description": "Nós limpamos para que você possa se concentrar no que mais importa, tornando sua vida mais fácil."
+      },
+      "securePayment": {
+        "title": "Pagamento Seguro e Fácil",
+        "description": "Opções sem dinheiro, convenientes e sem preocupações para sua tranquilidade."
+      },
+      "alwaysInTouch": {
+        "title": "Sempre em Contato",
+        "description": "Entre em contato conosco a qualquer momento por telefone, mensagem de texto ou e-mail para assistência imediata."
+       }
+    }
+  },
+  "banner": {
+    "mainHeadline": "Receba Seu Orçamento em Menos de 2 Horas!",
+    "subHeadline": "Experimente Nosso Serviço Rápido e Confiável.",
+    "timeGuarantee": "Orçamento em 2 Horas Garantido",
+    "hours": "Horário Comercial",
+    "satisfactionGuarantee": "100% Satisfação",
+    "satisfactionText": "Resultados Garantidos",
+    "qualityGuarantee": "Qualidade Premium",
+    "qualityText": "Cada Limpeza, Sempre"
+   
+  },
+  "quotePage": {
+    "heading": "Solicitar uma Estimativa Gratuita",
+    "mainHeading": "Obtenha Seu Orçamento Gratuito em 2 Horas",
+    "progressSteps": {
+      "fillForm": "Preencher Formulário",
+      "getQuote": "Obter Orçamento", 
+      "bookService": "Reservar Serviço"
+    },
+    "trustIndicators": {
+      "licensedInsured": "Licenciado e Segurado",
+      "backgroundChecked": "Verificado de Antecedentes",
+      "fiveStarRated": "Avaliado com 5 Estrelas"
+    },
+    "scrollIndicator": "Saiba mais sobre nossos serviços",
+    "benefitsSection": {
+      "title": "Por que Escolher a SolVida Clean?",
+      "guarantee": {
+        "title": "Garantia de Orçamento em 2 Horas",
+        "description": "Obtenha seu orçamento personalizado em 2 horas ou sua próxima limpeza terá 20% de desconto"
+      },
+      "satisfaction": {
+        "title": "100% de Satisfação Garantida", 
+        "description": "Não está satisfeito? Vamos resolver ou devolvemos seu dinheiro"
+      },
+      "rated": {
+        "title": "Serviço Avaliado com 5 Estrelas",
+        "description": "Confiado por mais de 500 famílias na área de Boston"
+      }
+    },
+    "testimonials": {
+      "title": "O que Nossos Clientes Dizem",
+      "items": [
+        {
+          "text": "Recebi meu orçamento em 1 hora! Serviço incrível.",
+          "author": "Sarah M.",
+          "rating": 5
+        },
+        {
+          "text": "Profissional, rápido e confiável. Altamente recomendado!",
+          "author": "Mike R.", 
+          "rating": 5
+        },
+        {
+          "text": "O melhor serviço de limpeza que já usei.",
+          "author": "Lisa K.",
+          "rating": 5
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Pronto para Começar?",
+      "description": "Não espere - obtenha seu orçamento gratuito agora e experimente a diferença!",
+      "button": "Obtenha Seu Orçamento Gratuito Agora"
+    }
+  },
+  "howItWorks": {
+    "header": "Como Funciona a SolVida Clean",
+    "subheader": "Serviço de limpeza simples, confiável e sem estresse em apenas três etapas",
+    "bookTitle": "Agendar",
+    "bookCaption": "Escolha a data e estaremos lá, pontualmente.",
+    "cleanTitle": "Limpar",
+    "cleanCaption": "Nossos especialistas trazem o brilho — cômodo por cômodo.",
+    "relaxTitle": "Relaxe",
+    "relaxCaption": "Respire aliviado em seu espaço recém-limpo.",
+    "cta": "Comece Agora",
+    "customizeOptions": {
+      "standard": "Padrão",
+      "kitchen": "Cozinha",
+      "bathroom": "Banheiro",
+      "livingRoom": "Sala de Estar",
+      "refrigerator": "Geladeira",
+      "bedroom": "Quarto",
+      "askProvider": "Pergunte ao seu Profissional"
+    }
+  },
+  "ourServices": {
+    "tabs": {
+      "specialities": "Nossas Especialidades",
+      "residential": "Limpeza Residencial",
+      "commercial": "Limpeza Comercial"
+    }
+  },
+  "quoteBanner": {
+    "guarantee": "✨ Garantia de Orçamento Rápido! ✨",
+    "within": "Em até 2 horas",
+    "or": "ou sua próxima limpeza será",
+    "discount": "20% OFF"
+  },
+  "hero": {
+    "fiveStarRated": "Avaliado com 5 Estrelas",
+    "premiumQuality": "Qualidade Premium",
+    "noHiddenFees": "Sem Taxas Ocultas",
+    "bookAnytime": "Agende a Qualquer Hora"
+  },
+  "reasonsToLove": {
+    "title": "Razões para Amar o SolVida",
+    "headline": "Por que Escolher o SolVida?",
+    "subtitle": "Serviços de limpeza profissionais que transformam seus espaços de vida e melhoram sua paz de espírito",
+    "trustedCleaners": {
+      "title": "Limpadores Confiáveis e Verificados",
+      "description": "No SolVida você encontrará apenas os melhores e mais confiáveis limpadores. Todos os limpadores são rigorosamente verificados por nós. Membros honestos e confiáveis que ficaríamos felizes em ter limpando nossa casa."
+    },
+    "customerRecommended": {
+      "title": "Recomendado pelos Clientes",
+      "description": "Os limpadores do SolVida são continuamente avaliados após cada limpeza pelos nossos clientes. Todos os limpadores devem manter altas avaliações para permanecer em nossa plataforma."
+    },
+    "trustAndSafety": {
+      "title": "Compromisso com Confiança e Segurança",
+      "description": "Sua casa é seu santuário. Estamos comprometidos em fornecer uma experiência de limpeza confiável, segura e segura."
+    },
+    "easyStart": {
+      "title": "Fácil de Começar",
+      "description": "Basta ir ao nosso site e nos contar suas informações relevantes e o tamanho da sua casa, apartamento ou residência. Com nosso processo de reserva perfeito, o SolVida irá conectá-lo aos melhores serviços de limpeza doméstica."
+    },
+    "cta": {
+      "title": "Como Começar",
+      "description": "Basta ir ao nosso site e nos contar suas informações relevantes e o tamanho da sua casa, apartamento ou residência. Com nosso processo de reserva perfeito, o SolVida irá conectá-lo aos melhores serviços de limpeza doméstica para ajudar com sua agenda ocupada.",
+      "getQuote": "Obtenha Orçamento Agora",
+      "exploreServices": "Explore Nossos Serviços"
+    },
+    "trustedService": "Serviço Confiável"
+  },
+  "floorPlan": {
+    "headline": "Limpar sua casa é muito importante para nós.",
+    "title": "Planta do Apartamento",
+    "rooms": {
+      "livingRoom": "Sala de Estar",
+      "kitchen": "Cozinha",
+      "bathroom": "Banheiro",
+      "masterBedroom": "Quarto Principal",
+      "secondBedroom": "Segundo Quarto"
+    },
+    "clickHint": "💡 Clique em qualquer cômodo para ver informações detalhadas e serviços de limpeza",
+    "services": {
+      "title": "Serviços de Limpeza:",
+      "items": [
+        "Móveis estofados aspirados",
+        "Almofadas e travesseiros afofados e endireitados",
+        "Ventiladores de teto desempolvados (restrições de altura se aplicam)",
+        "Lâmpadas limpas e abajures desempolvados",
+        "Molduras de quadros desempolvadas",
+        "Móveis desempolvados - em cima, na frente e embaixo",
+        "Pisos de madeira aspirados e/ou lavados",
+        "Pisos de azulejo aspirados e/ou lavados",
+        "Corredores e escadas aspirados e/ou lavados",
+        "Carpetes aspirados",
+        "Peitoris de janelas limpos (persianas desempolvadas mediante solicitação)",
+        "Rodapés desempolvados",
+        "Impressões digitais removidas de toda a madeira, molduras de portas e placas de interruptores",
+        "Lixo esvaziado"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "headline": "Como podemos ajudá-lo?",
+    "subtitle": "Encontre respostas para as perguntas mais comuns sobre nossos serviços de limpeza. Não encontrou o que procura?",
+    "contactLink": "Entre em contato conosco",
+    "contactLinkText": "diretamente.",
+    "trustIndicators": {
+      "fiveStar": {
+        "title": "Avaliado com 5 Estrelas",
+        "description": "Confiado por 500+ famílias"
+      },
+      "guarantee": {
+        "title": "100% Garantido",
+        "description": "Satisfação ou devolução do dinheiro"
+      },
+      "quote": {
+        "title": "Orçamento em 2 Horas",
+        "description": "Resposta rápida garantida"
+      }
+    },
+    "cta": {
+      "title": "Ainda tem perguntas?",
+      "description": "Nossa equipe amigável está aqui para ajudá-lo com qualquer pergunta específica sobre nossos serviços, preços ou agendamento. Estamos a apenas uma mensagem de distância!",
+      "contactButton": "Entre em Contato",
+      "quoteButton": "Obtenha Orçamento Gratuito"
+    },
+    "questions": {
+      "howItWorks": {
+        "question": "Como funciona o SolVida?",
+        "answer": "O SolVida torna o agendamento de uma limpeza doméstica simples e sem complicações. Basta escolher seu serviço, obter um orçamento instantâneo e reservar sua consulta online. Cuidamos do resto, usando produtos ecológicos e profissionais confiáveis."
+      },
+      "worthIt": {
+        "question": "Vale a pena contratar um serviço de limpeza?",
+        "answer": "Absolutamente. Um serviço de limpeza economiza tempo e estresse, garantindo que sua casa permaneça fresca, saudável e brilhante. Com o SolVida, você também está apoiando práticas verdes que são mais seguras para animais de estimação e famílias."
+      },
+      "getQuote": {
+        "question": "Como obtemos um orçamento?",
+        "answer": "Visite nosso site e preencha nosso formulário de orçamento rápido. Basta inserir os detalhes da sua casa e preferências — daremos a você um preço instantâneo e transparente sem surpresas."
+      },
+      "whatsIncluded": {
+        "question": "O que está incluído em uma limpeza de taxa fixa?",
+        "answer": "Nossas limpezas de taxa fixa cobrem todas as áreas essenciais: cozinha, banheiros, quartos, áreas de estar e superfícies. Também incluímos desempolvar, aspirar, esfregar e remoção de lixo — sempre usando produtos não tóxicos e seguros para a família."
+      },
+      "supplies": {
+        "question": "Vocês trazem suprimentos?",
+        "answer": "Sim! Nossa equipe traz todos os suprimentos e equipamentos necessários, incluindo produtos ecológicos e hipoalergênicos. Não há necessidade de se preocupar com nada."
+      },
+      "greenCleaning": {
+        "question": "Vocês oferecem Limpeza Verde?",
+        "answer": "Sim — é nosso padrão! Todas as nossas limpezas são verdes por padrão. Usamos produtos biodegradáveis e não tóxicos que são seguros para o meio ambiente, sua família e seus animais de estimação."
+      },
+      "payment": {
+        "question": "Quais métodos de pagamento vocês aceitam?",
+        "answer": "Aceitamos todos os principais cartões de crédito e débito. Por segurança e simplicidade, o pagamento é processado com segurança online — não há necessidade de lidar com dinheiro ou cheques."
+      },
+      "cost": {
+        "question": "Quanto custa?",
+        "answer": "Os preços variam dependendo do tamanho e condição da sua casa. Use nossa ferramenta de orçamento para uma estimativa precisa e sem compromisso em menos de 60 segundos."
+      },
+      "problem": {
+        "question": "E se houver um problema?",
+        "answer": "Sua satisfação é nossa prioridade. Se algo não estiver certo, nos avise dentro de 24 horas e corrigiremos — seja uma nova limpeza ou outra solução."
+      },
+      "refund": {
+        "question": "Posso obter um reembolso?",
+        "answer": "Defendemos nossa qualidade. Se nossa limpeza não atendeu às suas expectativas, avaliaremos a situação e ofereceremos uma nova limpeza ou um reembolso — sem perguntas."
+      },
+      "cancellation": {
+        "question": "Há uma taxa de cancelamento?",
+        "answer": "Oferecemos agendamento flexível. Basta cancelar ou reagendar pelo menos 24 horas antes da sua consulta — sem taxa alguma. Cancelamentos no mesmo dia podem incorrer em uma pequena taxa."
+      },
+      "beHome": {
+        "question": "Preciso estar em casa?",
+        "answer": "De jeito nenhum. Muitos de nossos clientes preferem fornecer instruções e acesso de entrada antecipadamente. Sua segurança e privacidade são sempre respeitadas."
+      },
+      "howManyCleaners": {
+        "question": "Quantos limpadores vêm?",
+        "answer": "Geralmente enviamos um ou dois profissionais dependendo do tamanho da sua casa e tipo de serviço. Todos são treinados, verificados e altamente avaliados."
+      },
+      "whenCharged": {
+        "question": "Quando meu cartão é cobrado?",
+        "answer": "Cobramos seu cartão apenas após o serviço ser concluído — nunca antes. Você receberá uma confirmação por e-mail e recibo imediatamente após."
+      },
+      "tipping": {
+        "question": "Devo dar gorjeta?",
+        "answer": "A gorjeta nunca é obrigatória, mas sempre é apreciada por um excelente serviço. Você pode dar gorjeta em dinheiro ou solicitar para adicioná-la à sua fatura."
+      },
+      "whatNotClean": {
+        "question": "O que vocês não limpam?",
+        "answer": "Por razões de segurança, evitamos limpeza de biohazard, situações de acumulação, remediação de mofo e trabalho pesado ao ar livre. Se você não tem certeza, apenas pergunte."
+      },
+      "sameCleaner": {
+        "question": "Posso solicitar o mesmo limpador?",
+        "answer": "Sim, tentamos acomodar solicitações recorrentes sempre que possível. A consistência nos ajuda a servi-lo melhor — apenas nos informe sua preferência."
+      },
+      "feedback": {
+        "question": "Como posso deixar feedback?",
+        "answer": "Adoramos ouvir de você! Após sua limpeza, você receberá um e-mail de acompanhamento onde pode avaliar sua experiência e compartilhar feedback diretamente."
+      }
+    }
+  },
+  "floorPlan": {
+    "headline": "Limpar sua casa é muito importante para nós.",
+    "title": "Planta do Apartamento",
+    "rooms": {
+      "livingRoom": "Sala de Estar",
+      "kitchen": "Cozinha",
+      "bathroom": "Banheiro",
+      "masterBedroom": "Quarto Principal",
+      "secondBedroom": "Segundo Quarto"
+    },
+    "clickHint": "💡 Clique em qualquer cômodo para ver informações detalhadas e serviços de limpeza",
+    "getQuoteButton": "Obtenha um Orçamento Gratuito Hoje",
+    "roomDescriptions": {
+      "livingRoom": "Sala de estar moderna com assentos confortáveis e iluminação natural.",
+      "kitchen": "Cozinha totalmente equipada com eletrodomésticos modernos e área de jantar.",
+      "bathroom": "Banheiro limpo e moderno com todas as comodidades.",
+      "masterBedroom": "Quarto principal espaçoso com área de trabalho e armazenamento.",
+      "secondBedroom": "Segundo quarto confortável com área de hobby para telescópio."
+    },
+    "roomAreas": {
+      "livingRoom": "250 m²",
+      "kitchen": "200 m²",
+      "bathroom": "80 m²",
+      "masterBedroom": "200 m²",
+      "secondBedroom": "180 m²"
+    },
+    "services": {
+      "title": "Serviços de Limpeza:",
+      "livingRoom": [
+        "Móveis estofados aspirados",
+        "Almofadas e travesseiros afofados e endireitados",
+        "Ventiladores de teto desempolvados (restrições de altura se aplicam)",
+        "Lâmpadas limpas e abajures desempolvados",
+        "Molduras de quadros desempolvadas",
+        "Móveis desempolvados - em cima, na frente e embaixo",
+        "Pisos de madeira aspirados e/ou lavados",
+        "Pisos de azulejo aspirados e/ou lavados",
+        "Corredores e escadas aspirados e/ou lavados",
+        "Carpetes aspirados",
+        "Peitoris de janelas limpos (persianas desempolvadas mediante solicitação)",
+        "Rodapés desempolvados",
+        "Impressões digitais removidas de toda a madeira, molduras de portas e placas de interruptores",
+        "Lixo esvaziado"
+      ],
+      "kitchen": [
+        "Exteriores dos eletrodomésticos limpos (interiores mediante solicitação)",
+        "Microondas exterior/interior limpo",
+        "Mesas e cadeiras limpas",
+        "Bancadas e azulejos desinfetados",
+        "Frentes dos armários limpas",
+        "Pias esfregadas e desinfetadas (pratos mediante solicitação)",
+        "Piso aspirado e/ou lavado",
+        "Peitoris de janelas limpos (persianas desempolvadas mediante solicitação)",
+        "Rodapés desempolvados",
+        "Impressões digitais removidas de toda a madeira, molduras de portas e placas de interruptores",
+        "Lixo esvaziado"
+      ],
+      "bathroom": [
+        "Azulejos da banheira e chuveiro esfregados, desinfetados e enxaguados",
+        "Vasos sanitários desinfetados por dentro e por fora",
+        "Acessórios cromados limpos e brilhantes",
+        "Toalhas penduradas e dobradas ordenadamente",
+        "Bancadas desinfetadas",
+        "Frente do armário limpa",
+        "Pias esfregadas e desinfetadas",
+        "Pisos aspirados e/ou lavados",
+        "Peitoris de janelas limpos (persianas desempolvadas mediante solicitação)",
+        "Rodapés desempolvados",
+        "Lixo esvaziado",
+        "Espelhos limpos"
+      ],
+      "masterBedroom": [
+        "Camas arrumadas (roupas de cama trocadas mediante solicitação)",
+        "Lâmpadas limpas e abajures desempolvados",
+        "Molduras de quadros desempolvadas",
+        "Móveis desempolvados - em cima, na frente e embaixo",
+        "Pisos aspirados e/ou lavados (sob a cama se acessível)",
+        "Peitoris de janelas limpos (persianas desempolvadas mediante solicitação)",
+        "Rodapés desempolvados",
+        "Impressões digitais removidas de toda a madeira, molduras de portas e placas de interruptores",
+        "Lixo esvaziado",
+        "Espelhos limpos"
+      ],
+      "secondBedroom": [
+        "Camas arrumadas (roupas de cama trocadas mediante solicitação)",
+        "Lâmpadas limpas e abajures desempolvados",
+        "Molduras de quadros desempolvadas",
+        "Móveis desempolvados - em cima, na frente e embaixo",
+        "Pisos aspirados e/ou lavados (sob a cama se acessível)",
+        "Peitoris de janelas limpos (persianas desempolvadas mediante solicitação)",
+        "Rodapés desempolvados",
+        "Impressões digitais removidas de toda a madeira, molduras de portas e placas de interruptores",
+        "Lixo esvaziado",
+        "Espelhos limpos"
+      ]
+    }
+  },
+  "servicesOverview": {
+    "popularServicesTitle": "SERVIÇOS POPULARES QUE OFERECEMOS",
+    "bostonServiceAreasTitle": "ÁREAS DE SERVIÇO EM BOSTON",
+    "suburbsTitle": "SUBÚRBIOS QUE ATENDEMOS",
+    "popularServices": [
+      "Limpeza de Escritórios Comerciais Boston",
+      "Aluguel de Férias",
+      "Organização Residencial", 
+      "Limpeza Pós-Reforma",
+      "Limpeza Ecológica Verde",
+      "Limpeza de Rotatividade Airbnb",
+      "Limpeza de Mudança",
+      "Limpeza Profunda",
+      "Limpeza Regular",
+      "Limpeza de Janelas e Persianas"
+    ],
+    "bostonAreas": [
+      "South End", "Back Bay", "South Boston", "Allston", "Bay Village", "Beacon Hill", 
+      "Brighton", "Charlestown", "Chinatown", "Dorchester", "Downtown", "East Boston", 
+      "Fenway-Kenmore", "Hyde Park", "Jamaica Plain", "Mattapan", "Mission Hill", 
+      "North End", "Roslindale", "Roxbury", "West End", "West Roxbury"
+    ],
+    "suburbs": [
+      { "name": "Brookline", "highlighted": true },
+      { "name": "Cambridge", "highlighted": true },
+      { "name": "Newton", "highlighted": true },
+      { "name": "Lexington", "highlighted": true },
+      { "name": "Belmont", "highlighted": true },
+      { "name": "Arlington", "highlighted": true },
+      { "name": "Wellesley", "highlighted": true },
+      { "name": "Natick", "highlighted": true },
+      { "name": "Needham", "highlighted": true },
+      { "name": "Winchester", "highlighted": true },
+      { "name": "Milton", "highlighted": true },
+      { "name": "Watertown", "highlighted": true },
+      { "name": "Somerville", "highlighted": true },
+      { "name": "Wakefield", "highlighted": false },
+      { "name": "Reading", "highlighted": false },
+      { "name": "Melrose", "highlighted": false },
+      { "name": "Burlington", "highlighted": false },
+      { "name": "Waltham", "highlighted": false },
+      { "name": "Medford", "highlighted": false },
+      { "name": "Norwood", "highlighted": false },
+      { "name": "Braintree", "highlighted": false },
+      { "name": "Framingham", "highlighted": false },
+      { "name": "Quincy", "highlighted": false },
+      { "name": "Dedham", "highlighted": false },
+      { "name": "Woburn", "highlighted": false },
+      { "name": "Malden", "highlighted": false },
+      { "name": "Stoneham", "highlighted": false },
+      { "name": "Wilmington", "highlighted": false },
+      { "name": "Winthrop", "highlighted": false },
+      { "name": "Methuen", "highlighted": false },
+      { "name": "Saugus", "highlighted": false },
+      { "name": "Revere", "highlighted": false },
+      { "name": "Peabody", "highlighted": false },
+      { "name": "Everett", "highlighted": false },
+      { "name": "Lynn", "highlighted": false }
+    ]
+  },
+  "footer": {
+    "brandDescription": "Serviços de Limpeza Residencial e Comercial Confiáveis. Soluções profissionais, confiáveis e ecológicas para seu espaço.",
+    "navigation": "Navegação",
+    "home": "Início",
+    "about": "Sobre",
+    "services": "Serviços",
+    "contact": "Contato",
+    "contactInfo": "Informações de Contato",
+    "phone": "(617) 202-1372",
+    "email": "info@solvidaclean.com",
+    "location": "Boston, MA",
+    "followUs": "Siga-nos",
+    "platformNotice": "© 2025 SolVida Cleaning Service é uma plataforma que conecta profissionais de limpeza independentes com clientes.",
+    "terms": "Termos de Serviço",
+    "privacy": "Política de Privacidade",
+    "sitemap": "Mapa do Site",
+    "seo": {
+      "metaDescription": "SolVida Clean - Serviços profissionais de limpeza residencial e comercial em Boston. Soluções ecológicas e confiáveis. Obtenha seu orçamento gratuito hoje!",
+      "keywords": "serviço de limpeza Boston, limpeza residencial, limpeza comercial, limpeza ecológica, limpadores profissionais, limpeza de casa, serviço de empregada, limpeza profunda, limpeza de mudança, limpeza pós-mudança",
+      "structuredData": {
+        "name": "SolVida Clean",
+        "description": "Serviços profissionais de limpeza residencial e comercial em Boston",
+        "url": "https://solvidaclean.com",
+        "logo": "https://solvidaclean.com/logo.png",
+        "contactPoint": {
+          "telephone": "+1-617-202-1372",
+          "contactType": "atendimento ao cliente",
+          "areaServed": "Boston, MA",
+          "availableLanguage": ["Inglês", "Português", "Espanhol", "Turco"]
+        },
+        "serviceArea": {
+          "name": "Área Metropolitana de Boston",
+          "description": "Atendendo Boston e subúrbios vizinhos com serviços profissionais de limpeza"
+        }
+      }
+    }
+  },
+  "customerReviews": {
+    "title": "O que nossos clientes dizem"
+  }
+}

@@ -1,0 +1,627 @@
+{
+  "services": {
+    "title": "Hizmetlerimiz",
+    "items": [
+      "Ev Temizliği",
+      "Ofis Temizliği",
+      "Derinlemesine Temizlik",
+      "Pencere Temizliği",
+      "İnşaat Sonrası Temizlik",
+      "Taşınma Öncesi/Sonrası Temizlik"
+    ],
+    "descs": {
+      "residential": "Tertemiz ve sağlıklı bir yaşam alanı için profesyonel ev temizliği.",
+      "office": "Temiz ve verimli bir çalışma ortamı için ofis temizliği.",
+      "deep": "Her köşeye ve yüzeye ulaşan kapsamlı derinlemesine temizlik.",
+      "airbnb": "İç ve dış yüzeyler için kristal netliğinde pencere temizliği.",
+      "postconst": "Tozu, kalıntıları ve inşaat sonrası atıkları temizlemek için temizlik.",
+      "moveout": "Sorunsuz bir başlangıç veya teslim için taşınma öncesi/sonrası temizlik."
+    }
+       },
+  "about": {
+    "title": "Hakkımızda",
+    "missionTitle": "Misyonumuz",
+    "missionStatement": "Biz sadece evleri temizlemiyoruz — huzur yaratıyoruz.",
+    "header": "Biz Kimiz",
+    "excellenceTitle": "Yılların Deneyimi",
+    "excellenceDesc": "On yılı aşkın süredir verdiğimiz hizmetle, güvenilirlik, detaylara özen ve müşteri memnuniyetine sarsılmaz bağlılıkla itibar kazandık.",
+    "ecoTitle": "Çevre Dostu & Güvenli",
+    "ecoDesc": "Aileniz, evcil hayvanlarınız ve çevre için güvenli, toksik olmayan ve çevre dostu temizlik ürünleri kullanıyoruz.",
+    "teamTitle": "Profesyonel Ekip",
+    "teamDesc": "Tam eğitimli, sigortalı ve güvenlik kontrolünden geçmiş ekibimiz, her mülke kendi evi gibi yaklaşır ve sürekli kalite ile huzur sağlar.",
+    "valuesTitle": "Temel Değerlerimiz",
+    "valueTrust": "Güven",
+    "valuePunctuality": "Dakiklik",
+    "valueProfessionalism": "Profesyonellik",
+    "valueQuality": "Kalite",
+    "multilingualTitle": "Çok Dilli Hizmet",
+    "multilingualDesc": "Çeşitli topluluğumuza <b><i>İngilizce</i></b>, <b><i>Portekizce</i></b>, <b><i>İspanyolca</i></b> ve <b><i>Türkçe</i></b> dillerinde hizmet veriyoruz — herkes için net iletişim ve kişiselleştirilmiş hizmet sağlıyoruz."
+  },
+  "quoteForm": {
+    "title": "Hemen Teklif Al",
+    "namePlaceholder": "Adınız",
+    "emailPlaceholder": "E-posta Adresiniz",
+    "phonePlaceholder": "Telefon (isteğe bağlı)",
+    "messagePlaceholder": "Ek Notlar veya Talimatlar",
+    "photoLabel": "Fotoğraf Yükle (isteğe bağlı)",
+    "noFileChosen": "Dosya seçilmedi",
+    "submitButton": "Talebi Gönder",
+    "serviceLabel": "Hizmet Seçin",
+    "selectServicePlaceholder": "Bir hizmet seçin...",
+    "customRequestLabel": "Lütfen özel talebinizi açıklayın",
+    "customRequestPlaceholder": "örn: Bahçeyi ve barbekü alanını temizle",
+    "bedroom": "Yatak Odası",
+    "bathroom": "Banyo",
+    "submitting": "Gönderiliyor...",
+    "submit": "Temizlik Talebi Oluştur",
+    "fiveStar": "5 Yıldızlı Hizmet",
+    "trusted": "Güvenilir Temizlikçiler",
+    "guarantee": "%100 Memnuniyet Garantisi",
+    "headline": "Boston’un 1 Numaralı Ev Temizlik ve Hizmet Şirketi",
+    "subheadline": "Hemen temizlik rezervasyonu yapın.",
+    "freeQuoteText": "Bugün ücretsiz teklif alın.",
+    "customService": "Özel hizmet girin",
+    "successMessage": "Fiyat teklifi talebiniz başarıyla gönderildi! Size yakında geri döneceğiz."
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "namePlaceholder": "Adınız",
+    "emailPlaceholder": "E-posta",
+    "messagePlaceholder": "Mesajınız...",
+    "submitButton": "Mesaj Gönder",
+    "introText": "Temizlik ihtiyaçlarınızda size yardımcı olmayı dört gözle bekliyoruz."
+  },
+  "footer": {
+    "copyright": "© 2025 SolVida Clean. Tüm hakları saklıdır.",
+    "contactInfo": "solvidaclean.com | info@solvidaclean.com"
+  },
+  "residential": {
+    "title": "Ev Temizliği",
+    "content": [
+      "Evi gerçekten temiz tutmak, özellikle yoğun bir yaşam tarzınız, çocuklarınız, evcil hayvanlarınız veya beklenmedik misafirleriniz varsa zorlayıcı olabilir. Köşelerde toz birikir, banyolar parlaklığını kaybeder ve mutfaklar hızla yağlı veya dağınık hale gelebilir. Ev temizliği hizmetimiz, bu stresi üzerinizden almak ve yaşam alanınıza kalıcı ferahlık ve netlik kazandırmak için tasarlanmıştır.",
+      "Yüzey temizliğinin çok ötesine geçiyoruz. Eğitimli ekibimiz evinizdeki her odayı — halıların süpürülmesi, parke zeminlerin silinmesi, süpürgeliklerin silinmesi, kapı kollarının dezenfekte edilmesi, muslukların parlatılması ve mobilya ile stor perdelerden tozun giderilmesi dahil — detaylı şekilde temizler. Mutfaklar yağdan arındırılır ve dezenfekte edilir, banyolar fayanslardan armatürlere kadar ovalanır ve yaşam alanları özenle tazelenir. Sert kimyasal kalıntılar bırakmayan, çevre dostu ve çocuklara güvenli ürünler kullanıyoruz.",
+      "İster düzenli bakım, ister tek seferlik bir tazeleme ihtiyacınız olsun, hizmetimiz programınıza ve ihtiyaçlarınıza uyum sağlar. Sıcak bir daireden büyük bir aile evine kadar, hizmetimizi özelleştirerek daha temiz ve sağlıklı bir yaşam tarzını destekleyen sonuçlar sunuyoruz. Yalnızca görünümde değil — yaşam alanınızın hissinde de farkı göreceksiniz."
+    ]
+  },
+  "office": {
+    "title": "Ofis Temizliği",
+    "content": [
+      "Temiz bir ofis yalnızca görünüşle ilgili değildir — doğrudan çalışan sağlığını, odağını ve iş yerinizin müşteriler üzerindeki izlenimini etkiler. Bakımlı bir çalışma alanı üretkenliği artırır, mikrop yayılımını azaltır ve profesyonelliğe verdiğiniz önemi gösterir. Ofis temizliği hizmetimiz, hem imajına hem ekibine değer veren şirketler için tasarlanmıştır.",
+      "Ofisinizin her alanını kapsarız: masalar, toplantı odaları, lobiler, dinlenme alanları, banyolar ve kapı kolları, anahtarlar ve ortak ekipman gibi sık temas edilen yüzeyler. Çöpler alınır, zeminler süpürülür ve silinir, cam yüzeyler iz bırakmadan parlatılır. Çalışmanızı kesintiye uğratmamak için temizlikleri mesai saatleri dışında veya hafta sonları planlayabiliriz.",
+      "Küçük girişimlerden çok katlı kurumsal ofislere kadar, ekibimiz etkili, gizli ve minimum aksama ile çalışmak üzere eğitilmiştir. Günlük, haftalık veya tek seferlik temizlik ihtiyaçlarınızda, ofisinize özel bir plan oluştururuz. Markanızı yansıtan temiz ve profesyonel bir ortam yaratmanıza yardımcı olalım."
+    ]
+  },
+  "deepclean": {
+    "title": "Derinlemesine Temizlik",
+    "content": [
+      "Derin temizlik, alanınızın rutin bakımın ötesine geçmesi gerektiğinde mükemmel bir çözümdür. Zamanla, düzenli temizlikle ulaşılamayan yerlerde kir birikir — cihazların arkası, dolap içleri, derz araları ve mobilya altları gibi. Derinlemesine temizlik hizmetimiz bu göz ardı edilen alanları eski canlılığına kavuşturur.",
+      "Birikmiş yağ, sabun kalıntısı, toz yumakları, kireç ve alerjenlerle endüstriyel ekipmanlar ve toksik olmayan ürünlerle mücadele ederiz. Mutfaklar, banyolar, süpürgelikler, kapılar, ışık düğmeleri — hiçbir detay gözden kaçmaz. Gerçekten tazelenmiş bir ortam için altına, arkasına ve etrafına ulaşırız.",
+      "Bu hizmet; mevsimsel temizlikler, hastalık sonrası hijyen, misafir gelmeden önceki temizlikler veya uzun süre ihmal edilmiş alanlar için idealdir. Düzenli temizlik planlarıyla harika bir uyum sağlar ve hava kalitesinde ve genel konforda gözle görülür bir iyileşme sunar."
+    ]
+  },
+  "airbnb": {
+    "title": "Dönüşümlü Temizlik Hizmetleri",
+    "content": [
+      "SolVida Clean'in özel Airbnb ve kısa süreli kiralık temizlik hizmetleriyle rezervasyonlarınızı ve misafir memnuniyetinizi en üst düzeye çıkarın. Özellikle Boston'da misafirler arasındaki hızlı, verimli ve kusursuz temizliğin kritik önemini anlıyoruz. Profesyonel ekibimiz, mülkünüzün her zaman misafirler için hazır olmasını sağlayarak, size 5 yıldızlı yorumlar ve tekrar rezervasyonlar kazandıracak sürekli pırıl pırıl bir deneyim sunar; böylece siz kirli işlerle değil, listelemelerinizi yönetmeye odaklanabilirsiniz.",
+      "Detaylı hizmetimiz her şeyi kapsar: mutfak/banyo dezenfeksiyonu, taze nevresim değişimi ve kapsamlı toz alma/zemin bakımı. Otel kalitesinde temizlik sunuyor, yoğun giriş çıkış sürelerine uyum sağlamak için programınıza güvenilir bir şekilde çalışıyoruz. Güvenilir ekibimiz, alanınızı her yeni geliş için titizlikle hazırlar.",
+      "Boston'da Airbnb'nizin temizliğini zahmetsizce yönetmek ve misafir memnuniyetini artırmak için SolVida Clean'i seçin. Esnek, çevre dostu hizmetler sunuyor ve olağanüstü yorumlar almanıza yardımcı olmaya adanmış durumdayız. Siz kiralık mülklerinize odaklanın; kusursuz dönüşümleri biz hallederiz."
+    ]
+  },
+  "postconst": {
+    "title": "İnşaat Sonrası Temizlik",
+    "content": [
+      "Tadilat heyecan vericidir — ancak alçı tozu, talaş, yapıştırıcı kalıntıları ve molozlar deneyimi hızla mahvedebilir. İnşaat sonrası temizlik hizmetimiz, işin tüm izlerini silmek için tasarlandı; böylece yeni alanınızın keyfini güvenle ve rahatlıkla çıkarabilirsiniz.",
+      "Tüm zeminleri süpürüyor, vakumluyor ve siliyoruz; havalandırma deliklerinden, ışık armatürlerinden, çıkıntılardan ve yüzeylerden toz alıyoruz; iç camları ve aynaları temizliyor, banyoları ve mutfakları parlatıyoruz. Etiketler, silikon kalıntıları ve ince toz? Hepsi yok edilir.",
+      "Bu hizmet; taşınma, denetim veya teslimata hazırlanan müteahhitler, ev sahipleri ve yöneticiler için kritik önemdedir. Yeni tamamlanmış mülkünüz tertemiz ve sunuma hazır hale gelir."
+    ]
+  },
+  "moveout": {
+    "title": "Taşınma Öncesi / Sonrası Temizlik",
+    "content": [
+      "Taşınmak streslidir — ve eski ya da yeni yerinizi temizlemek genellikle uğraşmak istemeyeceğiniz son şeydir. Taşınma öncesi/sonrası temizlik hizmetimiz bu yükü sizin için üstlenir; böylece geçişinize odaklanabilirsiniz.",
+      "Tüm yüzeyleri ovalarız: dolap ve çekmece içleri, lavabo altları, fırın ve buzdolabı içleri, tüm zeminler, duvarlar ve süpürgelikler. Banyolar dezenfekte edilir, mutfaklar derinlemesine temizlenir ve tüm odalar ferah ve lekesiz bırakılır.",
+      "İster depozitosunu geri almak isteyen bir kiracı olun, ister yeni bir kiracıya hazırlık yapan bir yönetici, bu hizmet yaşam alanının taşınmaya hazır ya da çıkış onaylı olmasını garanti eder."
+    ]
+  },
+  "header": {
+    "serviceAreas": "Hizmet Bölgeleri"
+  },
+  "serviceAreas": {
+    "title": "Hizmet Bölgeleri",
+    "headline": "Size En Yakın Temizlik Hizmetlerini Bulun",
+    "description": "Şehrinizi girin veya listeden seçin, hizmet verip vermediğimizi görün. Sürekli olarak yeni bölgelere açılıyoruz!",
+    "searchPlaceholder": "Şehir adı yazın...",
+    "popularTitle": "Popüler Şehirler",
+    "popularDescription": "En çok talep edilen lokasyonlara hızlı erişim.",
+    "served": "Hizmet Veriliyor",
+    "notServed": "Hizmet Verilmiyor",
+    "notServedNote": "Bölgenize hizmet verilmiyorsa lütfen <a href='/contact' class='underline text-[#00BFA6] font-semibold'>bizimle iletişime geçin</a>. Size yardımcı olabiliriz!",
+    "cardServed": "Bu bölgede hizmet veriyoruz! Ücretsiz teklif almak için tıklayın.",
+    "cardNotServed": "Şu anda hizmet verilmiyor. Şehrinizde hizmet istemek için bize ulaşın!"
+  },
+  "contactPage": {
+    "headline": "Ücretsiz Teklif Almak İçin Bugün Bize Ulaşın",
+    "getInTouch": "İletişime Geçin",
+    "connectWithUs": "Bize Ulaşın",
+        "features": {
+      "businessHours": {
+        "title": "Çalışma Saatleri",
+        "monFri": "Pzt-Cum: 07:00 – 23:00",
+        "satSun": "Cmt-Paz: 07:00 – 17:00"
+      },
+      "timeOff": {
+        "title": "Zamanınız Size Kalsın",
+        "description": "Hayatta en önemli şeylere odaklanabilmeniz için temizliği biz yapıyoruz, hayatınızı kolaylaştırıyoruz."
+      },
+      "securePayment": {
+        "title": "Güvenli ve Kolay Ödeme",
+        "description": "Nakit kullanmadan, uygun ve endişesiz ödeme seçenekleri ile içiniz rahat olsun."
+      },
+      "alwaysInTouch": {
+        "title": "Her Zaman İletişimde",
+        "description": "Hızlı yardım için istediğiniz zaman telefon, mesaj veya e-posta ile bize ulaşabilirsiniz."
+      } 
+    }
+    },
+  "banner": {
+    "mainHeadline": "Teklifinizi 2 Saat İçinde Alın!",
+    "subHeadline": "Hızlı ve Güvenilir Hizmetimizi Deneyimleyin.",
+    "timeGuarantee": "2 Saatlik Teklif Garantisi",
+    "hours": "İş Saatleri İçinde",
+    "satisfactionGuarantee": "%100 Memnuniyet",
+    "satisfactionText": "Garantili Sonuçlar",
+    "qualityGuarantee": "Üstün Kalite",
+    "qualityText": "Her Temizlikte, Her Zaman"
+  },
+  "quotePage": {
+    "heading": "Ücretsiz Tahmin Talep Et",
+    "mainHeading": "2 Saat İçinde Ücretsiz Teklifinizi Alın",
+    "progressSteps": {
+      "fillForm": "Formu Doldur",
+      "getQuote": "Teklif Al", 
+      "bookService": "Hizmet Rezervasyonu"
+    },
+    "trustIndicators": {
+      "licensedInsured": "Lisanslı ve Sigortalı",
+      "backgroundChecked": "Arka Plan Kontrolü Yapılmış",
+      "fiveStarRated": "5 Yıldızlı Değerlendirme"
+    },
+    "scrollIndicator": "Hizmetlerimiz hakkında daha fazla bilgi edinin",
+    "benefitsSection": {
+      "title": "Neden SolVida Clean'i Seçmelisiniz?",
+      "guarantee": {
+        "title": "2 Saatlik Teklif Garantisi",
+        "description": "2 saat içinde kişiselleştirilmiş teklifinizi alın veya bir sonraki temizliğiniz %20 indirimli olsun"
+      },
+      "satisfaction": {
+        "title": "%100 Memnuniyet Garantisi", 
+        "description": "Memnun değil misiniz? Düzeltiriz veya paranızı iade ederiz"
+      },
+      "rated": {
+        "title": "5 Yıldızlı Hizmet",
+        "description": "Boston bölgesinde 500'den fazla aile tarafından güvenilir"
+      }
+    },
+    "testimonials": {
+      "title": "Müşterilerimiz Ne Diyor",
+      "items": [
+        {
+          "text": "Teklifimi 1 saatte aldım! Harika hizmet.",
+          "author": "Sarah M.",
+          "rating": 5
+        },
+        {
+          "text": "Profesyonel, hızlı ve güvenilir. Kesinlikle tavsiye ederim!",
+          "author": "Mike R.", 
+          "rating": 5
+        },
+        {
+          "text": "Kullandığım en iyi temizlik hizmeti.",
+          "author": "Lisa K.",
+          "rating": 5
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Başlamaya Hazır mısınız?",
+      "description": "Beklemeyin - şimdi ücretsiz teklifinizi alın ve farkı deneyimleyin!",
+      "button": "Şimdi Ücretsiz Teklifinizi Alın"
+    }
+  },
+  "howItWorks": {
+    "header": "SolVida Clean Nasıl Çalışır?",
+    "subheader": "Sadece üç kolay adımda basit, güvenilir ve stressiz temizlik hizmeti",
+    "bookTitle": "Rezervasyon",
+    "bookCaption": "Tarihinizi seçin, tam zamanında orada olalım.",
+    "cleanTitle": "Temizlik",
+    "cleanCaption": "Uzmanlarımız her odayı pırıl pırıl yapar.",
+    "relaxTitle": "Rahatlayın",
+    "relaxCaption": "Yeni temizlenmiş alanınızda rahat bir nefes alın.",
+    "cta": "Hemen Başlayın",
+    "customizeOptions": {
+      "standard": "Standart",
+      "kitchen": "Mutfak",
+      "bathroom": "Banyo",
+      "livingRoom": "Oturma Odası",
+      "refrigerator": "Buzdolabı",
+      "bedroom": "Yatak Odası",
+      "askProvider": "Uzmanınıza Sorun"
+    }
+  },
+  "ourServices": {
+    "tabs": {
+      "specialities": "Uzmanlıklarımız",
+      "residential": "Ev Temizliği",
+      "commercial": "Ofis Temizliği"
+    }
+  },
+  "quoteBanner": {
+    "guarantee": "✨ Hızlı Teklif Garantisi! ✨",
+    "within": "2 Saat İçinde",
+    "or": "yoksa bir sonraki temizlik",
+    "discount": "%20 İNDİRİMLİ"
+  },
+  "hero": {
+    "fiveStarRated": "5 Yıldızlı Değerlendirme",
+    "premiumQuality": "Üstün Kalite",
+    "noHiddenFees": "Gizli Ücret Yok",
+    "bookAnytime": "İstediğiniz Zaman Rezervasyon"
+  },
+  "reasonsToLove": {
+    "title": "SolVida'yı Sevmek İçin Nedenler",
+    "headline": "Neden SolVida'yı Seçmelisiniz?",
+    "subtitle": "Profesyonel temizlik hizmetlerimizle yaşam alanlarınızı yenileyin ve huzurunuzu artırın",
+    "trustedCleaners": {
+      "title": "Güvenilir ve Denetlenmiş Temizlikçiler",
+      "description": "SolVida'da sadece en iyi ve en güvenilir temizlikçileri bulacaksınız. Tüm temizlikçilerimiz tarafımızdan kapsamlı şekilde denetlenir. Evimizi temizlemekten mutluluk duyacağımız dürüst ve güvenilir üyeler."
+    },
+    "customerRecommended": {
+      "title": "Müşteri Tarafından Önerilen",
+      "description": "SolVida temizlikçileri her temizlik sonrası müşterilerimiz tarafından sürekli değerlendirilir. Tüm temizlikçiler platformumuzda kalmak için yüksek puanları korumak zorundadır."
+    },
+    "trustAndSafety": {
+      "title": "Güven ve Güvenlik Taahhüdü",
+      "description": "Eviniz sizin sığınağınızdır. Güvenilir, güvenli ve güvenli bir temizlik deneyimi sağlamaya kararlıyız. Her detayda kalite ve güvenlik standartlarımızı koruyoruz."
+    },
+    "easyStart": {
+      "title": "Kolay Başlangıç Süreci",
+      "description": "Web sitemize gidin ve ilgili bilgilerinizi, evinizin, dairenizin veya evinizin ne kadar büyük olduğunu bize söyleyin. Sorunsuz rezervasyon sürecimizle SolVida sizi yoğun programınıza yardımcı olacak en iyi ev temizlik hizmetleriyle bağlayacaktır."
+    },
+    "cta": {
+      "title": "Nasıl Başlayabilirsiniz",
+      "description": "Sadece web sitemize gidin, ilgili bilgilerinizi ve evinizin, dairenizin veya evinizin ne kadar büyük olduğunu bize söyleyin. Sorunsuz rezervasyon sürecimizle SolVida sizi yoğun programınıza yardımcı olacak en iyi ev temizlik hizmetleriyle bağlayacaktır.",
+      "getQuote": "Hemen Teklif Alın",
+      "exploreServices": "Hizmetlerimizi Keşfedin"
+    },
+    "trustedService": "Güvenilir Hizmet"
+  },
+  "floorPlan": {
+    "headline": "Evinizi temizlemek bizim için çok önemli.",
+    "title": "Daire Planı",
+    "rooms": {
+      "livingRoom": "Oturma Odası",
+      "kitchen": "Mutfak",
+      "bathroom": "Banyo",
+      "masterBedroom": "Ana Yatak Odası",
+      "secondBedroom": "İkinci Yatak Odası"
+    },
+    "clickHint": "💡 Detaylı bilgi ve temizlik hizmetleri için herhangi bir odaya tıklayın",
+    "services": {
+      "title": "Temizlik Hizmetleri:",
+      "items": [
+        "Döşemeli mobilyalar elektrik süpürgesi ile temizlendi",
+        "Yastıklar ve minderler kabartıldı ve düzeltildi",
+        "Tavan vantilatörleri tozlandı (yükseklik kısıtlamaları geçerlidir)",
+        "Lambalar temizlendi ve abajurlar tozlandı",
+        "Resim çerçeveleri tozlandı",
+        "Mobilyalar tozlandı - üstte, önde ve altta",
+        "Ahşap zeminler elektrik süpürgesi ile temizlendi ve/veya yıkandı",
+        "Fayans zeminler elektrik süpürgesi ile temizlendi ve/veya yıkandı",
+        "Koridorlar ve merdivenler elektrik süpürgesi ile temizlendi ve/veya yıkandı",
+        "Halılar elektrik süpürgesi ile temizlendi",
+        "Pencere pervazları temizlendi (talebe göre panjurlar tozlandı)",
+        "Taban tahtaları tozlandı",
+        "Tüm ahşap işler, kapı çerçeveleri ve anahtar plakalarından parmak izleri kaldırıldı",
+        "Çöp boşaltıldı"
+      ]
+    }
+  },
+  "faq": {
+    "title": "SSS",
+    "headline": "Size nasıl yardımcı olabiliriz?",
+    "subtitle": "Temizlik hizmetlerimiz hakkında en yaygın soruların cevaplarını bulun. Aradığınızı bulamadınız mı?",
+    "contactLink": "Bizimle iletişime geçin",
+    "contactLinkText": "doğrudan.",
+    "trustIndicators": {
+      "fiveStar": {
+        "title": "5 Yıldızlı",
+        "description": "500+ aile tarafından güvenilir"
+      },
+      "guarantee": {
+        "title": "%100 Garantili",
+        "description": "Memnuniyet veya para iadesi"
+      },
+      "quote": {
+        "title": "2 Saat Teklif",
+        "description": "Hızlı yanıt garantisi"
+      }
+    },
+    "cta": {
+      "title": "Hala sorularınız mı var?",
+      "description": "Dostane ekibimiz hizmetlerimiz, fiyatlandırma veya programlama hakkında herhangi bir özel sorunuzda size yardımcı olmak için burada. Sadece bir mesaj uzaktayız!",
+      "contactButton": "Bize Ulaşın",
+      "quoteButton": "Ücretsiz Teklif Alın"
+    },
+    "questions": {
+      "howItWorks": {
+        "question": "SolVida nasıl çalışır?",
+        "answer": "SolVida ev temizliği planlamasını basit ve zahmetsiz hale getirir. Sadece hizmetinizi seçin, anında teklif alın ve randevunuzu online olarak rezerve edin. Gerisini biz hallediyoruz, çevre dostu ürünler ve güvenilir profesyoneller kullanarak."
+      },
+      "worthIt": {
+        "question": "Temizlik hizmeti kiralamaya değer mi?",
+        "answer": "Kesinlikle. Bir temizlik hizmeti size zaman ve stres tasarrufu sağlar, evinizin taze, sağlıklı ve parlak kalmasını sağlar. SolVida ile ayrıca evcil hayvanlar ve aileler için daha güvenli olan yeşil uygulamaları destekliyorsunuz."
+      },
+      "getQuote": {
+        "question": "Nasıl teklif alırız?",
+        "answer": "Web sitemizi ziyaret edin ve hızlı teklif formumuzu doldurun. Sadece ev detaylarınızı ve tercihlerinizi girin — size sürpriz olmayan anında, şeffaf bir fiyat vereceğiz."
+      },
+      "whatsIncluded": {
+        "question": "Sabit ücretli temizlikte neler dahil?",
+        "answer": "Sabit ücretli temizliklerimiz tüm temel alanları kapsar: mutfak, banyolar, yatak odaları, yaşam alanları ve yüzeyler. Ayrıca toz alma, elektrik süpürgesi, paspaslama ve çöp çıkarma işlemlerini de dahil ediyoruz — her zaman toksik olmayan, aile dostu ürünler kullanarak."
+      },
+      "supplies": {
+        "question": "Malzemeleri siz mi getiriyorsunuz?",
+        "answer": "Evet! Ekibimiz çevre dostu ve hipoalerjenik ürünler dahil tüm gerekli malzemeleri ve ekipmanları getirir. Hiçbir şey için endişelenmenize gerek yok."
+      },
+      "greenCleaning": {
+        "question": "Yeşil temizlik sunuyor musunuz?",
+        "answer": "Evet — bu bizim standardımız! Tüm temizliklerimiz varsayılan olarak yeşildir. Çevre, aileniz ve evcil hayvanlarınız için güvenli olan biyolojik olarak parçalanabilir, toksik olmayan ürünler kullanıyoruz."
+      },
+      "payment": {
+        "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
+        "answer": "Tüm büyük kredi ve banka kartlarını kabul ediyoruz. Güvenlik ve basitlik için ödeme güvenli bir şekilde online olarak işlenir — nakit veya çek ile uğraşmanıza gerek yok."
+      },
+      "cost": {
+        "question": "Ne kadar maliyeti var?",
+        "answer": "Fiyatlar evinizin boyutuna ve durumuna göre değişir. 60 saniyede doğru, yükümlülük gerektirmeyen bir tahmin için teklif aracımızı kullanın."
+      },
+      "problem": {
+        "question": "Bir sorun olursa ne olur?",
+        "answer": "Memnuniyetiniz önceliğimizdir. Herhangi bir şey doğru değilse, 24 saat içinde bize bildirin ve yeniden temizlik veya başka bir çözüm olsun, düzelteceğiz."
+      },
+      "refund": {
+        "question": "Para iadesi alabilir miyim?",
+        "answer": "Kalitemizi destekliyoruz. Temizliğimiz beklentilerinizi karşılamadıysa, durumu değerlendireceğiz ve soru sormadan yeniden temizlik veya para iadesi teklif edeceğiz."
+      },
+      "cancellation": {
+        "question": "İptal ücreti var mı?",
+        "answer": "Esnek programlama sunuyoruz. Randevunuzdan en az 24 saat önce iptal edin veya yeniden planlayın — hiçbir ücret yok. Aynı gün iptalleri küçük bir ücrete tabi olabilir."
+      },
+      "beHome": {
+        "question": "Evde olmam gerekiyor mu?",
+        "answer": "Hiç gerekmiyor. Müşterilerimizin çoğu önceden talimatlar ve giriş erişimi sağlamayı tercih eder. Güvenliğiniz ve gizliliğiniz her zaman saygı görür."
+      },
+      "howManyCleaners": {
+        "question": "Kaç temizlikçi geliyor?",
+        "answer": "Evinizin boyutuna ve hizmet türüne bağlı olarak genellikle bir veya iki profesyonel gönderiyoruz. Hepsi eğitimli, arka plan kontrolü yapılmış ve yüksek puanlıdır."
+      },
+      "whenCharged": {
+        "question": "Kartım ne zaman ücretlendirilir?",
+        "answer": "Kartınızı sadece hizmet tamamlandıktan sonra ücretlendiriyoruz — asla öncesinde değil. Hemen ardından e-posta onayı ve makbuz alacaksınız."
+      },
+      "tipping": {
+        "question": "Bahşiş vermeli miyim?",
+        "answer": "Bahşiş asla gerekli değildir, ancak mükemmel hizmet için her zaman takdir edilir. Nakit olarak bahşiş verebilir veya faturanıza eklenmesini isteyebilirsiniz."
+      },
+      "whatNotClean": {
+        "question": "Ne temizlemiyorsunuz?",
+        "answer": "Güvenlik nedenleriyle, biyolojik tehlike temizliği, istifleme durumları, küf giderme ve ağır dış mekan işlerinden kaçınıyoruz. Emin değilseniz, sadece sorun."
+      },
+      "sameCleaner": {
+        "question": "Aynı temizlikçiyi isteyebilir miyim?",
+        "answer": "Evet, mümkün olduğunda tekrarlayan istekleri karşılamaya çalışıyoruz. Tutarlılık size daha iyi hizmet vermemize yardımcı olur — sadece tercihinizi bize bildirin."
+      },
+      "feedback": {
+        "question": "Nasıl geri bildirim bırakabilirim?",
+        "answer": "Sizden duymayı seviyoruz! Temizliğinizden sonra deneyiminizi değerlendirebileceğiniz ve doğrudan geri bildirim paylaşabileceğiniz bir takip e-postası alacaksınız."
+      }
+    }
+  },
+  "floorPlan": {
+    "headline": "Evinizi temizlemek bizim için çok önemli.",
+    "title": "Daire Planı",
+    "rooms": {
+      "livingRoom": "Oturma Odası",
+      "kitchen": "Mutfak",
+      "bathroom": "Banyo",
+      "masterBedroom": "Ana Yatak Odası",
+      "secondBedroom": "İkinci Yatak Odası"
+    },
+    "clickHint": "💡 Detaylı bilgi ve temizlik hizmetleri için herhangi bir odaya tıklayın",
+    "getQuoteButton": "Bugün Ücretsiz Teklif Alın",
+    "roomDescriptions": {
+      "livingRoom": "Rahat oturma alanları ve doğal aydınlatma ile modern oturma odası.",
+      "kitchen": "Modern cihazlar ve yemek alanı ile tam donanımlı mutfak.",
+      "bathroom": "Tüm olanaklarla temiz ve modern banyo.",
+      "masterBedroom": "Çalışma alanı ve depolama ile geniş ana yatak odası.",
+      "secondBedroom": "Teleskop hobi alanı ile rahat ikinci yatak odası."
+    },
+    "roomAreas": {
+      "livingRoom": "250 m²",
+      "kitchen": "200 m²",
+      "bathroom": "80 m²",
+      "masterBedroom": "200 m²",
+      "secondBedroom": "180 m²"
+    },
+    "services": {
+      "title": "Temizlik Hizmetleri:",
+      "livingRoom": [
+        "Döşemeli mobilyalar elektrik süpürgesi ile temizlendi",
+        "Yastıklar ve minderler kabartıldı ve düzeltildi",
+        "Tavan vantilatörleri tozlandı (yükseklik kısıtlamaları geçerlidir)",
+        "Lambalar temizlendi ve abajurlar tozlandı",
+        "Resim çerçeveleri tozlandı",
+        "Mobilyalar tozlandı - üstte, önde ve altta",
+        "Ahşap zeminler elektrik süpürgesi ile temizlendi ve/veya yıkandı",
+        "Fayans zeminler elektrik süpürgesi ile temizlendi ve/veya yıkandı",
+        "Koridorlar ve merdivenler elektrik süpürgesi ile temizlendi ve/veya yıkandı",
+        "Halılar elektrik süpürgesi ile temizlendi",
+        "Pencere pervazları temizlendi (talebe göre panjurlar tozlandı)",
+        "Taban tahtaları tozlandı",
+        "Tüm ahşap işler, kapı çerçeveleri ve anahtar plakalarından parmak izleri kaldırıldı",
+        "Çöp boşaltıldı"
+      ],
+      "kitchen": [
+        "Cihaz dış yüzeyleri temizlendi (iç yüzeyler talebe göre)",
+        "Mikrodalga dış/iç yüzeyi temizlendi",
+        "Masa ve sandalyeler temizlendi",
+        "Tezgahlar ve fayans desinfekte edildi",
+        "Dolap önleri temizlendi",
+        "Lavabolar ovuldu ve desinfekte edildi (bulaşıklar talebe göre)",
+        "Zemin elektrik süpürgesi ile temizlendi ve/veya yıkandı",
+        "Pencere pervazları temizlendi (talebe göre panjurlar tozlandı)",
+        "Taban tahtaları tozlandı",
+        "Tüm ahşap işler, kapı çerçeveleri ve anahtar plakalarından parmak izleri kaldırıldı",
+        "Çöp boşaltıldı"
+      ],
+      "bathroom": [
+        "Küvet ve duş fayansları ovuldu, desinfekte edildi ve durulandı",
+        "Tuvaletler iç ve dış yüzeyden desinfekte edildi",
+        "Krom armatürler temizlendi ve parlatıldı",
+        "Havlular düzenli asıldı ve katlandı",
+        "Tezgahlar desinfekte edildi",
+        "Dolap önü temizlendi",
+        "Lavabolar ovuldu ve desinfekte edildi",
+        "Zeminler elektrik süpürgesi ile temizlendi ve/veya yıkandı",
+        "Pencere pervazları temizlendi (talebe göre panjurlar tozlandı)",
+        "Taban tahtaları tozlandı",
+        "Çöp boşaltıldı",
+        "Aynalar temizlendi"
+      ],
+      "masterBedroom": [
+        "Yataklar düzenlendi (çamaşırlar talebe göre değiştirildi)",
+        "Lambalar temizlendi ve abajurlar tozlandı",
+        "Resim çerçeveleri tozlandı",
+        "Mobilyalar tozlandı - üstte, önde ve altta",
+        "Zeminler elektrik süpürgesi ile temizlendi ve/veya yıkandı (yatak altı erişilebilirse)",
+        "Pencere pervazları temizlendi (talebe göre panjurlar tozlandı)",
+        "Taban tahtaları tozlandı",
+        "Tüm ahşap işler, kapı çerçeveleri ve anahtar plakalarından parmak izleri kaldırıldı",
+        "Çöp boşaltıldı",
+        "Aynalar temizlendi"
+      ],
+      "secondBedroom": [
+        "Yataklar düzenlendi (çamaşırlar talebe göre değiştirildi)",
+        "Lambalar temizlendi ve abajurlar tozlandı",
+        "Resim çerçeveleri tozlandı",
+        "Mobilyalar tozlandı - üstte, önde ve altta",
+        "Zeminler elektrik süpürgesi ile temizlendi ve/veya yıkandı (yatak altı erişilebilirse)",
+        "Pencere pervazları temizlendi (talebe göre panjurlar tozlandı)",
+        "Taban tahtaları tozlandı",
+        "Tüm ahşap işler, kapı çerçeveleri ve anahtar plakalarından parmak izleri kaldırıldı",
+        "Çöp boşaltıldı",
+        "Aynalar temizlendi"
+      ]
+    }
+  },
+  "servicesOverview": {
+    "popularServicesTitle": "SUNDUĞUMUZ POPÜLER HİZMETLER",
+    "bostonServiceAreasTitle": "BOSTON HİZMET ALANLARI",
+    "suburbsTitle": "HİZMET VERDİĞİMİZ BANLİYÖLER",
+    "popularServices": [
+      "Boston Ticari Ofis Temizliği",
+      "Tatil Kiralama",
+      "Ev Organizasyonu", 
+      "Renovasyon Sonrası Temizlik",
+      "Yeşil Çevre Dostu Temizlik",
+      "Airbnb Devir Temizliği",
+      "Taşınma Temizliği",
+      "Derinlemesine Temizlik",
+      "Düzenli Temizlik",
+      "Pencere ve Stor Perde Temizliği"
+    ],
+    "bostonAreas": [
+      "South End", "Back Bay", "South Boston", "Allston", "Bay Village", "Beacon Hill", 
+      "Brighton", "Charlestown", "Chinatown", "Dorchester", "Downtown", "East Boston", 
+      "Fenway-Kenmore", "Hyde Park", "Jamaica Plain", "Mattapan", "Mission Hill", 
+      "North End", "Roslindale", "Roxbury", "West End", "West Roxbury"
+    ],
+    "suburbs": [
+      { "name": "Brookline", "highlighted": true },
+      { "name": "Cambridge", "highlighted": true },
+      { "name": "Newton", "highlighted": true },
+      { "name": "Lexington", "highlighted": true },
+      { "name": "Belmont", "highlighted": true },
+      { "name": "Arlington", "highlighted": true },
+      { "name": "Wellesley", "highlighted": true },
+      { "name": "Natick", "highlighted": true },
+      { "name": "Needham", "highlighted": true },
+      { "name": "Winchester", "highlighted": true },
+      { "name": "Milton", "highlighted": true },
+      { "name": "Watertown", "highlighted": true },
+      { "name": "Somerville", "highlighted": true },
+      { "name": "Wakefield", "highlighted": false },
+      { "name": "Reading", "highlighted": false },
+      { "name": "Melrose", "highlighted": false },
+      { "name": "Burlington", "highlighted": false },
+      { "name": "Waltham", "highlighted": false },
+      { "name": "Medford", "highlighted": false },
+      { "name": "Norwood", "highlighted": false },
+      { "name": "Braintree", "highlighted": false },
+      { "name": "Framingham", "highlighted": false },
+      { "name": "Quincy", "highlighted": false },
+      { "name": "Dedham", "highlighted": false },
+      { "name": "Woburn", "highlighted": false },
+      { "name": "Malden", "highlighted": false },
+      { "name": "Stoneham", "highlighted": false },
+      { "name": "Wilmington", "highlighted": false },
+      { "name": "Winthrop", "highlighted": false },
+      { "name": "Methuen", "highlighted": false },
+      { "name": "Saugus", "highlighted": false },
+      { "name": "Revere", "highlighted": false },
+      { "name": "Peabody", "highlighted": false },
+      { "name": "Everett", "highlighted": false },
+      { "name": "Lynn", "highlighted": false }
+    ]
+  },
+  "footer": {
+    "brandDescription": "Güvenilir Ev ve Ofis Temizlik Hizmetleri. Alanınız için profesyonel, güvenilir ve çevre dostu temizlik çözümleri.",
+    "navigation": "Gezinme",
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "contactInfo": "İletişim Bilgileri",
+    "phone": "(617) 202-1372",
+    "email": "info@solvidaclean.com",
+    "location": "Boston, MA",
+    "followUs": "Bizi Takip Edin",
+    "platformNotice": "© 2025 SolVida Cleaning Service, bağımsız temizlik profesyonellerini müşterilerle bağlayan bir platformdur.",
+    "terms": "Hizmet Şartları",
+    "privacy": "Gizlilik Politikası",
+    "sitemap": "Site Haritası",
+    "seo": {
+      "metaDescription": "SolVida Clean - Boston'da profesyonel ev ve ofis temizlik hizmetleri. Çevre dostu ve güvenilir çözümler. Bugün ücretsiz teklif alın!",
+      "keywords": "Boston temizlik hizmeti, ev temizliği, ofis temizliği, çevre dostu temizlik, profesyonel temizlikçiler, ev temizliği, hizmetçi hizmeti, derinlemesine temizlik, taşınma temizliği, taşınma sonrası temizlik",
+      "structuredData": {
+        "name": "SolVida Clean",
+        "description": "Boston'da profesyonel ev ve ofis temizlik hizmetleri",
+        "url": "https://solvidaclean.com",
+        "logo": "https://solvidaclean.com/logo.png",
+        "contactPoint": {
+          "telephone": "+1-617-202-1372",
+          "contactType": "müşteri hizmetleri",
+          "areaServed": "Boston, MA",
+          "availableLanguage": ["İngilizce", "Türkçe", "Portekizce", "İspanyolca"]
+        },
+        "serviceArea": {
+          "name": "Boston Metropol Alanı",
+          "description": "Boston ve çevre banliyölere profesyonel temizlik hizmetleri sunuyoruz"
+        }
+      }
+    }
+  },
+  "customerReviews": {
+    "title": "Müşterilerimiz ne diyor"
+  }
+}

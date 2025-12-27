@@ -1,0 +1,47 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function - sadece oturum açılmış kullanıcılar
+    function isSignedIn() { 
+      return request.auth != null; 
+    }
+
+    // Quotes collection
+    match /quotes/{id} {
+      // Public read - müşteriler appointment oluştururken quote bilgilerine ihtiyaç duyuyor
+      allow read: if true;
+      // Sadece admin yazabilir
+      allow write: if isSignedIn();
+    }
+
+    // Appointments collection
+    match /appointments/{id} {
+      // Admin appointment'ları okuyabilir
+      allow read: if isSignedIn();
+      
+      // Müşteriler appointment oluşturabilir (login olmadan)
+      // Sadece gerekli alanları kontrol et
+      allow create: if request.resource.data.keys().hasAll(['customerName', 'customerEmail', 'preferredDate', 'preferredTime', 'status'])
+                    && request.resource.data.status == 'pending'
+                    && request.resource.data.customerEmail is string
+                    && request.resource.data.customerName is string;
+      
+      // Sadece admin güncelleyebilir/silebilir
+      allow update, delete: if isSignedIn();
+    }
+
+    // AppointmentSettings collection
+    match /appointmentSettings/{id} {
+      // Public read - müşteriler available slot'ları görebilmeli
+      allow read: if true;
+      
+      // Sadece admin yazabilir
+      allow write: if isSignedIn();
+    }
+
+    // Diğer her şey kapalı
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

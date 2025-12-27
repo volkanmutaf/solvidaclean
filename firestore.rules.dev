@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // DEVELOPMENT ONLY - Tüm collection'lara tam erişim
+    // ⚠️ PRODUCTION'DA KULLANMAYIN!
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+

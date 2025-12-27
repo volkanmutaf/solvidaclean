@@ -1,0 +1,612 @@
+{
+  "services": {
+    "title": "Our Services",
+    "items": [
+      "Residential Cleaning",
+      "Office Cleaning",
+      "Deep Cleaning",
+      "Turnaround Cleaning Services",
+      "Post-Construction Cleaning",
+      "Move-In/Move-Out Cleaning"
+    ],
+    "descs": {
+      "residential": "Professional home cleaning for a fresh, healthy living space.",
+      "office": "Office cleaning to maintain a clean and productive work environment.",
+      "deep": "Thorough deep cleaning that reaches every corner and surface.",
+      "airbnb": "Rapid, spotless cleaning for your rental turnovers, ensuring instant guest readiness.",
+      "postconst": "Post-construction cleanup to remove dust, debris, and residue.",
+      "moveout": "Move-in/out cleaning for a spotless start or smooth handover."
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "missionTitle": "Our Mission",
+    "missionStatement": "We don't just clean homes — we create peace of mind.",
+    "header": "Who We Are",
+    "excellenceTitle": "Years of Excellence",
+    "excellenceDesc": "With over a decade of dedicated service, we've built our reputation on reliability, attention to detail, and unwavering commitment to customer satisfaction.",
+    "ecoTitle": "Eco-Friendly & Safe",
+    "ecoDesc": "We use only non-toxic, eco-conscious cleaning products that are safe for your family, pets, and the environment while delivering exceptional results.",
+    "teamTitle": "Professional Team",
+    "teamDesc": "Our fully trained, insured, and background-checked team treats every property as if it were their own, ensuring consistent quality and peace of mind.",
+    "valuesTitle": "Our Core Values",
+    "valueTrust": "Trust",
+    "valuePunctuality": "Punctuality",
+    "valueProfessionalism": "Professionalism",
+    "valueQuality": "Quality",
+    "multilingualTitle": "Multilingual Service",
+    "multilingualDesc": "We proudly serve our diverse community in <b><i>English</i></b>, <b><i>Portuguese</i></b>, <b><i>Spanish</i></b>, and <b><i>Turkish</i></b> — ensuring clear communication and personalized service for everyone."
+  },
+  "quoteForm": {
+    "title": "Get a Free Quote",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Your Email",
+    "phonePlaceholder": "Phone (optional)",
+    "messagePlaceholder": "Additional Notes or Instructions",
+    "photoLabel": "Upload a photo",
+    "noFileChosen": "No file chosen",
+    "submitButton": "Submit Request",
+    "serviceLabel": "Select a Service",
+    "selectServicePlaceholder": "Choose a service... ",
+    "customRequestLabel": "Describe your request",
+    "customRequestPlaceholder": "e.g., Clean patio and BBQ area",
+    "bedroom": "Bedroom",
+    "bathroom": "Bathroom",
+    "submitting": "Submitting...",
+    "submit": "Get a cleaner now",
+    "fiveStar": "5 Star Rated Service",
+    "trusted": "Trusted Cleaners",
+    "guarantee": "100% Guarantee",
+    "headline": "Your #1 Boston House Cleaning\n& Maid Service",
+    "subheadline": "Book a cleaning instantly.",
+    "freeQuoteText": "Get a free quote today.",
+    "customService": "Enter custom service",
+    "successMessage": "Your quote request has been sent successfully! We will get back to you soon.",
+    "optional": "optional"  
+  },
+  "contact": {
+    "title": "Contact Us",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "Email",
+    "messagePlaceholder": "Your message...",
+    "submitButton": "Send Message",
+    "introText": "We are looking forward to helping you with your cleaning needs."
+  },
+  "footer": {
+    "copyright": "© 2025 SolVida Clean. All rights reserved.",
+    "contactInfo": "solvidaclean.com | info@solvidaclean.com"
+  },
+  "residential": {
+    "title": "Residential Cleaning",
+    "content": [
+      "Keeping a home truly clean can be overwhelming — especially with a busy lifestyle, kids, pets, or unexpected guests. Dust builds up in corners, bathrooms lose their shine, and kitchens can quickly feel greasy or cluttered. Our residential cleaning service is designed to take that stress off your shoulders and bring lasting freshness and clarity to your living space.",
+      "We go far beyond surface cleaning. Our trained team handles every room in your home — vacuuming carpets, mopping hardwood floors, wiping baseboards, disinfecting door handles, polishing faucets, and eliminating dust from furniture and blinds. Kitchens are degreased and sanitized, bathrooms are scrubbed from tiles to fixtures, and living spaces are refreshed with care. We use eco-conscious, child-safe products that clean effectively without leaving harsh chemical traces.",
+      "Whether you need regular upkeep or a one-time refresh, our service adapts to your schedule and needs. From cozy apartments to large family homes, we customize our work to deliver results that support a cleaner, healthier lifestyle. You’ll notice the difference not only in how your space looks — but in how it feels to live in it."
+    ]
+  },
+  "office": {
+    "title": "Office Cleaning",
+    "content": [
+      "Maintaining a clean office isn't just about appearance — it directly impacts employee health, focus, and the impression your business leaves on clients. A well-maintained workspace promotes productivity, reduces the spread of germs, and shows that you value professionalism. Our office cleaning service is designed for companies that care about their image and their team.",
+      "We cover every area of your office: desks, meeting rooms, lobbies, break rooms, bathrooms, and high-touch surfaces like doorknobs, switches, and shared equipment. Trash is removed, floors are vacuumed and mopped, and glass surfaces are polished to a streak-free shine. We can schedule cleanings after hours or on weekends to avoid disrupting your workflow.",
+      "From small startups to multi-floor corporate offices, our team is trained to work efficiently, discreetly, and with minimal disruption. Whether you need daily, weekly, or one-time cleanings, we’ll create a plan tailored to your workspace. Let us help you create a clean, professional environment that reflects your brand."
+    ]
+  },
+  "deepclean": {
+    "title": "Deep Cleaning",
+    "content": [
+      "Deep cleaning is perfect when your space needs more than routine upkeep. Over time, dirt builds up in places that regular cleaning misses — behind appliances, inside cabinets, on grout lines, and under furniture. Our deep cleaning service restores those forgotten spaces and brings your environment back to life.",
+      "We tackle built-up grease, soap scum, dust bunnies, limescale, and allergens with industrial-grade tools and non-toxic products. Kitchens, bathrooms, baseboards, doors, light switches — nothing is overlooked. We go under, behind, and around to ensure a truly refreshed space.",
+      "This service is ideal for seasonal resets, post-sickness sanitation, before guests arrive, or after long periods of neglect. It pairs well with regular cleaning plans and delivers a noticeable upgrade in air quality and overall comfort."
+    ]
+  },
+  "airbnb": {
+    "title": "Turnaround Cleaning Services",
+    "content": [
+      "Maximize your bookings and guest satisfaction with SolVida Clean's specialized Airbnb and short-term rental cleaning services. We understand the critical importance of a fast, efficient, and impeccably clean turnover between guests, especially here in Boston. Our professional team ensures your property is always guest-ready, providing a consistently sparkling experience that earns you 5-star reviews and repeat bookings, allowing you to focus on managing your listings, not the grime.",
+      "Our detailed service covers everything: sanitizing kitchens/bathrooms, fresh linen changes, and thorough dusting/flooring care. We deliver hotel-quality cleanliness, working reliably with your schedule to meet tight check-in deadlines. Our vetted team meticulously prepares your space for every new arrival.",
+      "Choose SolVida Clean to effortlessly manage your Airbnb's cleanliness and enhance guest satisfaction in Boston. We offer flexible, eco-friendly services, dedicated to helping you achieve outstanding reviews. Focus on your rentals; we'll handle the immaculate turnovers."
+
+    ]
+  },
+  "postconst": {
+    "title": "Post-Construction Cleaning",
+    "content": [
+      "Renovation is exciting — but drywall dust, sawdust, glue residue, and debris can ruin the experience fast. Our post-construction cleaning service is built to remove every trace of the job so you can enjoy your new space safely and comfortably.",
+      "We sweep, vacuum, and mop all floors; remove dust from vents, light fixtures, ledges, and surfaces; clean interior windows and mirrors; and polish bathrooms and kitchens. Stickers, caulk residue, and fine dust? Gone.",
+      "This service is essential for general contractors, homeowners, and landlords preparing for move-in, inspections, or handovers. Your freshly finished property will be spotless and presentation-ready."
+    ]
+  },
+  "moveout": {
+    "title": "Move-In / Move-Out Cleaning",
+    "content": [
+      "Moving is stressful — and cleaning either your old or new place is usually the last thing you want to deal with. Our move-in/move-out service takes care of that for you so you can focus on your transition.",
+      "We scrub every surface: inside cabinets and drawers, under sinks, inside ovens and refrigerators, and all floors, walls, and baseboards. Bathrooms are sanitized, kitchens are deep cleaned, and all rooms are left fresh and spotless.",
+      "Whether you're a tenant trying to secure your deposit or a property manager preparing for a new occupant, this service ensures the space is move-in ready — or move-out approved."
+    ]
+  },
+  "header": {
+    "serviceAreas": "Service Areas"
+  },
+  "serviceAreas": {
+    "title": "Service Areas",
+    "headline": "Find Cleaning Services Near You",
+    "description": "Enter your city or select from the list to see if we serve your area. We’re expanding all the time!",
+    "searchPlaceholder": "Type a city name...",
+    "popularTitle": "Popular Cities",
+    "popularDescription": "Quick access to our most requested locations.",
+    "served": "Served",
+    "notServed": "Not Served",
+    "notServedNote": "If your area is not served, please <a href='/contact' class='underline text-[#00BFA6] font-semibold'>contact us</a>. We may be able to help!",
+    "cardServed": "We serve this area! Click to get a free quote.",
+    "cardNotServed": "Currently not served. Let us know if you want us in your city!"
+  },
+  "contactPage": {
+    "headline": "Contact Us Today To Get Your Free Quote",
+    "getInTouch": "Get In Touch",
+    "connectWithUs": "Connect With Us",
+    "features": {
+      "businessHours": {
+        "title": "Business Hours",
+        "monFri": "Mon–Fri: 7 AM – 11 PM",
+        "satSun": "Sat–Sun: 7 AM – 5 PM"
+      },
+      "timeOff": {
+        "title": "Enjoy Your Time Off",
+        "description": "We clean so you can focus on what matters most, making your life easier."
+      },
+      "securePayment": {
+        "title": "Secure & Easy Payment",
+        "description": "Cashless, convenient, and worry-free options for your peace of mind."
+      },
+      "alwaysInTouch": {
+        "title": "Always in Touch",
+        "description": "Reach us anytime by phone, text, or email for prompt assistance."
+      }
+    }
+  },
+  "banner": {
+    "mainHeadline": "Easy Quotes: Ready in 2 Hours",
+    "subHeadline": "Experience Our Fast & Reliable Service.",
+    "timeGuarantee": "2-Hour Quote Guarantee",
+    "hours": "Business Hours",
+    "satisfactionGuarantee": "100% Satisfaction",
+    "satisfactionText": "Guaranteed Results",
+    "qualityGuarantee": "Premium Quality",
+    "qualityText": "Every Clean, Every Time"
+  },
+  "quotePage": {
+    "heading": "Request a Free Estimate",
+    "mainHeading": "Get Your Free Quote in 2 Hours",
+    "progressSteps": {
+      "fillForm": "Fill Form",
+      "getQuote": "Get Quote", 
+      "bookService": "Book Service"
+    },
+    "trustIndicators": {
+      "licensedInsured": "Licensed & Insured",
+      "backgroundChecked": "Background Checked",
+      "fiveStarRated": "5-Star Rated"
+    },
+    "scrollIndicator": "Learn more about our services",
+    "benefitsSection": {
+      "title": "Why Choose SolVida Clean?",
+      "guarantee": {
+        "title": "2-Hour Quote Guarantee",
+        "description": "Get your personalized quote within 2 hours or your next cleaning is 20% off"
+      },
+      "satisfaction": {
+        "title": "100% Satisfaction Guaranteed", 
+        "description": "Not happy? We'll make it right or your money back"
+      },
+      "rated": {
+        "title": "5-Star Rated Service",
+        "description": "Trusted by 500+ families in Boston area"
+      }
+    },
+    "testimonials": {
+      "title": "What Our Customers Say",
+      "items": [
+        {
+          "text": "Got my quote in 1 hour! Amazing service.",
+          "author": "Sarah M.",
+          "rating": 5
+        },
+        {
+          "text": "Professional, fast, and reliable. Highly recommend!",
+          "author": "Mike R.", 
+          "rating": 5
+        },
+        {
+          "text": "Best cleaning service I've ever used.",
+          "author": "Lisa K.",
+          "rating": 5
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Ready to Get Started?",
+      "description": "Don't wait - get your free quote now and experience the difference!",
+      "button": "Get Your Free Quote Now"
+    }
+  },
+  "globalFAB": {
+    "phoneLabel": "(617) 202-1372",
+    "getQuote": "Get Quote"
+  },
+  "howItWorks": {
+    "header": "How SolVida Clean Works",
+    "subheader": "Simple, reliable, and stress-free cleaning service in just three easy steps",
+    "bookTitle": "Book",
+    "bookCaption": "Choose your date and we'll be there, right on time.",
+    "cleanTitle": "Clean",
+    "cleanCaption": "Our experts bring the sparkle — room by room.",
+    "relaxTitle": "Relax",
+    "relaxCaption": "Breathe easy in your freshly cleaned space.",
+    "cta": "Get Started Today",
+    "customizeOptions": {
+      "standard": "Standard",
+      "kitchen": "Kitchen",
+      "bathroom": "Bathroom",
+      "livingRoom": "Living Room",
+      "refrigerator": "Refrigerator",
+      "bedroom": "Bedroom",
+      "askProvider": "Ask your pro"
+    }
+  },
+  "ourServices": {
+    "tabs": {
+      "specialities": "Our Specialties",
+      "residential": "Residential Cleaning",
+      "commercial": "Commercial Cleaning"
+    }
+  },
+  "quoteBanner": {
+    "guarantee": "✨ Quick Quote Guarantee! ✨",
+    "within": "Within 2 Hours",
+    "or": "or your next cleaning is",
+    "discount": "20% OFF"
+  },
+  "hero": {
+    "fiveStarRated": "5-Star Rated",
+    "premiumQuality": "Premium Quality",
+    "noHiddenFees": "No Hidden Fees",
+    "bookAnytime": "Book Anytime"
+  },
+  "reasonsToLove": {
+    "title": "Reasons to Love SolVida",
+    "headline": "Why Choose SolVida?",
+    "subtitle": "Professional cleaning services that transform your living spaces and enhance your peace of mind",
+    "trustedCleaners": {
+      "title": "Trusted & Vetted Cleaners",
+      "description": "At SolVida you'll only find the best and most trusted cleaners. All cleaners are thoroughly vetted by us. Honest and trusted members who we'd be happy to have clean our home."
+    },
+    "customerRecommended": {
+      "title": "Customer Recommended",
+      "description": "SolVida cleaners are continuously reviewed after each cleaning by our customers. All cleaners have to maintain high ratings to remain on our platform."
+    },
+    "trustAndSafety": {
+      "title": "Commitment to Trust & Safety",
+      "description": "Your home is your sanctuary. We are committed to providing a trusted, reliable and safe cleaning experience."
+    },
+    "easyStart": {
+      "title": "Easy to Get Started",
+      "description": "Just go to our website and tell us your relevant information and how big your home, apartment, or house is. With our seamless booking process, SolVida will then connect you with top rated home cleaning services."
+    },
+    "cta": {
+      "title": "How to Get Started",
+      "description": "Just go to our website and tell us your relevant information and how big your home, apartment, or house is. With our seamless booking process, SolVida will then connect you with top rated home cleaning services to help with your busy schedule.",
+      "getQuote": "Get Quote Now",
+      "exploreServices": "Explore Services"
+    },
+    "trustedService": "Trusted Service"
+  },
+  "faq": {
+    "title": "FAQ",
+    "headline": "How can we help you?",
+    "subtitle": "Find answers to the most common questions about our cleaning services. Can't find what you're looking for?",
+    "contactLink": "Contact us",
+    "contactLinkText": "directly.",
+    "trustIndicators": {
+      "fiveStar": {
+        "title": "5-Star Rated",
+        "description": "Trusted by 500+ families"
+      },
+      "guarantee": {
+        "title": "100% Guaranteed",
+        "description": "Satisfaction or money back"
+      },
+      "quote": {
+        "title": "2-Hour Quote",
+        "description": "Fast response guaranteed"
+      }
+    },
+    "cta": {
+      "title": "Still have questions?",
+      "description": "Our friendly team is here to help you with any specific questions about our services, pricing, or scheduling. We're just a message away!",
+      "contactButton": "Contact Us",
+      "quoteButton": "Get Free Quote"
+    },
+    "questions": {
+      "howItWorks": {
+        "question": "How does SolVida work?",
+        "answer": "SolVida makes scheduling a home cleaning simple and hassle-free. Just choose your service, get an instant quote, and book your appointment online. We take care of the rest, using eco-friendly products and trusted professionals."
+      },
+      "worthIt": {
+        "question": "Is hiring a cleaning service worth it?",
+        "answer": "Absolutely. A cleaning service saves you time and stress, ensuring your home stays fresh, healthy, and sparkling. With SolVida, you're also supporting green practices that are safer for pets and families."
+      },
+      "getQuote": {
+        "question": "How do we get a quote?",
+        "answer": "Visit our website and fill out our quick quote form. Just enter your home details and preferences — we'll give you an instant, transparent price with no surprises."
+      },
+      "whatsIncluded": {
+        "question": "What's included in a flat-rate cleaning?",
+        "answer": "Our flat-rate cleanings cover all essential areas: kitchen, bathrooms, bedrooms, living areas, and surfaces. We also include dusting, vacuuming, mopping, and trash removal — always using non-toxic, family-safe products."
+      },
+      "supplies": {
+        "question": "Do you bring supplies?",
+        "answer": "We do! Our team brings all necessary supplies and equipment, including eco-friendly and hypoallergenic products. No need to worry about a thing."
+      },
+      "greenCleaning": {
+        "question": "Do you offer Green Cleaning?",
+        "answer": "Yes — it's our standard! All of our cleanings are green by default. We use biodegradable, non-toxic products that are safe for the environment, your family, and your pets."
+      },
+      "payment": {
+        "question": "What payment methods do you take?",
+        "answer": "We accept all major credit and debit cards. For safety and simplicity, payment is processed securely online — no need to handle cash or checks."
+      },
+      "cost": {
+        "question": "How much does it cost?",
+        "answer": "Prices vary depending on the size and condition of your home. Use our quote tool for an accurate, no-obligation estimate in under 60 seconds."
+      },
+      "problem": {
+        "question": "What if there's a problem?",
+        "answer": "Your satisfaction is our priority. If anything isn't right, let us know within 24 hours and we'll make it right — whether it's a re-clean or other solution."
+      },
+      "refund": {
+        "question": "Can I get a refund?",
+        "answer": "We stand by our quality. If our cleaning didn't meet your expectations, we'll evaluate the situation and offer a re-clean or a refund — no questions asked."
+      },
+      "cancellation": {
+        "question": "Is there a cancellation fee?",
+        "answer": "We offer flexible scheduling. Just cancel or reschedule at least 24 hours before your appointment — no fee at all. Same-day cancellations may incur a small fee."
+      },
+      "beHome": {
+        "question": "Do I have to be home?",
+        "answer": "Not at all. Many of our clients prefer to provide instructions and entry access beforehand. Your security and privacy are always respected."
+      },
+      "howManyCleaners": {
+        "question": "How many cleaners come?",
+        "answer": "We usually send one or two professionals depending on your home's size and service type. All of them are trained, background-checked, and highly rated."
+      },
+      "whenCharged": {
+        "question": "When is my card charged?",
+        "answer": "We charge your card only after the service is completed — never before. You'll receive an email confirmation and receipt immediately after."
+      },
+      "tipping": {
+        "question": "Should I tip?",
+        "answer": "Tipping is never required, but always appreciated for excellent service. You can tip in cash or request to add it to your invoice."
+      },
+      "whatNotClean": {
+        "question": "What don't you clean?",
+        "answer": "For safety reasons, we avoid biohazard cleanup, hoarding situations, mold remediation, and heavy-duty outdoor work. If you're unsure, just ask."
+      },
+      "sameCleaner": {
+        "question": "Can I request the same cleaner?",
+        "answer": "Yes, we try to accommodate recurring requests whenever possible. Consistency helps us serve you better — just let us know your preference."
+      },
+      "feedback": {
+        "question": "How can I leave feedback?",
+        "answer": "We love hearing from you! After your cleaning, you'll get a follow-up email where you can rate your experience and share feedback directly."
+      }
+    }
+  },
+  "floorPlan": {
+    "headline": "Cleaning your home is a big deal to us.",
+    "title": "Apartment Floor Plan",
+    "rooms": {
+      "livingRoom": "Living Room",
+      "kitchen": "Kitchen",
+      "bathroom": "Bathroom",
+      "masterBedroom": "Master Bedroom",
+      "secondBedroom": "Second Bedroom"
+    },
+    "clickHint": "💡 Click on any room to see detailed information and cleaning services",
+    "getQuoteButton": "Get a Free Quote Today",
+    "roomDescriptions": {
+      "livingRoom": "Modern living room with comfortable seating and natural lighting.",
+      "kitchen": "Fully equipped kitchen with modern appliances and dining area.",
+      "bathroom": "Clean and modern bathroom with all amenities.",
+      "masterBedroom": "Spacious master bedroom with workspace and storage.",
+      "secondBedroom": "Comfortable second bedroom with telescope hobby area."
+    },
+    "roomAreas": {
+      "livingRoom": "250 sq ft",
+      "kitchen": "200 sq ft",
+      "bathroom": "80 sq ft",
+      "masterBedroom": "200 sq ft",
+      "secondBedroom": "180 sq ft"
+    },
+    "services": {
+      "title": "Cleaning Services:",
+      "livingRoom": [
+        "Upholstered furniture vacuumed",
+        "Cushions and pillows fluffed and straightened",
+        "Ceiling fans dusted (height restrictions apply)",
+        "Lamps cleaned and lampshades dusted",
+        "Picture frames dusted",
+        "Furniture dusted - on top, on front and underneath",
+        "Hardwood floors vacuumed and/or washed",
+        "Tile floors vacuumed and/or washed",
+        "Hallways and stairs vacuumed and/or washed",
+        "Carpets vacuumed",
+        "Windowsills cleaned (blinds dusted upon request)",
+        "Baseboards dusted",
+        "Fingerprints removed from all woodwork, doorframes and switch plates",
+        "Trash emptied"
+      ],
+      "kitchen": [
+        "Appliance exteriors cleaned (interiors upon request)",
+        "Microwave exterior/interior cleaned",
+        "Tables and chairs cleaned",
+        "Countertops and backsplash disinfected",
+        "Cabinet fronts cleaned",
+        "Sinks scrubbed and disinfected (dishes upon request)",
+        "Floor vacuumed and/or washed",
+        "Windowsills cleaned (blinds dusted upon request)",
+        "Baseboards dusted",
+        "Fingerprints removed from all woodwork, doorframes and switch plates",
+        "Trash emptied"
+      ],
+      "bathroom": [
+        "Tub and shower tiles scrubbed, disinfected and rinsed",
+        "Toilets disinfected inside and out",
+        "Chrome fixtures cleaned and shined",
+        "Towels neatly hung and folded",
+        "Countertops disinfected",
+        "Cabinet front cleaned",
+        "Sinks scrubbed and disinfected",
+        "Floors vacuumed and/or washed",
+        "Windowsills cleaned (blinds dusted upon request)",
+        "Baseboards dusted",
+        "Trash emptied",
+        "Mirrors cleaned"
+      ],
+      "masterBedroom": [
+        "Beds made (linens changed upon request)",
+        "Lamps cleaned and lampshades dusted",
+        "Picture frames dusted",
+        "Furniture dusted - top, front and underneath",
+        "Floors vacuumed and/or washed (under bed if accessible)",
+        "Windowsills cleaned (blinds dusted upon request)",
+        "Baseboards dusted",
+        "Fingerprints removed from all woodwork, doorframes and switch plates",
+        "Trash emptied",
+        "Mirrors cleaned"
+      ],
+      "secondBedroom": [
+        "Beds made (linens changed upon request)",
+        "Lamps cleaned and lampshades dusted",
+        "Picture frames dusted",
+        "Furniture dusted - top, front and underneath",
+        "Floors vacuumed and/or washed (under bed if accessible)",
+        "Windowsills cleaned (blinds dusted upon request)",
+        "Baseboards dusted",
+        "Fingerprints removed from all woodwork, doorframes and switch plates",
+        "Trash emptied",
+        "Mirrors cleaned"
+      ]
+    }
+  },
+  "servicesOverview": {
+    "popularServicesTitle": "POPULAR SERVICES WE OFFER",
+    "bostonServiceAreasTitle": "BOSTON SERVICE AREAS",
+    "suburbsTitle": "SUBURBS WE SERVICE",
+    "popularServices": [
+      "Commercial Office Cleaning Boston",
+      "Vacation Rental",
+      "Home Organization", 
+      "Post Renovation Cleaning",
+      "Green Eco Friendly Cleaning",
+      "Airbnb Turnaround Cleaning",
+      "Move In Out Cleaning",
+      "Deep Cleaning",
+      "Regular Cleaning",
+      "Window & Blind Cleaning"
+    ],
+    "bostonAreas": [
+      "South End", "Back Bay", "South Boston", "Allston", "Bay Village", "Beacon Hill", 
+      "Brighton", "Charlestown", "Chinatown", "Dorchester", "Downtown", "East Boston", 
+      "Fenway-Kenmore", "Hyde Park", "Jamaica Plain", "Mattapan", "Mission Hill", 
+      "North End", "Roslindale", "Roxbury", "West End", "West Roxbury"
+    ],
+    "suburbs": [
+      { "name": "Brookline", "highlighted": true },
+      { "name": "Cambridge", "highlighted": true },
+      { "name": "Newton", "highlighted": true },
+      { "name": "Lexington", "highlighted": true },
+      { "name": "Belmont", "highlighted": true },
+      { "name": "Arlington", "highlighted": true },
+      { "name": "Wellesley", "highlighted": true },
+      { "name": "Natick", "highlighted": true },
+      { "name": "Needham", "highlighted": true },
+      { "name": "Winchester", "highlighted": true },
+      { "name": "Milton", "highlighted": true },
+      { "name": "Watertown", "highlighted": true },
+      { "name": "Somerville", "highlighted": true },
+      { "name": "Wakefield", "highlighted": false },
+      { "name": "Reading", "highlighted": false },
+      { "name": "Melrose", "highlighted": false },
+      { "name": "Burlington", "highlighted": false },
+      { "name": "Waltham", "highlighted": false },
+      { "name": "Medford", "highlighted": false },
+      { "name": "Norwood", "highlighted": false },
+      { "name": "Braintree", "highlighted": false },
+      { "name": "Framingham", "highlighted": false },
+      { "name": "Quincy", "highlighted": false },
+      { "name": "Dedham", "highlighted": false },
+      { "name": "Woburn", "highlighted": false },
+      { "name": "Malden", "highlighted": false },
+      { "name": "Stoneham", "highlighted": false },
+      { "name": "Wilmington", "highlighted": false },
+      { "name": "Winthrop", "highlighted": false },
+      { "name": "Methuen", "highlighted": false },
+      { "name": "Saugus", "highlighted": false },
+      { "name": "Revere", "highlighted": false },
+      { "name": "Peabody", "highlighted": false },
+      { "name": "Everett", "highlighted": false },
+      { "name": "Lynn", "highlighted": false }
+    ]
+  },
+  "footer": {
+    "brandDescription": "Trusted Home & Office Cleaning Services. Professional, reliable, and eco-conscious cleaning solutions for your space.",
+    "navigation": "Navigation",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "contactInfo": "Contact Info",
+    "phone": "(617) 202-1372",
+    "email": "info@solvidaclean.com",
+    "location": "Boston, MA",
+    "followUs": "Follow Us",
+    "platformNotice": "© 2025 SolVida Cleaning Service is a platform that connects independent cleaning professionals with customers.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "sitemap": {
+      "title": "Sitemap",
+      "home": "Home",
+      "about": "About",
+      "services": "Our Services",
+      "serviceAreas": "Service Areas",
+      "contact": "Contact",
+      "faq": "FAQ",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy"
+    },
+    "seo": {
+      "metaDescription": "SolVida Clean - Professional home and office cleaning services in Boston. Eco-friendly, reliable cleaning solutions. Get your free quote today!",
+      "keywords": "Boston cleaning service, home cleaning, office cleaning, eco-friendly cleaning, professional cleaners, house cleaning, maid service, deep cleaning, move-in cleaning, move-out cleaning",
+      "structuredData": {
+        "name": "SolVida Clean",
+        "description": "Professional home and office cleaning services in Boston",
+        "url": "https://solvidaclean.com",
+        "logo": "https://solvidaclean.com/logo.png",
+        "contactPoint": {
+          "telephone": "+1-617-202-1372",
+          "contactType": "customer service",
+          "areaServed": "Boston, MA",
+          "availableLanguage": ["English", "Portuguese", "Spanish", "Turkish"]
+        },
+        "serviceArea": {
+          "name": "Boston Metropolitan Area",
+          "description": "Serving Boston and surrounding suburbs with professional cleaning services"
+        }
+      }
+    }
+  },
+  "customerReviews": {
+    "title": "What our customers say"
+  }
+}
