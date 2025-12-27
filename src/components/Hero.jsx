@@ -204,9 +204,22 @@ useEffect(() => {
         <img
           src="/src/assets/cleaningequipments.svg"
           alt="Cleaning Equipments Decorative"
-          className="absolute right-0 top-1/4 w-[600px] max-w-none opacity-10 pointer-events-none select-none z-0"
+          className="absolute right-0 top-1/4 w-[600px] max-w-none opacity-10 pointer-events-none select-none z-0 hidden lg:block"
           draggable={false}
         />
+        {/* Maid Image - Absolute positioned on desktop */}
+        <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[400px] xl:w-[500px] z-5 pointer-events-none">
+          <img
+            src="/images/cleaner-woman2.png"
+            alt="Professional cleaning staff"
+            className="w-full h-auto object-contain opacity-95"
+            draggable={false}
+            onError={(e) => {
+              console.error('Hero maid image failed to load:', e.target.src);
+              e.target.style.display = 'none';
+            }}
+          />
+        </div>
         {/* Right-side bubbles/drops (more concentrated) */}
         <span className="absolute top-10 right-1/4 opacity-20 text-5xl">🫧</span>
         <span className="absolute top-1/2 right-1/3 opacity-10 text-7xl">💧</span>
@@ -471,21 +484,6 @@ useEffect(() => {
           </form>
         </div>
 
-        {/* RIGHT CONTENT - Maid Image (Desktop only) */}
-        <div className="hidden lg:flex flex-1 items-center justify-center lg:justify-end relative z-10 pl-4 xl:pl-8 min-w-0">
-          <div className="relative w-full max-w-md xl:max-w-lg flex-shrink-0">
-            <img
-              src="/images/cleaner-woman2.png"
-              alt="Professional cleaning staff"
-              className="w-full h-auto max-h-[500px] object-contain"
-              draggable={false}
-              onError={(e) => {
-                console.error('Hero image failed to load:', e.target.src);
-                e.target.style.display = 'none';
-              }}
-            />
-          </div>
-        </div>
 
       </div>
       {/* Floating Action Buttons (FAB) */}
