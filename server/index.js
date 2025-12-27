@@ -37,7 +37,9 @@ expressApp.use(cors(corsOptions));
 expressApp.use(express.json());
 
 // Serve static files in production (if frontend build is in dist folder)
-if (NODE_ENV === 'production') {
+// Note: Railway'da dist klasörü yok, bu yüzden devre dışı
+// Frontend İyonos'ta serve ediliyor
+if (NODE_ENV === 'production' && false) { // Railway'da dist yok, devre dışı
   expressApp.use(express.static(path.join(__dirname, '../dist')));
 }
 
@@ -214,14 +216,10 @@ expressApp.get('/api/health', (req, res) => {
 });
 
 // Serve React app for all non-API routes (production only)
-if (NODE_ENV === 'production') {
-  expressApp.get('*', (req, res) => {
-    // Don't serve index.html for API routes
-    if (req.path.startsWith('/api')) {
-      return res.status(404).json({ error: 'API endpoint not found' });
-    }
-    res.sendFile(path.join(__dirname, '../dist/index.html'));
-  });
+// Note: Railway'da sadece API server çalışıyor, frontend İyonos'ta
+// Bu route'u devre dışı bırakıyoruz çünkü dist klasörü Railway'da yok
+if (false) { // Railway'da frontend yok, sadece API
+  // Frontend İyonos'ta serve ediliyor
 }
 
 // 🟢 SUNUCUYU BAŞLAT
