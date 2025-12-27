@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 export default function QuoteStripBanner() {
   const { t } = useTranslation();
   return (
-    <div className="w-full bg-gradient-to-r from-primary to-dark text-white text-center text-sm sm:text-base md:text-lg py-3 px-2 sm:px-4 font-extrabold tracking-wide shadow-lg relative overflow-x-hidden">
+    <div className="w-full bg-gradient-to-r from-primary to-dark text-white text-center text-sm sm:text-base md:text-lg py-3 px-2 sm:px-4 font-extrabold tracking-wide shadow-lg relative overflow-hidden">
       {/* Cleaner Woman Image - Fixed to banner bottom, moves with banner */}
       <div className="hidden lg:block absolute right-4 xl:right-8 bottom-0 z-10 pointer-events-none" style={{
         transform: 'translateY(0)',

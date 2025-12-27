@@ -145,7 +145,7 @@ export function Header() {
     // Tek bir ana kapsayıcı div
     <div className="bg-transparent">
       {/* Reverted header background to bg-light and text colors to text-dark */}
-      <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-md z-50 overflow-x-hidden">
+      <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-md z-50 overflow-hidden">
       <div className="max-w-6xl mx-auto flex items-center justify-between h-full relative px-2 sm:px-4">
           {/* Sol: Logo */}
           <div className="ml-0 sm:ml-[-60px] md:ml-[-80px] lg:ml-[-110px] flex-shrink-0 flex items-center h-full overflow-visible" style={{width: 'auto', height: '80px', minWidth: '100px'}}>
