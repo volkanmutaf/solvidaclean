@@ -3,7 +3,7 @@
 
 $hostname = "access-5019269728.webspace-host.com"
 $username = "su48783"
-$password = "Volcano2135$$"
+$password = $env:IONOS_SFTP_PASSWORD  # Environment variable'dan al
 $remotePath = "/public"
 
 Write-Host "🚀 SolVida Clean - Otomatik Deployment" -ForegroundColor Green

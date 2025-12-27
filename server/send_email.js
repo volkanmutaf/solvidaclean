@@ -119,7 +119,7 @@ export async function sendEmail({
     let errorMessage = err.message || "Resend API failed";
     
     if (err.message?.includes("Unauthorized") || err.message?.includes("Invalid API key")) {
-      errorMessage = "Unauthenticated: Invalid or expired API key. Please check your RESEND_API_KEY in .env file.";
+      errorMessage = "Unauthenticated: Email service configuration error. Please contact support.";
     } else if (err.message?.includes("Forbidden")) {
       errorMessage = "Forbidden: Your API key doesn't have permission to send emails. Check your Resend account settings.";
     } else if (err.message?.includes("Validation")) {

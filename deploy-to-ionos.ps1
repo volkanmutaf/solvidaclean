@@ -4,7 +4,7 @@
 param(
     [string]$Host = "access-5019269728.webspace-host.com",
     [string]$User = "su48783",
-    [string]$Password = "Volcano2135$$",
+    [string]$Password = $env:IONOS_SFTP_PASSWORD,  # Environment variable'dan al
     [int]$Port = 22
 )
 

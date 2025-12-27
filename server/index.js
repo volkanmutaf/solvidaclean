@@ -47,34 +47,45 @@ if (NODE_ENV === 'production' && false) { // Railway'da dist yok, devre dışı
 expressApp.post("/api/submit-quote", async (req, res) => {
   const { name, email, phone, service, message, bedrooms, bathrooms } = req.body;
   
-  // Check if name and email are provided (phone is optional)
-  if (!name) {
+  // Input validation and sanitization
+  if (!name || typeof name !== 'string' || name.trim().length === 0) {
     return res.status(400).json({ error: "Name is required" });
   }
   
-  if (!email) {
+  if (!email || typeof email !== 'string') {
     return res.status(400).json({ error: "Email is required" });
   }
   
   // Validate email format
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
+  if (!emailRegex.test(email.trim())) {
     return res.status(400).json({ error: "Invalid email format" });
   }
+  
+  // Sanitize inputs
+  const sanitizedName = name.trim().substring(0, 100); // Max 100 chars
+  const sanitizedEmail = email.trim().toLowerCase().substring(0, 255); // Max 255 chars
+  const sanitizedPhone = phone ? phone.trim().substring(0, 20) : null; // Max 20 chars
+  const sanitizedMessage = message ? message.trim().substring(0, 1000) : ""; // Max 1000 chars
+  const sanitizedService = service ? service.trim().substring(0, 100) : "General Cleaning";
+  
+  // Validate numeric inputs
+  const validBedrooms = bedrooms && !isNaN(bedrooms) ? Math.max(1, Math.min(10, parseInt(bedrooms))) : 1;
+  const validBathrooms = bathrooms && !isNaN(bathrooms) ? Math.max(1, Math.min(10, parseInt(bathrooms))) : 1;
 
   try {
     const currentYear = new Date().getFullYear();
     const quoteNumber = `Q${currentYear}-${String(Date.now()).slice(-5)}`;
 
     const quoteData = {
-      name,
-      email,
-      phone,
-      service: service || "General Cleaning",
-      message: message || "",
+      name: sanitizedName,
+      email: sanitizedEmail,
+      phone: sanitizedPhone,
+      service: sanitizedService,
+      message: sanitizedMessage,
       imageUrls: [],
-      bedrooms: bedrooms || 1,
-      bathrooms: bathrooms || 1,
+      bedrooms: validBedrooms,
+      bathrooms: validBathrooms,
       quoteNumber,
       timestamp: new Date().toISOString(),
       read: false,
@@ -99,22 +110,36 @@ expressApp.post("/api/send_quote_response", async (req, res) => {
   const { to, subject, message, templateData } = req.body;
   
   // Validate required fields
-  if (!to || !subject) {
-    return res.status(400).json({ error: "Missing required fields: to and subject are required" });
+  if (!to || typeof to !== 'string' || !to.trim()) {
+    return res.status(400).json({ error: "Missing required fields: to is required" });
+  }
+  
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(to.trim())) {
+    return res.status(400).json({ error: "Invalid email format" });
+  }
+  
+  if (!subject || typeof subject !== 'string' || !subject.trim()) {
+    return res.status(400).json({ error: "Missing required fields: subject is required" });
   }
 
   // If templateData is provided, message is optional (will be generated from template)
   // Otherwise, message is required
-  if (!templateData && !message) {
+  if (!templateData && (!message || typeof message !== 'string' || !message.trim())) {
     return res.status(400).json({ error: "Either message or templateData must be provided" });
   }
+  
+  // Sanitize inputs
+  const sanitizedTo = to.trim().toLowerCase();
+  const sanitizedSubject = subject.trim().substring(0, 200); // Max 200 chars
 
   try {
-    console.log("📨 Received email request:", { to, subject, hasTemplateData: !!templateData });
+    console.log("📨 Received email request:", { to: sanitizedTo, subject: sanitizedSubject, hasTemplateData: !!templateData });
     const result = await sendEmail({ 
-      to, 
-      subject, 
-      message: message || "", // Fallback empty string if using template
+      to: sanitizedTo, 
+      subject: sanitizedSubject, 
+      message: message ? message.trim().substring(0, 5000) : "", // Max 5000 chars
       templateData // Will generate HTML template if provided
     });
     console.log("✅ Email sent successfully, result:", result);
@@ -133,9 +158,22 @@ expressApp.post("/api/send_appointment_confirmation", async (req, res) => {
   const { to, templateData } = req.body;
   
   // Validate required fields
-  if (!to || !templateData) {
-    return res.status(400).json({ error: "Missing required fields: to and templateData are required" });
+  if (!to || typeof to !== 'string' || !to.trim()) {
+    return res.status(400).json({ error: "Missing required fields: to is required" });
   }
+  
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(to.trim())) {
+    return res.status(400).json({ error: "Invalid email format" });
+  }
+  
+  if (!templateData || typeof templateData !== 'object') {
+    return res.status(400).json({ error: "Missing required fields: templateData is required" });
+  }
+  
+  // Sanitize email
+  const sanitizedTo = to.trim().toLowerCase();
 
   try {
     const websiteUrl = process.env.WEBSITE_URL || "http://localhost:5173";
@@ -144,11 +182,11 @@ expressApp.post("/api/send_appointment_confirmation", async (req, res) => {
       websiteUrl
     });
 
-    console.log("📨 Sending appointment confirmation email to:", to);
+    console.log("📨 Sending appointment confirmation email to:", sanitizedTo);
     const emailResult = await sendEmail({ 
-      to, 
-      subject: `Appointment Confirmed - ${templateData.appointmentDate}`,
-      message: `Your appointment has been confirmed for ${templateData.appointmentDate} at ${templateData.appointmentTime}.`,
+      to: sanitizedTo, 
+      subject: `Appointment Confirmed - ${templateData.appointmentDate || 'N/A'}`,
+      message: `Your appointment has been confirmed for ${templateData.appointmentDate || 'N/A'} at ${templateData.appointmentTime || 'N/A'}.`,
       html: htmlContent
     });
     console.log("✅ Appointment confirmation email sent successfully, result:", emailResult);
@@ -166,25 +204,38 @@ expressApp.post("/api/send_appointment_confirmation", async (req, res) => {
 expressApp.post("/api/send_appointment_cancellation", async (req, res) => {
   const { to, templateData } = req.body;
   
-  console.log("📨 Received cancellation email request:", { to, hasTemplateData: !!templateData });
-  
   // Validate required fields
-  if (!to || !templateData) {
-    console.error("❌ Missing required fields:", { to: !!to, templateData: !!templateData });
-    return res.status(400).json({ error: "Missing required fields: to and templateData are required" });
+  if (!to || typeof to !== 'string' || !to.trim()) {
+    console.error("❌ Missing required fields: to");
+    return res.status(400).json({ error: "Missing required fields: to is required" });
   }
+  
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(to.trim())) {
+    return res.status(400).json({ error: "Invalid email format" });
+  }
+  
+  if (!templateData || typeof templateData !== 'object') {
+    console.error("❌ Missing required fields: templateData");
+    return res.status(400).json({ error: "Missing required fields: templateData is required" });
+  }
+  
+  // Sanitize email
+  const sanitizedTo = to.trim().toLowerCase();
+  
+  console.log("📨 Received cancellation email request:", { to: sanitizedTo, hasTemplateData: !!templateData });
 
   try {
     const websiteUrl = process.env.WEBSITE_URL || "http://localhost:5173";
     
-    console.log("📨 Sending appointment cancellation email to:", to);
-    console.log("📧 Template data:", JSON.stringify(templateData, null, 2));
-    console.log("📧 Email subject: Appointment Cancelled -", templateData.appointmentDate);
+    console.log("📨 Sending appointment cancellation email to:", sanitizedTo);
+    console.log("📧 Email subject: Appointment Cancelled -", templateData.appointmentDate || 'N/A');
     
     const emailResult = await sendEmail({ 
-      to, 
-      subject: `Appointment Cancelled - ${templateData.appointmentDate}`,
-      message: `Your appointment for ${templateData.appointmentDate} at ${templateData.appointmentTime} has been cancelled. If you would like to reschedule, please call us at (617) 202-1372.`,
+      to: sanitizedTo, 
+      subject: `Appointment Cancelled - ${templateData.appointmentDate || 'N/A'}`,
+      message: `Your appointment for ${templateData.appointmentDate || 'N/A'} at ${templateData.appointmentTime || 'N/A'} has been cancelled. If you would like to reschedule, please call us at (617) 202-1372.`,
       templateData: {
         ...templateData,
         websiteUrl

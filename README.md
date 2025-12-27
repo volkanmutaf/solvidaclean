@@ -1,12 +1,67 @@
-# React + Vite
+# SolVida Clean - Professional Cleaning Services Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, responsive cleaning services website built with React, Vite, and Firebase.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend:** React 19, Vite, Tailwind CSS
+- **Backend:** Node.js, Express
+- **Database:** Firebase Firestore
+- **Email:** Resend API
+- **Hosting:** 
+  - Frontend: İyonos
+  - Backend: Railway
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+## 🛠️ Development
+
+```bash
+# Start frontend dev server
+npm run dev
+
+# Start backend server
+npm run server
+```
+
+## 🏗️ Build
+
+```bash
+npm run build
+```
+
+## 📝 Environment Variables
+
+### Frontend (.env.production)
+```
+VITE_API_URL=https://your-backend.railway.app
+```
+
+### Backend (Railway Environment Variables)
+```
+RESEND_API_KEY=re_your_api_key
+WEBSITE_URL=https://solvidaclean.com
+NODE_ENV=production
+```
+
+## 🚀 Deployment
+
+### Backend (Railway)
+1. Connect GitHub repo to Railway
+2. Set Root Directory: `server`
+3. Set Start Command: `node index.js`
+4. Add environment variables in Railway dashboard
+
+### Frontend (İyonos)
+1. Build: `npm run build`
+2. Upload `dist/` folder contents to İyonos `public/` directory via SFTP
+
+## 📞 Contact
+
+- Website: https://solvidaclean.com
+- Phone: (617) 202-1372
+- Email: info@solvidaclean.com
