@@ -461,6 +461,164 @@ export function generateAppointmentConfirmationEmail({
 }
 
 // Appointment Cancellation Email Template
+export function generateQuoteNotificationEmail({
+  customerName,
+  customerEmail,
+  customerPhone,
+  quoteNumber,
+  serviceType,
+  bedrooms,
+  bathrooms,
+  message,
+  imageUrls = [],
+  companyName = "SolVida Clean",
+  companyPhone = "(617) 202-1372",
+  companyEmail = "info@solvidaclean.com",
+  websiteUrl = "https://solvidaclean.com",
+}) {
+  const currentYear = new Date().getFullYear();
+  
+  return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Quote Request - ${quoteNumber}</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f7fa;">
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f5f7fa; padding: 40px 20px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden;">
+          
+          <!-- Header -->
+          <tr>
+            <td style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); padding: 40px 40px 30px; text-align: center;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">
+                🆕 New Quote Request
+              </h1>
+            </td>
+          </tr>
+          
+          <!-- Content -->
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 20px; color: #1f2937; font-size: 16px; line-height: 1.6;">
+                You have received a new quote request:
+              </p>
+              
+              <!-- Quote Details -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f9fafb; border-radius: 8px; padding: 20px; margin: 20px 0;">
+                <tr>
+                  <td style="padding: 8px 0;">
+                    <strong style="color: #374151;">Quote Number:</strong>
+                    <span style="color: #1f2937; margin-left: 8px;">${quoteNumber}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0;">
+                    <strong style="color: #374151;">Customer Name:</strong>
+                    <span style="color: #1f2937; margin-left: 8px;">${customerName || 'N/A'}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0;">
+                    <strong style="color: #374151;">Email:</strong>
+                    <a href="mailto:${customerEmail}" style="color: #3b82f6; margin-left: 8px; text-decoration: none;">${customerEmail || 'N/A'}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0;">
+                    <strong style="color: #374151;">Phone:</strong>
+                    <a href="tel:${customerPhone?.replace(/[^0-9]/g, '') || ''}" style="color: #3b82f6; margin-left: 8px; text-decoration: none;">${customerPhone || 'N/A'}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0;">
+                    <strong style="color: #374151;">Service Type:</strong>
+                    <span style="color: #1f2937; margin-left: 8px;">${serviceType || 'General Cleaning'}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0;">
+                    <strong style="color: #374151;">Bedrooms:</strong>
+                    <span style="color: #1f2937; margin-left: 8px;">${bedrooms || 1}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 0;">
+                    <strong style="color: #374151;">Bathrooms:</strong>
+                    <span style="color: #1f2937; margin-left: 8px;">${bathrooms || 1}</span>
+                  </td>
+                </tr>
+                ${message ? `
+                <tr>
+                  <td style="padding: 8px 0;">
+                    <strong style="color: #374151;">Message:</strong>
+                    <p style="color: #1f2937; margin: 8px 0 0; line-height: 1.6;">${message}</p>
+                  </td>
+                </tr>
+                ` : ''}
+                ${imageUrls && imageUrls.length > 0 ? `
+                <tr>
+                  <td style="padding: 8px 0;">
+                    <strong style="color: #374151;">Images:</strong>
+                    <span style="color: #1f2937; margin-left: 8px;">${imageUrls.length} image(s) attached</span>
+                  </td>
+                </tr>
+                ` : ''}
+              </table>
+              
+              <p style="margin: 30px 0 20px; color: #1f2937; font-size: 16px; line-height: 1.6;">
+                Please review this quote request and respond to the customer as soon as possible.
+              </p>
+              
+              <!-- Action Button -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                <tr>
+                  <td align="center" style="padding: 20px 0;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td style="background-color: #3b82f6; border-radius: 8px;">
+                          <a href="${websiteUrl}/admin" style="display: inline-block; padding: 14px 32px; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 16px; border-radius: 8px;">
+                            View in Admin Panel
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f9fafb; padding: 30px 40px; text-align: center; border-top: 1px solid #e5e7eb;">
+              <p style="margin: 0 0 10px; color: #6b7280; font-size: 14px;">
+                <strong>${companyName}</strong>
+              </p>
+              <p style="margin: 0 0 10px; color: #6b7280; font-size: 14px;">
+                Phone: <a href="tel:6172021372" style="color: #3b82f6; text-decoration: none;">${companyPhone}</a>
+              </p>
+              <p style="margin: 0; color: #6b7280; font-size: 14px;">
+                Email: <a href="mailto:${companyEmail}" style="color: #3b82f6; text-decoration: none;">${companyEmail}</a>
+              </p>
+              <p style="margin: 15px 0 0; color: #9ca3af; font-size: 12px;">
+                © ${currentYear} ${companyName}. All rights reserved.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+  `;
+}
+
 export function generateAppointmentCancellationEmail({
   customerName,
   appointmentDate,

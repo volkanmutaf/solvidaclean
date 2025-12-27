@@ -299,7 +299,7 @@ export function Header() {
               </Link>
 
               {/* Language Dropdown */}
-              <div className="relative">
+              <div className="relative z-50">
                 <button
                   onClick={() => setLanguageOpen((prev) => !prev)}
                   // Hover:bg-highlight remains as requested
@@ -315,12 +315,13 @@ export function Header() {
                 </button>
 
                 <div
-                  className={`absolute right-0 mt-2 w-32 bg-light rounded-lg shadow-lg border border-gray-100 transition-all duration-300 ease-in-out ${
+                  className={`absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-xl border border-gray-100 transition-all duration-300 ease-in-out z-50 ${
                     languageOpen
-                      ? "opacity-100 translate-y-0 pointer-events-auto"
-                      : "opacity-0 -translate-y-2 pointer-events-none"
+                      ? "opacity-100 translate-y-0 pointer-events-auto visible"
+                      : "opacity-0 -translate-y-2 pointer-events-none invisible"
                   }`}
                   onMouseLeave={() => setLanguageOpen(false)} // Menüyü boş alana çekince kapatma
+                  style={{ zIndex: 9999 }}
                 >
                   {languages.map((lng) => (
                     <button
@@ -330,7 +331,7 @@ export function Header() {
                         setLanguageOpen(false);
                       }}
                       // Dil seçenekleri üzerine gelince belirgin renk (accent/10 ve highlight metin rengi)
-                      className="w-full px-4 py-2 text-left hover:bg-dark hover:text-white flex items-center gap-2 transition-colors duration-200"
+                      className="w-full px-4 py-2 text-left hover:bg-dark hover:text-white flex items-center gap-2 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
                       >
                       <img src={lng.flag} alt={lng.code} className="w-4 h-3" />
                       {lng.label}
@@ -366,7 +367,7 @@ export function Header() {
 
       {/* Mobile Language Dropdown */}
       {langOpen && (
-        <div className="lg:hidden fixed top-[80px] right-4 w-40 bg-light rounded-lg shadow-lg border border-gray-100 z-40">
+        <div className="lg:hidden fixed top-[80px] right-4 w-40 bg-white rounded-lg shadow-xl border border-gray-100 z-[60]" style={{ zIndex: 9999 }}>
           {languages.map((l) => (
             <button
               key={l.code}
@@ -374,7 +375,7 @@ export function Header() {
                 setLang(l.code);
                 setLangOpen(false);
               }}
-              className="w-full px-4 py-3 text-left hover:bg-accent/10 hover:text-highlight flex items-center gap-2 transition-colors duration-200"
+              className="w-full px-4 py-3 text-left hover:bg-accent/10 hover:text-highlight flex items-center gap-2 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
             >
               <img src={l.flag} alt={l.code} className="w-4 h-3" />
               <span>{l.label}</span>

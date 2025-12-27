@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
 import { sendEmail } from "./send_email.js"; // .js uzantısı zorunlu (ESM)
-import { generateAppointmentConfirmationEmail, generateAppointmentCancellationEmail } from "./emailTemplate.js";
+import { generateAppointmentConfirmationEmail, generateAppointmentCancellationEmail, generateQuoteNotificationEmail } from "./emailTemplate.js";
 
 dotenv.config();
 
@@ -94,6 +94,34 @@ expressApp.post("/api/submit-quote", async (req, res) => {
     // For now, just return success without saving to Firestore
     // The frontend will handle the Firebase operations
     console.log("📝 Quote data received:", quoteData);
+    
+    // Send notification email to info@solvidaclean.com
+    try {
+      const notificationHtml = generateQuoteNotificationEmail({
+        customerName: sanitizedName,
+        customerEmail: sanitizedEmail,
+        customerPhone: sanitizedPhone,
+        quoteNumber,
+        serviceType: sanitizedService,
+        bedrooms: validBedrooms,
+        bathrooms: validBathrooms,
+        message: sanitizedMessage,
+        imageUrls: req.body.imageUrls || [],
+        websiteUrl: process.env.WEBSITE_URL || "https://solvidaclean.com"
+      });
+      
+      await sendEmail({
+        to: "info@solvidaclean.com",
+        subject: `New Quote Request - ${quoteNumber}`,
+        message: `You have received a new quote request from ${sanitizedName} (${sanitizedEmail}). Quote Number: ${quoteNumber}`,
+        html: notificationHtml
+      });
+      
+      console.log("✅ Notification email sent to info@solvidaclean.com");
+    } catch (emailError) {
+      console.error("❌ Failed to send notification email:", emailError);
+      // Don't fail the request if email fails
+    }
     
     res.json({ 
       success: true, 
