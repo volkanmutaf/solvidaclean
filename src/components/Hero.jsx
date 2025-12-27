@@ -197,7 +197,7 @@ useEffect(() => {
   };
 
   return (
-<section className="w-full bg-[#2563eb] flex items-start justify-center px-2 sm:px-4 md:px-8 relative min-h-[600px] -mt-4 md:-mt-6 mb-0 pb-0 z-0 overflow-x-hidden">
+<section className="w-full bg-[#2563eb] flex items-start justify-center px-2 sm:px-4 md:px-8 relative -mt-4 md:-mt-6 mb-0 pb-0 z-0 overflow-x-hidden overflow-y-visible">
 {/* Decorative bubbles/drops background */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none select-none">
         {/* Decorative SVG background */}
@@ -233,7 +233,7 @@ useEffect(() => {
         <span className="absolute bottom-1/4 left-1/5 opacity-10 text-4xl">💧</span>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-end justify-between pt-24 sm:pt-28 md:pt-32 pb-0 mb-0 gap-y-8 gap-x-6 min-h-[500px] px-2 sm:px-4 md:px-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between pt-24 sm:pt-28 md:pt-32 pb-0 mb-0 gap-y-8 gap-x-6 px-2 sm:px-4 md:px-0">
         {/* LEFT CONTENT - This is your form container */}
         <div className="flex-1 min-w-0 flex flex-col items-start justify-start relative z-10 w-full max-w-full lg:max-w-2xl"> {/* Added relative and z-10 */}
           <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-3 md:mb-4 text-left w-full break-words">
@@ -469,21 +469,6 @@ useEffect(() => {
 
 
           </form>
-        </div>
-
-        {/* RIGHT CONTENT - Maid Image (Desktop only) */}
-        <div className="hidden lg:flex flex-1 items-end justify-end relative z-10 pr-4 xl:pr-8 pb-0 mb-0">
-          <img
-            src="/images/cleaner-woman2.png"
-            alt="Professional cleaning staff"
-            className="w-auto h-auto max-w-xs xl:max-w-sm object-contain mb-0 pb-0"
-            draggable={false}
-            style={{ marginBottom: 0, paddingBottom: 0 }}
-            onError={(e) => {
-              console.error('Hero maid image failed to load:', e.target.src);
-              e.target.style.display = 'none';
-            }}
-          />
         </div>
 
       </div>

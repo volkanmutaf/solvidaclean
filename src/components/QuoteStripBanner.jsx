@@ -4,21 +4,15 @@ export default function QuoteStripBanner() {
   const { t } = useTranslation();
   return (
     <div className="w-full bg-gradient-to-r from-primary to-dark text-white text-center text-sm sm:text-base md:text-lg py-3 px-2 sm:px-4 font-extrabold tracking-wide shadow-lg relative overflow-x-hidden">
-      {/* Cleaner Woman Image - Visible on desktop */}
-      <div className="hidden lg:block" style={{
-        position: 'absolute',
-        right: '330px',
-        top: '0px',
-        transform: 'translateY(-100%)',
-        width: '450px',
-        height: '450px',
-        zIndex: 9999,
-        pointerEvents: 'none'
+      {/* Cleaner Woman Image - Fixed to banner bottom, moves with banner */}
+      <div className="hidden lg:block absolute right-4 xl:right-8 bottom-0 z-10 pointer-events-none" style={{
+        transform: 'translateY(0)',
       }}>
         <img
           src="/images/cleaner-woman2.png"
           alt="Professional cleaning staff member"
-          style={{width: '100%', height: '100%', objectFit: 'contain'}}
+          className="w-auto h-auto max-w-xs xl:max-w-sm object-contain"
+          style={{ marginBottom: 0, paddingBottom: 0 }}
           draggable={false}
           onError={(e) => { 
             console.error('Image failed to load:', e.target.src);
