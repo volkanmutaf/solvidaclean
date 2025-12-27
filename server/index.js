@@ -25,10 +25,12 @@ const corsOptions = {
     ? [
         'https://solvidaclean.com', 
         'https://www.solvidaclean.com',
-        process.env.RAILWAY_PUBLIC_DOMAIN // Railway URL'i otomatik eklenir
+        'https://solvidaclean-production.up.railway.app' // Railway public domain
       ].filter(Boolean) // undefined değerleri temizle
     : ['http://localhost:5173', 'http://localhost:3000'],
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 };
 
 expressApp.use(cors(corsOptions));
