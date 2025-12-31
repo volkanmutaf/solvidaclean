@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { Menu, X, ChevronDown, Phone, Home, Building2, Sparkles, Calendar, Truck, Hammer, MapPin, User, MessageCircle, FileText, Plus } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -323,19 +324,19 @@ export function Header() {
                   <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${languageOpen ? 'rotate-180' : ''}`} />
                 </button>
 
-                {languageOpen && languageButtonRect && (
+                {languageOpen && languageButtonRect && createPortal(
                   <>
                     {/* Backdrop to close on outside click */}
                     <div
-                      className="fixed inset-0 z-[102]"
+                      className="fixed inset-0 z-[9998]"
                       onClick={() => {
                         setLanguageOpen(false);
                         setLanguageButtonRect(null);
                       }}
                     />
-                    {/* Dropdown Menu */}
+                    {/* Dropdown Menu - Portal ile body'ye render ediliyor */}
                     <div
-                      className="fixed w-32 bg-white rounded-lg shadow-xl border border-gray-100 z-[103]"
+                      className="fixed w-32 bg-white rounded-lg shadow-2xl border border-gray-200 z-[9999]"
                       style={{
                         top: `${languageButtonRect.bottom + 8}px`,
                         right: `${window.innerWidth - languageButtonRect.right}px`
@@ -362,7 +363,8 @@ export function Header() {
                         </button>
                       ))}
                     </div>
-                  </>
+                  </>,
+                  document.body
                 )}
               </div>
             </div>
