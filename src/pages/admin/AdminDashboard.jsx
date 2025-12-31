@@ -437,17 +437,17 @@ export default function AdminDashboard() {
     <div className="bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Compact Summary Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 mb-4">
           <button
             onClick={() => { setArchiveView(false); setDeletedView(false); setFilter("all"); }}
-            className={`bg-white rounded-lg shadow-sm border p-4 flex items-center justify-between transition-all hover:shadow-md ${!archiveView && !deletedView ? 'ring-2 ring-blue-500' : ''}`}
+            className={`bg-white rounded-lg shadow-sm border p-2 sm:p-4 flex items-center justify-between transition-all hover:shadow-md ${!archiveView && !deletedView ? 'ring-2 ring-blue-500' : ''}`}
           >
             <div>
-              <span className="text-lg font-bold text-blue-700">{quotes.filter(q => !q.archived && !q.deleted).length}</span>
+              <span className="text-base sm:text-lg font-bold text-blue-700">{quotes.filter(q => !q.archived && !q.deleted).length}</span>
               <p className="text-xs text-gray-500">Active</p>
             </div>
-            <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-              <FileText className="w-4 h-4 text-blue-600" />
+            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+              <FileText className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" />
             </div>
           </button>
           <button
@@ -489,14 +489,14 @@ export default function AdminDashboard() {
         </div>
 
         {/* Header with Search */}
-        <div className="bg-white rounded-xl shadow border border-gray-200 p-6 mb-4">
+        <div className="bg-white rounded-xl shadow border border-gray-200 p-4 sm:p-6 mb-4">
           <div className="flex flex-col gap-4">
             {/* Title and Actions */}
-            <div className="flex items-center gap-4 flex-wrap">
-              <h1 className="text-2xl font-bold text-gray-900">Quote Requests</h1>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Quote Requests</h1>
               
               {/* Actions - All on the left */}
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-2 flex-wrap text-xs sm:text-sm">
                 {/* Bulk Actions */}
                 {selectedQuotes.length > 0 && (
                   <div className="flex gap-2 items-center border-r border-gray-300 pr-4">
@@ -580,7 +580,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* Status Filters */}
-        <div className="flex flex-wrap gap-1.5 mb-4">
+        <div className="flex flex-wrap gap-1.5 mb-4 overflow-x-auto pb-2">
           {filterOptions.map((option) => (
             <button
               key={option.value}
@@ -621,8 +621,10 @@ export default function AdminDashboard() {
               )}
             </div>
           ) : (
-            <div className="overflow-x-auto">
-                             <table className="w-full text-sm border-2 border-gray-300 rounded-lg shadow-sm">
+            <>
+              {/* Desktop Table View */}
+              <div className="hidden lg:block overflow-x-auto">
+                <table className="w-full text-sm border-2 border-gray-300 rounded-lg shadow-sm">
                                  <thead className="bg-gray-200 border-b-2 border-gray-300">
                    <tr>
                      <th className="px-6 py-3 text-center font-semibold text-gray-500 uppercase">
@@ -813,7 +815,162 @@ export default function AdminDashboard() {
                   ))}
                 </tbody>
               </table>
-            </div>
+              </div>
+              
+              {/* Mobile Card View */}
+              <div className="lg:hidden space-y-3">
+                {filteredAndSortedQuotes.map((q) => (
+                  <div
+                    key={q.id}
+                    onClick={() => !deletedView && handleRowClick(q)}
+                    className={`bg-white rounded-lg border-2 p-4 transition cursor-pointer ${
+                      q.deleted ? "opacity-50" : ""
+                    } ${
+                      q.status === "Appointment Created" && !q.archived && !q.deleted
+                        ? "bg-purple-50 border-l-4 border-l-purple-500"
+                        : q.status === "Replied" && !q.archived && !q.deleted
+                        ? "bg-green-50 border-l-4 border-l-green-500"
+                        : !q.read && !q.archived && !q.deleted
+                        ? "bg-blue-100 border-l-4 border-l-blue-500"
+                        : isOverdue(q) && !q.deleted
+                        ? "bg-red-50 border-l-4 border-l-red-500"
+                        : "border-gray-200"
+                    }`}
+                  >
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex-1">
+                        <div className="font-mono text-blue-700 font-bold text-sm mb-1">{q.quoteNumber}</div>
+                        <div className="text-gray-600 text-xs mb-2">{formatDate(q.timestamp)} {formatTime(q.timestamp)}</div>
+                        <div className="font-medium text-gray-900 mb-1">{q.name}</div>
+                        <div className="text-gray-500 text-xs mb-1">{q.email}</div>
+                        <div className="text-gray-500 text-xs">{q.phone}</div>
+                      </div>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleSelectQuote(q.id);
+                        }}
+                        className="p-1"
+                      >
+                        {selectedQuotes.includes(q.id) ? (
+                          <CheckSquare className="w-5 h-5 text-blue-600" />
+                        ) : (
+                          <Square className="w-5 h-5 text-gray-400" />
+                        )}
+                      </button>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-1 mb-3">
+                      {q.deleted ? (
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 border border-red-200">Deleted</span>
+                      ) : q.archived ? (
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 border border-blue-200">Archived</span>
+                      ) : (
+                        <>
+                          {!q.read && (
+                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 border border-blue-200">
+                              <Circle className="w-3 h-3 mr-1 text-blue-600 fill-current" />
+                              New
+                            </span>
+                          )}
+                          {q.read && (
+                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-600 border border-gray-200">
+                              <MailCheck className="w-3 h-3 mr-1 text-gray-500" />
+                              Read
+                            </span>
+                          )}
+                          {q.status === "Replied" && (
+                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 border border-green-200">
+                              <CheckCircle className="w-3 h-3 mr-1 text-green-600" />
+                              Replied
+                            </span>
+                          )}
+                          {q.status === "Appointment Created" && (
+                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 border border-purple-200">
+                              <Calendar className="w-3 h-3 mr-1 text-purple-600" />
+                              Appointment
+                            </span>
+                          )}
+                          {isOverdue(q) && q.status !== "Replied" && (
+                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 border border-red-200">
+                              <AlertTriangle className="w-3 h-3 mr-1 text-red-600" />
+                              OVERDUE
+                            </span>
+                          )}
+                        </>
+                      )}
+                    </div>
+                    
+                    <div className="flex items-center justify-between pt-3 border-t border-gray-200">
+                      <div className="text-xs text-gray-600">{getTimeAgo(q.timestamp)}</div>
+                      <div className="flex items-center gap-2">
+                        {!archiveView && !deletedView && (
+                          <>
+                            <button
+                              onClick={e => { e.stopPropagation(); toggleReadStatus(q.id, q.read); }}
+                              className="p-1.5 rounded-full text-gray-500 hover:bg-gray-100"
+                              title={q.read ? "Mark as Unread" : "Mark as Read"}
+                            >
+                              {q.read ? <MailX className="w-4 h-4" /> : <MailCheck className="w-4 h-4" />}
+                            </button>
+                            <button
+                              onClick={e => { e.stopPropagation(); handleArchiveInList(q.id); }}
+                              className="p-1.5 rounded-full text-gray-500 hover:bg-gray-100"
+                              title="Archive"
+                            >
+                              <Archive className="w-4 h-4" />
+                            </button>
+                            <button
+                              onClick={e => { e.stopPropagation(); handleSoftDelete(q.id); }}
+                              className="p-1.5 rounded-full text-red-600 hover:bg-red-100"
+                              title="Delete"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          </>
+                        )}
+                        {archiveView && !deletedView && (
+                          <>
+                            <button
+                              onClick={e => { e.stopPropagation(); handleRestore(q.id); }}
+                              className="p-1.5 rounded-full text-blue-600 hover:bg-blue-100"
+                              title="Restore"
+                            >
+                              <ArchiveRestore className="w-4 h-4" />
+                            </button>
+                            <button
+                              onClick={e => { e.stopPropagation(); handleSoftDelete(q.id); }}
+                              className="p-1.5 rounded-full text-red-600 hover:bg-red-100"
+                              title="Delete"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          </>
+                        )}
+                        {deletedView && (
+                          <>
+                            <button
+                              onClick={e => { e.stopPropagation(); handleRestoreDeleted(q.id); }}
+                              className="p-1.5 rounded-full text-green-600 hover:bg-green-100"
+                              title="Restore"
+                            >
+                              <ArchiveRestore className="w-4 h-4" />
+                            </button>
+                            <button
+                              onClick={e => { e.stopPropagation(); handlePermanentDelete(q.id); }}
+                              className="p-1.5 rounded-full text-red-600 hover:bg-red-100"
+                              title="Permanently Delete"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
           )}
         </div>
 

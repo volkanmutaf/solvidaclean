@@ -742,25 +742,28 @@ export default function AppointmentsPage() {
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="bg-white rounded-xl shadow border border-gray-200 p-6 mb-6">
+        <div className="bg-white rounded-xl shadow border border-gray-200 p-4 sm:p-6 mb-4 sm:mb-6">
           <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-4 flex-wrap">
-              <h1 className="text-2xl font-bold text-gray-900">Appointments</h1>
-              <button
-                onClick={() => setShowTimeSlots(!showTimeSlots)}
-                className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50"
-              >
-                <Clock className="w-4 h-4 mr-2" />
-                {showTimeSlots ? "Hide" : "Manage"} Time Slots
-              </button>
-              <button
-                onClick={fetchAppointments}
-                disabled={loading}
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-teal-600 hover:bg-teal-700 disabled:opacity-50"
-              >
-                <RefreshCw className={`w-4 h-4 mr-2 ${loading ? "animate-spin" : ""}`} />
-                {loading ? "Loading..." : "Refresh"}
-              </button>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Appointments</h1>
+              <div className="flex gap-2 flex-wrap">
+                <button
+                  onClick={() => setShowTimeSlots(!showTimeSlots)}
+                  className="inline-flex items-center px-3 sm:px-4 py-2 border border-gray-300 text-xs sm:text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50"
+                >
+                  <Clock className="w-4 h-4 mr-2" />
+                  <span className="hidden sm:inline">{showTimeSlots ? "Hide" : "Manage"} Time Slots</span>
+                  <span className="sm:hidden">Time Slots</span>
+                </button>
+                <button
+                  onClick={fetchAppointments}
+                  disabled={loading}
+                  className="inline-flex items-center px-3 sm:px-4 py-2 border border-transparent text-xs sm:text-sm font-medium rounded-lg text-white bg-teal-600 hover:bg-teal-700 disabled:opacity-50"
+                >
+                  <RefreshCw className={`w-4 h-4 mr-2 ${loading ? "animate-spin" : ""}`} />
+                  {loading ? "Loading..." : "Refresh"}
+                </button>
+              </div>
             </div>
             <div className="relative w-full max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -1046,8 +1049,10 @@ export default function AppointmentsPage() {
               </p>
             </div>
           ) : (
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
+            <>
+              {/* Desktop Table View */}
+              <div className="hidden lg:block overflow-x-auto">
+                <table className="w-full text-sm">
                 <thead className="bg-gray-50 border-b border-gray-200">
                   <tr>
                     <th className="px-6 py-3 text-left font-semibold text-gray-700 uppercase">Customer</th>
@@ -1184,7 +1189,129 @@ export default function AppointmentsPage() {
                   ))}
                 </tbody>
               </table>
-            </div>
+              </div>
+              
+              {/* Mobile Card View */}
+              <div className="lg:hidden p-4 space-y-4">
+                {filteredAppointments.map((apt) => (
+                  <div
+                    key={apt.id}
+                    className="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:bg-gray-100 transition-colors"
+                  >
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <h4 className="font-semibold text-gray-900">{apt.customerName || 'Unknown'}</h4>
+                          {apt.quoteNumber && (
+                            <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                              {apt.quoteNumber}
+                            </span>
+                          )}
+                        </div>
+                        <div className="space-y-1 text-sm text-gray-600">
+                          {apt.preferredDate && (
+                            <div className="flex items-center gap-2">
+                              <Calendar className="w-4 h-4" />
+                              <span>
+                                {typeof apt.preferredDate === 'string' 
+                                  ? new Date(apt.preferredDate).toLocaleDateString("en-US", {
+                                      year: "numeric",
+                                      month: "short",
+                                      day: "numeric",
+                                    })
+                                  : formatDate(apt.preferredDate)
+                                }
+                              </span>
+                            </div>
+                          )}
+                          {apt.preferredTime && (
+                            <div className="flex items-center gap-2">
+                              <Clock className="w-4 h-4" />
+                              <span>{apt.preferredTime}</span>
+                            </div>
+                          )}
+                          <div className="flex items-center gap-2">
+                            <Mail className="w-4 h-4" />
+                            <span>{apt.customerEmail || 'No email'}</span>
+                          </div>
+                          {apt.customerPhone && (
+                            <div className="flex items-center gap-2">
+                              <Phone className="w-4 h-4" />
+                              <span>{apt.customerPhone}</span>
+                            </div>
+                          )}
+                          {apt.serviceAddress && (
+                            <div className="flex items-start gap-2 mt-2">
+                              <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                              <span className="text-gray-700 font-medium text-xs">{apt.serviceAddress}</span>
+                            </div>
+                          )}
+                          {apt.notes && (
+                            <div className="mt-2 pt-2 border-t border-gray-200">
+                              <p className="text-xs text-gray-500">Notes:</p>
+                              <p className="text-sm text-gray-700">{apt.notes}</p>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      <div className="ml-4 flex flex-col gap-2">
+                        {getStatusBadge(apt.status)}
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap gap-2 pt-3 border-t border-gray-200">
+                      {apt.status === "pending" && (
+                        <>
+                          <button
+                            onClick={() => updateAppointmentStatus(apt.id, "confirmed")}
+                            className="px-3 py-1.5 bg-blue-600 text-white text-xs font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                          >
+                            Confirm
+                          </button>
+                          <button
+                            onClick={() => updateAppointmentStatus(apt.id, "cancelled")}
+                            className="px-3 py-1.5 bg-red-600 text-white text-xs font-medium rounded-lg hover:bg-red-700 transition-colors"
+                          >
+                            Cancel
+                          </button>
+                        </>
+                      )}
+                      {apt.status === "confirmed" && (
+                        <>
+                          <button
+                            onClick={() => updateAppointmentStatus(apt.id, "completed")}
+                            className="px-3 py-1.5 bg-green-600 text-white text-xs font-medium rounded-lg hover:bg-green-700 transition-colors"
+                          >
+                            Complete
+                          </button>
+                          <button
+                            onClick={() => updateAppointmentStatus(apt.id, "cancelled")}
+                            className="px-3 py-1.5 bg-red-600 text-white text-xs font-medium rounded-lg hover:bg-red-700 transition-colors"
+                          >
+                            Cancel
+                          </button>
+                          {apt.customerPhone && (
+                            <button
+                              onClick={() => openSMSModal(apt)}
+                              className="px-3 py-1.5 bg-purple-600 text-white text-xs font-medium rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-1"
+                            >
+                              <MessageSquare className="w-3 h-3" />
+                              SMS
+                            </button>
+                          )}
+                        </>
+                      )}
+                      <button
+                        onClick={() => handleDeleteAppointment(apt.id)}
+                        className="px-3 py-1.5 bg-gray-600 text-white text-xs font-medium rounded-lg hover:bg-gray-700 transition-colors flex items-center gap-1"
+                      >
+                        <Trash2 className="w-3 h-3" />
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
           )}
         </div>
         )}

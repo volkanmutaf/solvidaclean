@@ -16,9 +16,23 @@ import { collection, query, onSnapshot, where } from "firebase/firestore";
 export default function AdminLayout({ children }) {
   const location = useLocation();
   const navigate = useNavigate();
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false); // Mobile'da kapalı başlasın
   const [unreadQuotesCount, setUnreadQuotesCount] = useState(0);
   const [newAppointmentsCount, setNewAppointmentsCount] = useState(0);
+  
+  // Desktop'ta sidebar açık, mobile'da kapalı
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setSidebarOpen(true);
+      } else {
+        setSidebarOpen(false);
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleLogout = async () => {
     try {
@@ -177,13 +191,22 @@ export default function AdminLayout({ children }) {
 
   return (
     <div className="min-h-screen bg-gray-50 flex">
+      {/* Mobile Overlay */}
+      {sidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+      
       {/* Sidebar */}
       <aside className={`
-        ${sidebarOpen ? "w-64" : "w-20"} 
+        ${sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"} 
+        ${sidebarOpen ? "w-64" : "w-64 lg:w-20"} 
         bg-white border-r border-gray-200 
-        fixed h-screen 
+        fixed lg:relative h-screen 
         transition-all duration-300 
-        z-40
+        z-50 lg:z-40
         flex flex-col
       `}>
         {/* Logo/Header */}
@@ -283,8 +306,24 @@ export default function AdminLayout({ children }) {
       </aside>
 
       {/* Main Content */}
-      <main className={`flex-1 transition-all duration-300 ${sidebarOpen ? "ml-64" : "ml-20"}`}>
-        <div className="p-6">
+      <main className="flex-1 w-full lg:transition-all lg:duration-300 lg:ml-0">
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-30 px-4 py-3 flex items-center justify-between">
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            <Menu className="w-6 h-6 text-gray-600" />
+          </button>
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center">
+              <Sparkles className="w-5 h-5 text-white" />
+            </div>
+            <h1 className="text-lg font-bold text-gray-900">SolVida Clean</h1>
+          </div>
+        </div>
+        
+        <div className="pt-16 lg:pt-6 p-4 lg:p-6">
           {children}
         </div>
       </main>

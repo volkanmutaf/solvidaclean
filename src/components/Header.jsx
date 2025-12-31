@@ -145,7 +145,7 @@ export function Header() {
     // Tek bir ana kapsayıcı div
     <div className="bg-transparent">
       {/* Reverted header background to bg-light and text colors to text-dark */}
-      <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-md z-50 overflow-hidden">
+      <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-md z-50 overflow-visible">
       <div className="max-w-6xl mx-auto flex items-center justify-between h-full relative px-2 sm:px-4">
           {/* Sol: Logo */}
           <div className="ml-0 sm:ml-[-60px] md:ml-[-80px] lg:ml-[-110px] flex-shrink-0 flex items-center h-full overflow-visible" style={{width: 'auto', height: '80px', minWidth: '100px'}}>
@@ -159,7 +159,7 @@ export function Header() {
   <a href="tel:6172021372" className="text-accent font-bold text-xs sm:text-sm md:text-xl touch-manipulation">(617) 202-1372</a>
 </div>
           {/* Sağ: Menü ve Butonlar */}
-          <div className="flex-1 flex items-center justify-end h-full">
+          <div className="flex-1 flex items-center justify-end h-full relative" style={{ zIndex: 10000 }}>
             {/* Changed text-light back to text-dark */}
             <nav className="hidden lg:flex items-center space-x-2 xl:space-x-4 flex-nowrap whitespace-nowrap text-xs md:text-sm lg:text-base font-bold text-dark h-full">
               {/* Services Dropdown */}
@@ -287,7 +287,7 @@ export function Header() {
 
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-4 relative">
 
               {/* Get Quote Button */}
               <Link
@@ -299,7 +299,7 @@ export function Header() {
               </Link>
 
               {/* Language Dropdown */}
-              <div className="relative z-50">
+              <div className="relative" style={{ zIndex: 10000 }}>
                 <button
                   onClick={() => setLanguageOpen((prev) => !prev)}
                   // Hover:bg-highlight remains as requested
@@ -314,30 +314,28 @@ export function Header() {
                   <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${languageOpen ? 'rotate-180' : ''}`} />
                 </button>
 
-                <div
-                  className={`absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-xl border border-gray-100 transition-all duration-300 ease-in-out z-50 ${
-                    languageOpen
-                      ? "opacity-100 translate-y-0 pointer-events-auto visible"
-                      : "opacity-0 -translate-y-2 pointer-events-none invisible"
-                  }`}
-                  onMouseLeave={() => setLanguageOpen(false)} // Menüyü boş alana çekince kapatma
-                  style={{ zIndex: 9999 }}
-                >
-                  {languages.map((lng) => (
-                    <button
-                      key={lng.code}
-                      onClick={() => {
-                        setLang(lng.code);
-                        setLanguageOpen(false);
-                      }}
-                      // Dil seçenekleri üzerine gelince belirgin renk (accent/10 ve highlight metin rengi)
-                      className="w-full px-4 py-2 text-left hover:bg-dark hover:text-white flex items-center gap-2 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
+                {languageOpen && (
+                  <div
+                    className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-xl border border-gray-100 z-50"
+                    style={{ zIndex: 10001 }}
+                    onMouseLeave={() => setLanguageOpen(false)}
+                  >
+                    {languages.map((lng) => (
+                      <button
+                        key={lng.code}
+                        onClick={() => {
+                          setLang(lng.code);
+                          setLanguageOpen(false);
+                        }}
+                        // Dil seçenekleri üzerine gelince belirgin renk (accent/10 ve highlight metin rengi)
+                        className="w-full px-4 py-2 text-left hover:bg-dark hover:text-white flex items-center gap-2 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
                       >
-                      <img src={lng.flag} alt={lng.code} className="w-4 h-3" />
-                      {lng.label}
-                    </button>
-                  ))}
-                </div>
+                        <img src={lng.flag} alt={lng.code} className="w-4 h-3" />
+                        {lng.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
 
