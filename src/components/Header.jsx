@@ -30,10 +30,12 @@ export function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false); // Mobile language dropdown
+  const [languageButtonRect, setLanguageButtonRect] = useState(null);
 
   // Refs for dropdown hover handling
   const dropdownRef = useRef(null);
   const dropdownTimeoutRef = useRef(null);
+  const languageButtonRef = useRef(null);
 
   useEffect(() => {
     i18n.changeLanguage(lang);
@@ -145,8 +147,8 @@ export function Header() {
     // Tek bir ana kapsayıcı div
     <div className="bg-transparent">
       {/* Reverted header background to bg-light and text colors to text-dark */}
-      <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-md z-50 overflow-visible">
-      <div className="max-w-6xl mx-auto flex items-center justify-between h-full relative px-2 sm:px-4">
+      <header className="fixed top-0 left-0 right-0 w-full bg-white shadow-md z-[100] overflow-visible">
+      <div className="max-w-6xl mx-auto flex items-center justify-between h-full relative px-2 sm:px-4" style={{ zIndex: 100 }}>
           {/* Sol: Logo */}
           <div className="ml-0 sm:ml-[-60px] md:ml-[-80px] lg:ml-[-110px] flex-shrink-0 flex items-center h-full overflow-visible" style={{width: 'auto', height: '80px', minWidth: '100px'}}>
             <a onClick={() => handleNavigate("/")} className="cursor-pointer flex items-center justify-center w-full h-full touch-manipulation">
@@ -299,11 +301,18 @@ export function Header() {
               </Link>
 
               {/* Language Dropdown */}
-              <div className="relative" style={{ zIndex: 10000 }}>
+              <div className="relative">
                 <button
-                  onClick={() => setLanguageOpen((prev) => !prev)}
+                  ref={languageButtonRef}
+                  onClick={() => {
+                    if (languageButtonRef.current) {
+                      const rect = languageButtonRef.current.getBoundingClientRect();
+                      setLanguageButtonRect(rect);
+                    }
+                    setLanguageOpen((prev) => !prev);
+                  }}
                   // Hover:bg-highlight remains as requested
-                  className="flex items-center gap-2 px-3 py-2 text-sm bg-light hover:bg-highlight text-dark rounded-lg transition-colors duration-200"
+                  className="flex items-center gap-2 px-3 py-2 text-sm bg-light hover:bg-highlight text-dark rounded-lg transition-colors duration-200 relative z-[101]"
                 >
                   <img
                     src={languages.find((l) => l.code === lang)?.flag}
@@ -314,27 +323,46 @@ export function Header() {
                   <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${languageOpen ? 'rotate-180' : ''}`} />
                 </button>
 
-                {languageOpen && (
-                  <div
-                    className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-xl border border-gray-100 z-50"
-                    style={{ zIndex: 10001 }}
-                    onMouseLeave={() => setLanguageOpen(false)}
-                  >
-                    {languages.map((lng) => (
-                      <button
-                        key={lng.code}
-                        onClick={() => {
-                          setLang(lng.code);
-                          setLanguageOpen(false);
-                        }}
-                        // Dil seçenekleri üzerine gelince belirgin renk (accent/10 ve highlight metin rengi)
-                        className="w-full px-4 py-2 text-left hover:bg-dark hover:text-white flex items-center gap-2 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
-                      >
-                        <img src={lng.flag} alt={lng.code} className="w-4 h-3" />
-                        {lng.label}
-                      </button>
-                    ))}
-                  </div>
+                {languageOpen && languageButtonRect && (
+                  <>
+                    {/* Backdrop to close on outside click */}
+                    <div
+                      className="fixed inset-0 z-[102]"
+                      onClick={() => {
+                        setLanguageOpen(false);
+                        setLanguageButtonRect(null);
+                      }}
+                    />
+                    {/* Dropdown Menu */}
+                    <div
+                      className="fixed w-32 bg-white rounded-lg shadow-xl border border-gray-100 z-[103]"
+                      style={{
+                        top: `${languageButtonRect.bottom + 8}px`,
+                        right: `${window.innerWidth - languageButtonRect.right}px`
+                      }}
+                      onMouseLeave={() => {
+                        setLanguageOpen(false);
+                        setLanguageButtonRect(null);
+                      }}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {languages.map((lng) => (
+                        <button
+                          key={lng.code}
+                          onClick={() => {
+                            setLang(lng.code);
+                            setLanguageOpen(false);
+                            setLanguageButtonRect(null);
+                          }}
+                          // Dil seçenekleri üzerine gelince belirgin renk (accent/10 ve highlight metin rengi)
+                          className="w-full px-4 py-2 text-left hover:bg-dark hover:text-white flex items-center gap-2 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
+                        >
+                          <img src={lng.flag} alt={lng.code} className="w-4 h-3" />
+                          {lng.label}
+                        </button>
+                      ))}
+                    </div>
+                  </>
                 )}
               </div>
             </div>
