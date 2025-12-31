@@ -321,7 +321,7 @@ export function Header() {
                     className="w-4 h-3"
                   />
                   <span className="font-medium">{languages.find((l) => l.code === lang)?.label}</span>
-                  <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${languageOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${languageOpen ? 'rotate-90' : '-rotate-90'}`} />
                 </button>
 
                 {languageOpen && languageButtonRect && createPortal(
@@ -334,12 +334,12 @@ export function Header() {
                         setLanguageButtonRect(null);
                       }}
                     />
-                    {/* Dropdown Menu - Portal ile body'ye render ediliyor */}
+                    {/* Dropdown Menu - Sağa doğru açılıyor */}
                     <div
                       className="fixed w-32 bg-white rounded-lg shadow-2xl border border-gray-200 z-[9999]"
                       style={{
-                        top: `${languageButtonRect.bottom + 8}px`,
-                        right: `${window.innerWidth - languageButtonRect.right}px`
+                        top: `${languageButtonRect.top}px`,
+                        left: `${languageButtonRect.right + 8}px`
                       }}
                       onMouseLeave={() => {
                         setLanguageOpen(false);
